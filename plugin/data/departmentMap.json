@@ -1,0 +1,424 @@
+{
+  "bodyParts": {
+    "head_and_neck": {
+      "displayName": "Head & Neck",
+      "symptoms": [
+        {
+          "id": "headache",
+          "label": "Headache / Migraine",
+          "hasDecisionTree": true,
+          "decisionTreeId": "headache_tree",
+          "department": "Neurology",
+          "reason": "Neurologists specialize in diagnosing recurrent headaches, migraines, nerve-related cranial pain, and intracranial concerns.",
+          "advice": "Note the trigger factors, frequency, and whether light or sound sensitivity is present."
+        },
+        {
+          "id": "dizziness",
+          "label": "Dizziness / Vertigo",
+          "department": "ENT",
+          "altDepartment": "Neurology",
+          "reason": "Vertigo and balance issues commonly stem from inner ear vestibular disturbances, or neurological equilibrium issues.",
+          "advice": "Keep track of whether turning your head triggers spinning sensations."
+        },
+        {
+          "id": "eye_pain",
+          "label": "Eye Pain / Vision Issue",
+          "department": "Ophthalmology",
+          "reason": "Ophthalmologists handle ocular inflammation, acute eye pain, visual disturbances, and cornea/retina examinations.",
+          "advice": "Avoid rubbing your eyes; seek emergency care immediately if sudden vision loss occurs."
+        },
+        {
+          "id": "ear_pain",
+          "label": "Ear Pain / Hearing Difficulty",
+          "department": "ENT (Otolaryngology)",
+          "reason": "ENT specialists treat middle and inner ear infections, eustachian tube blockages, and hearing disturbances.",
+          "advice": "Avoid inserting cotton buds or foreign objects into the ear canal."
+        },
+        {
+          "id": "sore_throat",
+          "label": "Sore Throat / Difficulty Swallowing",
+          "department": "ENT (Otolaryngology)",
+          "altDepartment": "General Medicine",
+          "reason": "Pharyngeal inflammation, tonsillitis, and vocal cord irritation are evaluated by ENT or General Physicians.",
+          "advice": "Stay hydrated and monitor if accompanied by high fever or swollen glands."
+        },
+        {
+          "id": "neck_pain",
+          "label": "Neck Pain / Stiffness",
+          "department": "Orthopedics",
+          "reason": "Cervical spine strain, disc compression, and musculoskeletal stiffness are managed by Orthopedic specialists.",
+          "advice": "Avoid sudden neck jerks; maintain ergonomic posture while reading or working."
+        }
+      ]
+    },
+    "chest": {
+      "displayName": "Chest",
+      "symptoms": [
+        {
+          "id": "chest_pain",
+          "label": "Chest Pain / Heavy Pressure",
+          "department": "Cardiology",
+          "reason": "Chest pressure or pain warrants immediate cardiac evaluation to assess coronary artery circulation and heart function.",
+          "advice": "If the pain radiates to the jaw, left arm, or causes cold sweats/breathlessness, call emergency services immediately.",
+          "isRedFlagCandidate": true
+        },
+        {
+          "id": "burning_chest",
+          "label": "Burning Sensation / Acid Reflux",
+          "department": "Gastroenterology",
+          "reason": "Substernal burning after meals is typically gastroesophageal reflux disease (GERD) or esophageal irritation.",
+          "advice": "Avoid lying down flat immediately after eating and note trigger foods."
+        },
+        {
+          "id": "palpitations",
+          "label": "Palpitations / Rapid Heartbeat",
+          "department": "Cardiology",
+          "reason": "Irregular rhythm, fluttering sensations, or tachyarrhythmias are investigated by Cardiologists.",
+          "advice": "Monitor if episodes occur at rest or during exertion, and limit caffeine."
+        },
+        {
+          "id": "breathing_difficulty",
+          "label": "Shortness of Breath / Wheezing",
+          "department": "Pulmonology",
+          "reason": "Pulmonologists specialize in airways, asthma, bronchitis, and lung parenchymal disorders.",
+          "advice": "Seek immediate medical care if breathing becomes rapidly labored or lips turn pale/blue.",
+          "isRedFlagCandidate": true
+        },
+        {
+          "id": "persistent_cough",
+          "label": "Persistent Cough",
+          "department": "Pulmonology",
+          "reason": "Coughs extending past 2-3 weeks require respiratory evaluation, chest radiography, and airway assessment.",
+          "advice": "Note if the cough produces colored phlegm or occurs mainly during night."
+        }
+      ]
+    },
+    "abdomen": {
+      "displayName": "Upper Abdomen",
+      "symptoms": [
+        {
+          "id": "stomach_pain",
+          "label": "Stomach Pain / Cramping",
+          "department": "Gastroenterology",
+          "reason": "Gastroenterologists diagnose gastritis, peptic ulcers, gall bladder issues, and digestive tract disorders.",
+          "advice": "Note whether the pain happens before meals, after eating, or wakes you at night."
+        },
+        {
+          "id": "nausea_vomiting",
+          "label": "Nausea / Vomiting",
+          "department": "Gastroenterology",
+          "altDepartment": "General Medicine",
+          "reason": "Frequent nausea and gastrointestinal intolerance should be evaluated for viral gastritis or metabolic causes.",
+          "advice": "Sip electrolyte fluids frequently in small amounts to prevent dehydration."
+        },
+        {
+          "id": "bloating_indigestion",
+          "label": "Bloating / Indigestion",
+          "department": "Gastroenterology",
+          "reason": "Digestive enzyme deficiencies, gut dysmotility, or irritable bowel patterns are treated by gastroenterologists.",
+          "advice": "Keep a 3-day food log to pinpoint specific digestive sensitivities."
+        }
+      ]
+    },
+    "lower_abdomen": {
+      "displayName": "Lower Abdomen & Pelvis",
+      "symptoms": [
+        {
+          "id": "lower_belly_pain",
+          "label": "Lower Abdominal Pain",
+          "department": "Gastroenterology",
+          "altDepartment": "General Surgery",
+          "reason": "Lower quadrant discomfort may indicate bowel irritation, diverticulitis, or acute appendiceal inflammation.",
+          "advice": "Consult immediately if pain localizes sharply to the lower right side with fever."
+        },
+        {
+          "id": "burning_urination",
+          "label": "Painful / Frequent Urination",
+          "department": "Urology",
+          "reason": "Urologists specialize in the urinary tract, bladder infections, urethral inflammation, and kidney stones.",
+          "advice": "Increase fluid intake and avoid holding urine for prolonged periods."
+        },
+        {
+          "id": "pelvic_pain",
+          "label": "Pelvic Pain / Cramps",
+          "department": "Gynecology / Urology",
+          "reason": "Pelvic region issues require targeted evaluation of reproductive organs or lower urinary tract pathways.",
+          "advice": "Document the correlation with menstrual cycles or physical movement."
+        }
+      ]
+    },
+    "left_arm": {
+      "displayName": "Left Arm & Shoulder",
+      "symptoms": [
+        {
+          "id": "arm_joint_pain",
+          "label": "Shoulder / Elbow Joint Pain",
+          "department": "Orthopedics",
+          "reason": "Orthopedic doctors assess rotator cuff tears, tendonitis, arthritis, and joint dislocations.",
+          "advice": "Avoid heavy overhead lifting until clinically evaluated."
+        },
+        {
+          "id": "arm_numbness",
+          "label": "Numbness / Tingling in Hand",
+          "department": "Neurology",
+          "altDepartment": "Orthopedics",
+          "reason": "Tingling or pins-and-needles down the arm points to cervical nerve root compression or carpal tunnel syndrome.",
+          "advice": "Note if symptoms worsen when typing or resting your wrist on hard surfaces."
+        },
+        {
+          "id": "arm_muscle_pain",
+          "label": "Muscle Strain / Weakness",
+          "department": "Orthopedics",
+          "reason": "Musculoskeletal strain or acute trauma to the upper limb is best addressed by Orthopedic specialists.",
+          "advice": "Apply cold compression for acute sprains within the first 48 hours."
+        }
+      ]
+    },
+    "right_arm": {
+      "displayName": "Right Arm & Shoulder",
+      "symptoms": [
+        {
+          "id": "arm_joint_pain",
+          "label": "Shoulder / Elbow Joint Pain",
+          "department": "Orthopedics",
+          "reason": "Orthopedic doctors assess rotator cuff tears, tendonitis, arthritis, and joint dislocations.",
+          "advice": "Avoid heavy overhead lifting until clinically evaluated."
+        },
+        {
+          "id": "arm_numbness",
+          "label": "Numbness / Tingling in Hand",
+          "department": "Neurology",
+          "altDepartment": "Orthopedics",
+          "reason": "Numbness or pins-and-needles down the arm points to peripheral neuropathy or nerve entrapment.",
+          "advice": "Note if symptoms worsen when typing or working on screens."
+        },
+        {
+          "id": "arm_muscle_pain",
+          "label": "Muscle Strain / Weakness",
+          "department": "Orthopedics",
+          "reason": "Musculoskeletal strain or acute trauma to the arm is best addressed by Orthopedic specialists.",
+          "advice": "Apply cold compression for acute sprains within the first 48 hours."
+        }
+      ]
+    },
+    "left_leg": {
+      "displayName": "Left Leg & Foot",
+      "symptoms": [
+        {
+          "id": "knee_joint_pain",
+          "label": "Knee Pain / Swelling",
+          "department": "Orthopedics",
+          "reason": "Orthopedists diagnose ligament tears (ACL/meniscus), osteoarthritis, patellar tendonitis, and joint effusion.",
+          "advice": "Avoid high-impact jumping or squatting until the joint is evaluated."
+        },
+        {
+          "id": "ankle_foot_pain",
+          "label": "Ankle / Foot Pain",
+          "department": "Orthopedics",
+          "reason": "Sprains, plantar fasciitis, and stress fractures are managed by Orthopedic and Podiatric specialists.",
+          "advice": "Rest the foot elevated and wear supportive, cushioned footwear."
+        },
+        {
+          "id": "walking_difficulty",
+          "label": "Difficulty Walking / Weakness",
+          "department": "Orthopedics",
+          "altDepartment": "Neurology",
+          "reason": "Gait disturbances can be caused by joint degeneration or lumbar nerve root impingement (sciatica).",
+          "advice": "Use support while walking if balance feels compromised."
+        }
+      ]
+    },
+    "right_leg": {
+      "displayName": "Right Leg & Foot",
+      "symptoms": [
+        {
+          "id": "knee_joint_pain",
+          "label": "Knee Pain / Swelling",
+          "department": "Orthopedics",
+          "reason": "Orthopedists diagnose ligament tears (ACL/meniscus), osteoarthritis, patellar tendonitis, and joint effusion.",
+          "advice": "Avoid high-impact jumping or squatting until the joint is evaluated."
+        },
+        {
+          "id": "ankle_foot_pain",
+          "label": "Ankle / Foot Pain",
+          "department": "Orthopedics",
+          "reason": "Sprains, plantar fasciitis, and stress fractures are managed by Orthopedic specialists.",
+          "advice": "Rest the foot elevated and wear supportive, cushioned footwear."
+        },
+        {
+          "id": "walking_difficulty",
+          "label": "Difficulty Walking / Weakness",
+          "department": "Orthopedics",
+          "altDepartment": "Neurology",
+          "reason": "Gait disturbances can be caused by joint degeneration or lumbar nerve root impingement (sciatica).",
+          "advice": "Use support while walking if balance feels compromised."
+        }
+      ]
+    },
+    "skin": {
+      "displayName": "Skin & General",
+      "symptoms": [
+        {
+          "id": "skin_rash",
+          "label": "Rash / Redness / Itching",
+          "department": "Dermatology",
+          "reason": "Dermatologists manage eczema, contact dermatitis, fungal/bacterial skin infections, and allergic eruptions.",
+          "advice": "Avoid scratching and refrain from applying harsh fragranced lotions."
+        },
+        {
+          "id": "acne_lesions",
+          "label": "Acne / Skin Blemish / Lesion",
+          "department": "Dermatology",
+          "reason": "Dermatologists specialize in follicular inflammation, cystic acne, and abnormal mole/pigment changes.",
+          "advice": "Keep the area gently cleansed; do not pop or pinch blemishes."
+        }
+      ]
+    },
+    "back": {
+      "displayName": "Back & Spine",
+      "symptoms": [
+        {
+          "id": "lower_back_pain",
+          "label": "Lower Back Pain",
+          "department": "Orthopedics",
+          "reason": "Orthopedic spine specialists evaluate lumbar muscle strain, herniated discs, and facet joint arthritis.",
+          "advice": "Avoid heavy lifting or bending from the waist; maintain a neutral spine."
+        },
+        {
+          "id": "upper_back_pain",
+          "label": "Upper Back / Shoulder Blade Pain",
+          "department": "Orthopedics",
+          "altDepartment": "General Medicine",
+          "reason": "Thoracic paraspinal tension, postural strain, or rib cage mechanics are treated by Orthopedics.",
+          "advice": "Perform gentle chest openers and check desk ergonomics."
+        }
+      ]
+    }
+  },
+  "followUpQuestions": {
+    "duration": {
+      "question": "How long have you been experiencing this problem?",
+      "options": [
+        { "id": "hours", "label": "Less than 24 hours" },
+        { "id": "days", "label": "A few days (1–6 days)" },
+        { "id": "weeks", "label": "1 to 3 weeks" },
+        { "id": "chronic", "label": "More than a month" }
+      ]
+    },
+    "severity": {
+      "question": "How severe is the discomfort?",
+      "options": [
+        { "id": "mild", "label": "Mild (Noticeable but does not disrupt daily tasks)" },
+        { "id": "moderate", "label": "Moderate (Disrupts work or sleep)" },
+        { "id": "severe", "label": "Severe (Debilitating / intense)" }
+      ]
+    }
+  },
+  "decisionTrees": {
+    "headache_tree": {
+      "startNode": "red_flag_screen",
+      "nodes": {
+        "red_flag_screen": {
+          "question": "Quick safety check first — are any of these present? (Select all that apply)",
+          "type": "multi_select",
+          "options": [
+            { "id": "thunderclap", "label": "Sudden, explosive 'worst headache of my life'" },
+            { "id": "fever_stiff_neck", "label": "Fever with stiff neck or sensitivity to light" },
+            { "id": "neuro_deficits", "label": "Weakness, slurred speech, or facial drooping" },
+            { "id": "after_trauma", "label": "Headache after a head injury or fall" },
+            { "id": "vision_loss", "label": "Sudden vision loss or double vision" },
+            { "id": "none", "label": "None of the above" }
+          ],
+          "logic": {
+            "if_any_except_none": "emergency",
+            "if_none_or_only_none": "migraine_screen"
+          }
+        },
+        "migraine_screen": {
+          "question": "Does your headache tend to have any of these features?",
+          "type": "multi_select",
+          "options": [
+            { "id": "throbbing", "label": "Throbbing or pulsating pain" },
+            { "id": "one_sided", "label": "Pain on one side of the head" },
+            { "id": "nausea", "label": "Nausea or vomiting" },
+            { "id": "light_sound", "label": "Sensitivity to light or sound" },
+            { "id": "aura", "label": "Visual aura (flashing lights, blind spots) before headache" },
+            { "id": "none", "label": "None of these" }
+          ],
+          "logic": {
+            "if_2_or_more_except_none": "migraine_recurrence",
+            "if_less_than_2_or_only_none": "general_headache"
+          }
+        },
+        "migraine_recurrence": {
+          "question": "How often do these headaches occur?",
+          "type": "single_select",
+          "options": [
+            { "id": "first_time", "label": "This is my first time" },
+            { "id": "occasional", "label": "Occasionally (a few times a year)" },
+            { "id": "frequent", "label": "Frequently (more than 4 days per month)" },
+            { "id": "daily", "label": "Almost daily / chronic" }
+          ],
+          "logic": {
+            "first_time": "outcome_primary_care_migraine",
+            "occasional": "outcome_primary_care_migraine",
+            "frequent": "outcome_neurology_migraine",
+            "daily": "outcome_neurology_chronic"
+          }
+        },
+        "general_headache": {
+          "question": "Is this headache worsening despite rest or pain relief?",
+          "type": "single_select",
+          "options": [
+            { "id": "improving", "label": "No — it improves with rest or basic pain relief" },
+            { "id": "refractory", "label": "Yes — persistent despite medication and rest" }
+          ],
+          "logic": {
+            "improving": "outcome_general_medicine",
+            "refractory": "outcome_neurology_refractory"
+          }
+        }
+      },
+      "outcomes": {
+        "emergency": {
+          "urgency": "EMERGENCY",
+          "department": "Emergency Room (A&E)",
+          "reason": "One or more of your reported symptoms are red flags that require immediate emergency evaluation to rule out life-threatening conditions such as subarachnoid haemorrhage, meningitis, or stroke.",
+          "advice": "Please call emergency services (108 / 999 / 911) or go to the nearest Emergency Room immediately. Do not drive yourself.",
+          "emergencyNotice": "🚨 CRITICAL ALERT: Do not wait. Seek emergency care NOW."
+        },
+        "outcome_primary_care_migraine": {
+          "urgency": "ROUTINE",
+          "department": "Primary Care / General Medicine",
+          "altDepartment": "Neurology (if recurrent)",
+          "reason": "Your headache features are consistent with a migraine pattern. A first or occasional migraine episode is best managed initially by a General Physician, who can confirm the diagnosis and initiate standard treatment.",
+          "advice": "Keep a headache diary (triggers, frequency, duration). Avoid known triggers such as skipped meals, poor sleep, or caffeine changes. Your doctor may prescribe triptans if appropriate."
+        },
+        "outcome_neurology_migraine": {
+          "urgency": "PRIORITY",
+          "department": "Neurology",
+          "reason": "You are experiencing frequent migraines (more than 4 days/month). Neurologists specialise in migraine prophylaxis, acute rescue therapy, and identifying any structural causes for recurrent episodes.",
+          "advice": "Request a neurology referral from your GP. Preventive medications (beta-blockers, topiramate, CGRP antagonists) or specialised procedures may be appropriate."
+        },
+        "outcome_neurology_chronic": {
+          "urgency": "PRIORITY",
+          "department": "Neurology",
+          "reason": "Daily or near-daily headaches may indicate Chronic Daily Headache (CDH) or Medication Overuse Headache (MOH), requiring specialist neurological evaluation.",
+          "advice": "Track all medications taken for headache relief — overuse of painkillers can worsen chronic headache. A neurologist will guide a supervised detox and preventive regimen."
+        },
+        "outcome_general_medicine": {
+          "urgency": "ROUTINE",
+          "department": "General Medicine",
+          "reason": "Your headache is responding to rest and basic pain relief, and no concerning features are present. This is likely a tension-type or stress-related headache best managed at primary care level.",
+          "advice": "Stay hydrated, maintain regular sleep, and consider stress-reduction techniques. See a GP if headaches become more frequent or resistant to simple relief."
+        },
+        "outcome_neurology_refractory": {
+          "urgency": "PRIORITY",
+          "department": "Neurology",
+          "reason": "A headache that is persistent and refractory to standard pain relief warrants specialist evaluation to rule out secondary causes such as raised intracranial pressure, cervicogenic headache, or structural abnormalities.",
+          "advice": "Avoid exceeding the recommended dose of any pain medication. A neurologist may order imaging (MRI/CT) or refer to a headache clinic."
+        }
+      }
+    }
+  }
+}
