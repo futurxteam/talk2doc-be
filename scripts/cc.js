@@ -138,7 +138,7 @@ const generateQuestions = (disease) => {
 
     // Final success message
     console.log("\nAPI READY! Test this:");
-    console.log("GET http://localhost:5000/api/chief-complaints/bodypart/abdomen/watery%20diarrhea");
+    console.log("GET https://talk2doc-be.onrender.com/api/chief-complaints/bodypart/abdomen/watery%20diarrhea");
 
     process.exit(0);
   } catch (err) {
