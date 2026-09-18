@@ -1,0 +1,8044 @@
+[
+  {
+    "name": "abdominal cramping",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "colon"
+    ],
+    "questions": [
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "during_antibiotic_use",
+            "weight": 1.8,
+            "description": "During Antibiotic Use"
+          },
+          {
+            "value": "weeks_after_antibiotic_use",
+            "weight": 1.8,
+            "description": "Weeks After Antibiotic Use"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_frequency",
+        "text": "What best describes your diarrhea frequency?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "3_to_5_times_day",
+            "weight": 1.6,
+            "description": "3 To 5 Times Day"
+          },
+          {
+            "value": "6_to_9_times_day",
+            "weight": 1.8,
+            "description": "6 To 9 Times Day"
+          },
+          {
+            "value": "10_plus_times_day",
+            "weight": 2,
+            "description": "10 Plus Times Day"
+          }
+        ]
+      },
+      {
+        "id": "cramping_severity",
+        "text": "What best describes your cramping severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "severe_cramping",
+            "weight": 1.9,
+            "description": "Severe Cramping"
+          },
+          {
+            "value": "mild_cramping",
+            "weight": 1.6,
+            "description": "Mild Cramping"
+          }
+        ]
+      },
+      {
+        "id": "stool_appearance",
+        "text": "What best describes your stool appearance?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "blood_in_stool",
+            "weight": 1.8,
+            "description": "Blood In Stool"
+          },
+          {
+            "value": "pus_in_stool",
+            "weight": 1.8,
+            "description": "Pus In Stool"
+          },
+          {
+            "value": "watery_only",
+            "weight": 1.6,
+            "description": "Watery Only"
+          }
+        ]
+      },
+      {
+        "id": "recent_antibiotic_use",
+        "text": "Have you been exposed to recent antibiotic use?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.9,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_hospitalization",
+        "text": "Have you been exposed to recent hospitalization?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "age_65_plus",
+        "text": "Have you been exposed to age 65 plus?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "use_ppi_stomach_acid_reducer",
+        "text": "Have you been exposed to use ppi stomach acid reducer?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "previous_cdiff_infection",
+        "text": "Have you been exposed to previous cdiff infection?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.9,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "abdominal cramps",
+    "body_parts": [
+      "abdomen",
+      "digestive system"
+    ],
+    "questions": [
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "2_to_5_days_after_exposure",
+            "weight": 1.7,
+            "description": "2 To 5 Days After Exposure"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.7,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery",
+            "weight": 1.6,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "fever_present",
+            "weight": 1.6,
+            "description": "Fever Present"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "undercooked_poultry",
+        "text": "Have you been exposed to undercooked poultry?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_milk",
+        "text": "Have you been exposed to unpasteurized milk?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "animal_contact",
+        "text": "Have you been exposed to animal contact?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_eggs",
+        "text": "Have you been exposed to consumed raw eggs?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_undercooked_poultry",
+        "text": "Have you been exposed to consumed undercooked poultry?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_meat",
+        "text": "Have you been exposed to consumed raw meat?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_reptiles_amphibians",
+        "text": "Have you been exposed to contact reptiles amphibians?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "abdominal pain",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "head",
+      "skin",
+      "joints"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "less_than_one_week",
+            "weight": 1.5,
+            "description": "Less Than One Week"
+          },
+          {
+            "value": "more_than_one_week",
+            "weight": 1.6,
+            "description": "More Than One Week"
+          }
+        ]
+      },
+      {
+        "id": "fever",
+        "text": "What best describes your fever?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "present",
+            "weight": 1.6,
+            "description": "Present"
+          },
+          {
+            "value": "absent",
+            "weight": 1.5,
+            "description": "Absent"
+          }
+        ]
+      },
+      {
+        "id": "travel_to_endemic_area",
+        "text": "Have you been exposed to travel to endemic area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food_water",
+        "text": "Have you been exposed to contaminated food water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person",
+        "text": "Have you been exposed to contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "rash_present",
+        "text": "What best describes your rash present?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "yes",
+            "weight": 2.8,
+            "description": "Yes"
+          },
+          {
+            "value": "no",
+            "weight": 0.8,
+            "description": "No"
+          }
+        ]
+      },
+      {
+        "id": "unsafe_food_or_water",
+        "text": "Have you been exposed to unsafe food or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "abdominal_pain_location",
+        "text": "What best describes your abdominal pain location?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "right_sided",
+            "weight": 1.7,
+            "description": "Right Sided"
+          },
+          {
+            "value": "generalized",
+            "weight": 1.6,
+            "description": "Generalized"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "4_to_7_days_after_exposure",
+            "weight": 1.6,
+            "description": "4 To 7 Days After Exposure"
+          }
+        ]
+      },
+      {
+        "id": "age_group",
+        "text": "What best describes your age group?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "child",
+            "weight": 1.6,
+            "description": "Child"
+          },
+          {
+            "value": "adult",
+            "weight": 1.5,
+            "description": "Adult"
+          }
+        ]
+      },
+      {
+        "id": "later_symptoms",
+        "text": "What best describes your later symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "joint_pain",
+            "weight": 1.6,
+            "description": "Joint Pain"
+          },
+          {
+            "value": "skin_rash",
+            "weight": 1.5,
+            "description": "Skin Rash"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_undercooked_pork",
+        "text": "Have you been exposed to consumed raw undercooked pork?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_unpasteurized_milk",
+        "text": "Have you been exposed to consumed unpasteurized milk?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handled_raw_pork_chitterlings",
+        "text": "Have you been exposed to handled raw pork chitterlings?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_blood_transfusion",
+        "text": "Have you been exposed to recent blood transfusion?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_character",
+        "text": "What best describes your diarrhea character?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.3,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery",
+            "weight": 1,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "poor_hygiene",
+        "text": "Have you been exposed to poor hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food_or_water",
+        "text": "Have you been exposed to contaminated food or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "black painless ulcer",
+    "body_parts": [
+      "skin",
+      "lungs",
+      "gastrointestinal tract"
+    ],
+    "questions": [
+      {
+        "id": "clinical_form",
+        "text": "What best describes your clinical form?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "cutaneous",
+            "weight": 3.6,
+            "description": "Cutaneous"
+          },
+          {
+            "value": "inhalation",
+            "weight": 5,
+            "description": "Inhalation"
+          },
+          {
+            "value": "gastrointestinal",
+            "weight": 4,
+            "description": "Gastrointestinal"
+          }
+        ]
+      },
+      {
+        "id": "animal_products_exposure",
+        "text": "Have you been exposed to animal products exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handling_fur_or_wool",
+        "text": "Have you been exposed to handling fur or wool?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "biolaboratory_exposure",
+        "text": "Have you been exposed to biolaboratory exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 4.5,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "bloody diarrhea",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "colon",
+      "liver"
+    ],
+    "questions": [
+      {
+        "id": "diarrhea_character",
+        "text": "What best describes your diarrhea character?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.3,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery",
+            "weight": 1,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 0.7,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "poor_hygiene",
+        "text": "Have you been exposed to poor hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food_or_water",
+        "text": "Have you been exposed to contaminated food or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 0.3,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery_only",
+            "weight": 0,
+            "description": "Watery Only"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "fever_present",
+            "weight": 0.2,
+            "description": "Fever Present"
+          },
+          {
+            "value": "no_fever",
+            "weight": 0,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "pain_location",
+        "text": "What best describes your pain location?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "right_upper_quadrant_pain",
+            "weight": 0.2,
+            "description": "Right Upper Quadrant Pain"
+          },
+          {
+            "value": "generalized_abdominal_pain",
+            "weight": 0.1,
+            "description": "Generalized Abdominal Pain"
+          }
+        ]
+      },
+      {
+        "id": "travel_history",
+        "text": "What best describes your travel history?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "recent_travel_endemic_area",
+            "weight": 0.3,
+            "description": "Recent Travel Endemic Area"
+          }
+        ]
+      },
+      {
+        "id": "travel_tropical_area",
+        "text": "Have you been exposed to travel tropical area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_area_poor_sanitation",
+        "text": "Have you been exposed to live in area poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_unwashed_fruit_veg",
+        "text": "Have you been exposed to consumed unwashed fruit veg?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "blurred vision",
+    "body_parts": [
+      "face",
+      "nervous system",
+      "eyes",
+      "throat"
+    ],
+    "questions": [
+      {
+        "id": "symptom_progression",
+        "text": "What best describes your symptom progression?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "started_in_feet_legs_moved_up",
+            "weight": 5,
+            "description": "Started In Feet Legs Moved Up"
+          },
+          {
+            "value": "descending_paralysis",
+            "weight": 5,
+            "description": "Descending Paralysis"
+          }
+        ]
+      },
+      {
+        "id": "vision_symptoms",
+        "text": "What best describes your vision symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "blurred_or_double_vision",
+            "weight": 3.6,
+            "description": "Blurred Or Double Vision"
+          },
+          {
+            "value": "drooping_eyelids",
+            "weight": 3.6,
+            "description": "Drooping Eyelids"
+          }
+        ]
+      },
+      {
+        "id": "speech_symptoms",
+        "text": "What best describes your speech symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "slurred_speech",
+            "weight": 3.6,
+            "description": "Slurred Speech"
+          },
+          {
+            "value": "difficulty_swallowing",
+            "weight": 3.6,
+            "description": "Difficulty Swallowing"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "no_fever",
+            "weight": 3.5,
+            "description": "No Fever"
+          },
+          {
+            "value": "fever_present",
+            "weight": 3.6,
+            "description": "Fever Present"
+          }
+        ]
+      },
+      {
+        "id": "mental_status",
+        "text": "What best describes your mental status?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "alert_and_oriented",
+            "weight": 3.6,
+            "description": "Alert And Oriented"
+          }
+        ]
+      },
+      {
+        "id": "home_canned_food",
+        "text": "Have you been exposed to home canned food?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "infant_honey_consumption",
+        "text": "Have you been exposed to infant honey consumption?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "wound_contamination",
+        "text": "Have you been exposed to wound contamination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chest pain",
+    "body_parts": [
+      "lungs",
+      "brain",
+      "skin"
+    ],
+    "questions": [
+      {
+        "id": "spread",
+        "text": "What best describes your spread?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "central_nervous_system",
+            "weight": 3.4,
+            "description": "Central Nervous System"
+          },
+          {
+            "value": "only_lung",
+            "weight": 2.6,
+            "description": "Only Lung"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "chronic_steroid_use",
+        "text": "Have you been exposed to chronic steroid use?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lung_disease",
+        "text": "Have you been exposed to lung disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chronic cough",
+    "body_parts": [
+      "lungs",
+      "respiratory system",
+      "skin",
+      "lymph nodes",
+      "brain"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 2.4,
+            "description": "Weeks"
+          },
+          {
+            "value": "months",
+            "weight": 3.5,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "infection_type",
+        "text": "What best describes your infection type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pulmonary",
+            "weight": 2.8,
+            "description": "Pulmonary"
+          },
+          {
+            "value": "cutaneous",
+            "weight": 2.2,
+            "description": "Cutaneous"
+          }
+        ]
+      },
+      {
+        "id": "chronic_lung_disease",
+        "text": "Have you been exposed to chronic lung disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "smoking",
+        "text": "Have you been exposed to smoking?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "environmental_exposure",
+        "text": "Have you been exposed to environmental exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "spread",
+        "text": "What best describes your spread?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "central_nervous_system",
+            "weight": 3.4,
+            "description": "Central Nervous System"
+          },
+          {
+            "value": "only_lung",
+            "weight": 2.6,
+            "description": "Only Lung"
+          }
+        ]
+      },
+      {
+        "id": "chronic_steroid_use",
+        "text": "Have you been exposed to chronic steroid use?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lung_disease",
+        "text": "Have you been exposed to lung disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "congenital symptoms after birth",
+    "body_parts": [
+      "skin",
+      "bones",
+      "liver",
+      "spleen"
+    ],
+    "questions": [
+      {
+        "id": "disease_stage",
+        "text": "What best describes your disease stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "early_infant",
+            "weight": 1.5,
+            "description": "Early Infant"
+          },
+          {
+            "value": "late_infant",
+            "weight": 1.6,
+            "description": "Late Infant"
+          }
+        ]
+      },
+      {
+        "id": "maternal_syphilis",
+        "text": "Have you been exposed to maternal syphilis?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_prenatal_screening",
+        "text": "Have you been exposed to lack of prenatal screening?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "cough",
+    "body_parts": [
+      "lymph nodes",
+      "lungs",
+      "bloodstream",
+      "skin",
+      "systemic"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 3.8,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 3.6,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "clinical_form",
+        "text": "What best describes your clinical form?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bubonic",
+            "weight": 3.6,
+            "description": "Bubonic"
+          },
+          {
+            "value": "pneumonic",
+            "weight": 5,
+            "description": "Pneumonic"
+          },
+          {
+            "value": "septicemic",
+            "weight": 5,
+            "description": "Septicemic"
+          }
+        ]
+      },
+      {
+        "id": "contact_with_rodents_or_fleas",
+        "text": "Have you been exposed to contact with rodents or fleas?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "living_in_outbreak_area",
+        "text": "Have you been exposed to living in outbreak area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handling_infected_animals",
+        "text": "Have you been exposed to handling infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "severity",
+        "text": "What best describes your severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pulmonary",
+            "weight": 3.8,
+            "description": "Pulmonary"
+          },
+          {
+            "value": "disseminated",
+            "weight": 4.5,
+            "description": "Disseminated"
+          }
+        ]
+      },
+      {
+        "id": "exposure_to_infected_animals",
+        "text": "Have you been exposed to exposure to infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_soil_or_water",
+        "text": "Have you been exposed to contaminated soil or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes",
+        "text": "Have you been exposed to diabetes?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "coughing up blood",
+    "body_parts": [
+      "lungs",
+      "chest",
+      "respiratory system"
+    ],
+    "questions": [
+      {
+        "id": "cough_duration",
+        "text": "What best describes your cough duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "less_than_3_weeks",
+            "weight": 2,
+            "description": "Less Than 3 Weeks"
+          },
+          {
+            "value": "more_than_3_weeks",
+            "weight": 3,
+            "description": "More Than 3 Weeks"
+          }
+        ]
+      },
+      {
+        "id": "cough_sputum",
+        "text": "What best describes your cough sputum?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "coughing_up_blood",
+            "weight": 3.2,
+            "description": "Coughing Up Blood"
+          },
+          {
+            "value": "coughing_up_mucus",
+            "weight": 2.4,
+            "description": "Coughing Up Mucus"
+          }
+        ]
+      },
+      {
+        "id": "systemic_symptoms",
+        "text": "What best describes your systemic symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "night_sweats_present",
+            "weight": 2.4,
+            "description": "Night Sweats Present"
+          },
+          {
+            "value": "unexplained_weight_loss_present",
+            "weight": 2.4,
+            "description": "Unexplained Weight Loss Present"
+          }
+        ]
+      },
+      {
+        "id": "fever_pattern",
+        "text": "What best describes your fever pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 2,
+            "description": "Low Grade Fever"
+          }
+        ]
+      },
+      {
+        "id": "chest_pain",
+        "text": "What best describes your chest pain?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pain_with_breathing",
+            "weight": 2,
+            "description": "Pain With Breathing"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_hiv",
+        "text": "Have you been exposed to weakened immune system hiv?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_other",
+        "text": "Have you been exposed to weakened immune system other?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_infected_person",
+        "text": "Have you been exposed to close contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_high_tb_area",
+        "text": "Have you been exposed to travel high tb area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_high_risk_facility",
+        "text": "Have you been exposed to live in high risk facility?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_in_healthcare",
+        "text": "Have you been exposed to works in healthcare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "substance_abuse",
+        "text": "Have you been exposed to substance abuse?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "smoking",
+        "text": "Have you been exposed to smoking?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes_or_kidney_disease",
+        "text": "Have you been exposed to diabetes or kidney disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "diarrhea",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "small intestine",
+      "joints"
+    ],
+    "questions": [
+      {
+        "id": "stool_characteristics",
+        "text": "What best describes your stool characteristics?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "foul_smelling",
+            "weight": 1.6,
+            "description": "Foul Smelling"
+          },
+          {
+            "value": "greasy_or_floating",
+            "weight": 1.6,
+            "description": "Greasy Or Floating"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "gi_symptoms",
+        "text": "What best describes your gi symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "excessive_gas",
+            "weight": 1.6,
+            "description": "Excessive Gas"
+          },
+          {
+            "value": "nausea",
+            "weight": 1.5,
+            "description": "Nausea"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "one_to_two_weeks",
+            "weight": 1.6,
+            "description": "One To Two Weeks"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_lake_river_water",
+        "text": "Have you been exposed to swallowed lake river water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare",
+        "text": "Have you been exposed to works at daycare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person_or_animal",
+        "text": "Have you been exposed to contact infected person or animal?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "backpacking_camping",
+        "text": "Have you been exposed to backpacking camping?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "abdominal_pain_location",
+        "text": "What best describes your abdominal pain location?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "right_sided",
+            "weight": 1.7,
+            "description": "Right Sided"
+          },
+          {
+            "value": "generalized",
+            "weight": 1.6,
+            "description": "Generalized"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "4_to_7_days_after_exposure",
+            "weight": 1.6,
+            "description": "4 To 7 Days After Exposure"
+          }
+        ]
+      },
+      {
+        "id": "age_group",
+        "text": "What best describes your age group?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "child",
+            "weight": 1.6,
+            "description": "Child"
+          },
+          {
+            "value": "adult",
+            "weight": 1.5,
+            "description": "Adult"
+          }
+        ]
+      },
+      {
+        "id": "later_symptoms",
+        "text": "What best describes your later symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "joint_pain",
+            "weight": 1.6,
+            "description": "Joint Pain"
+          },
+          {
+            "value": "skin_rash",
+            "weight": 1.5,
+            "description": "Skin Rash"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_undercooked_pork",
+        "text": "Have you been exposed to consumed raw undercooked pork?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_unpasteurized_milk",
+        "text": "Have you been exposed to consumed unpasteurized milk?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handled_raw_pork_chitterlings",
+        "text": "Have you been exposed to handled raw pork chitterlings?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_blood_transfusion",
+        "text": "Have you been exposed to recent blood transfusion?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.6,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery",
+            "weight": 1.6,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "fever_present",
+            "weight": 1.6,
+            "description": "Fever Present"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_eggs",
+        "text": "Have you been exposed to consumed raw eggs?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_undercooked_poultry",
+        "text": "Have you been exposed to consumed undercooked poultry?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_meat",
+        "text": "Have you been exposed to consumed raw meat?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_reptiles_amphibians",
+        "text": "Have you been exposed to contact reptiles amphibians?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "diarrhea (sometimes bloody)",
+    "body_parts": [
+      "abdomen",
+      "digestive system"
+    ],
+    "questions": [
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.8,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery_then_bloody",
+            "weight": 1.8,
+            "description": "Watery Then Bloody"
+          },
+          {
+            "value": "watery_only",
+            "weight": 1.6,
+            "description": "Watery Only"
+          }
+        ]
+      },
+      {
+        "id": "cramping_severity",
+        "text": "What best describes your cramping severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "severe_stomach_cramps",
+            "weight": 1.8,
+            "description": "Severe Stomach Cramps"
+          },
+          {
+            "value": "mild_cramps",
+            "weight": 1.5,
+            "description": "Mild Cramps"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 1.5,
+            "description": "Low Grade Fever"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          },
+          {
+            "value": "high_fever",
+            "weight": 1.6,
+            "description": "High Fever"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "3_to_4_days_after_exposure",
+            "weight": 1.7,
+            "description": "3 To 4 Days After Exposure"
+          }
+        ]
+      },
+      {
+        "id": "consumed_undercooked_ground_beef",
+        "text": "Have you been exposed to consumed undercooked ground beef?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_milk_juice",
+        "text": "Have you been exposed to consumed raw milk juice?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_sprouts_lettuce",
+        "text": "Have you been exposed to consumed raw sprouts lettuce?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_lake_pool_water",
+        "text": "Have you been exposed to swallowed lake pool water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_farm_animals",
+        "text": "Have you been exposed to contact farm animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person",
+        "text": "Have you been exposed to contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "undercooked_poultry",
+        "text": "Have you been exposed to undercooked poultry?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_milk",
+        "text": "Have you been exposed to unpasteurized milk?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "animal_contact",
+        "text": "Have you been exposed to animal contact?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "difficulty swallowing or speaking",
+    "body_parts": [
+      "face",
+      "nervous system",
+      "eyes",
+      "throat"
+    ],
+    "questions": [
+      {
+        "id": "symptom_progression",
+        "text": "What best describes your symptom progression?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "started_in_feet_legs_moved_up",
+            "weight": 5,
+            "description": "Started In Feet Legs Moved Up"
+          },
+          {
+            "value": "descending_paralysis",
+            "weight": 5,
+            "description": "Descending Paralysis"
+          }
+        ]
+      },
+      {
+        "id": "vision_symptoms",
+        "text": "What best describes your vision symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "blurred_or_double_vision",
+            "weight": 3.6,
+            "description": "Blurred Or Double Vision"
+          },
+          {
+            "value": "drooping_eyelids",
+            "weight": 3.6,
+            "description": "Drooping Eyelids"
+          }
+        ]
+      },
+      {
+        "id": "speech_symptoms",
+        "text": "What best describes your speech symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "slurred_speech",
+            "weight": 3.6,
+            "description": "Slurred Speech"
+          },
+          {
+            "value": "difficulty_swallowing",
+            "weight": 3.6,
+            "description": "Difficulty Swallowing"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "no_fever",
+            "weight": 3.5,
+            "description": "No Fever"
+          },
+          {
+            "value": "fever_present",
+            "weight": 3.6,
+            "description": "Fever Present"
+          }
+        ]
+      },
+      {
+        "id": "mental_status",
+        "text": "What best describes your mental status?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "alert_and_oriented",
+            "weight": 3.6,
+            "description": "Alert And Oriented"
+          }
+        ]
+      },
+      {
+        "id": "home_canned_food",
+        "text": "Have you been exposed to home canned food?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "infant_honey_consumption",
+        "text": "Have you been exposed to infant honey consumption?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "wound_contamination",
+        "text": "Have you been exposed to wound contamination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "draining sinus tracts",
+    "body_parts": [
+      "jaw",
+      "face",
+      "lungs",
+      "abdomen"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "months",
+            "weight": 3.2,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "sinus_tracts",
+        "text": "What best describes your sinus tracts?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "present",
+            "weight": 3.4,
+            "description": "Present"
+          }
+        ]
+      },
+      {
+        "id": "poor_oral_hygiene",
+        "text": "Have you been exposed to poor oral hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "dental_procedures",
+        "text": "Have you been exposed to dental procedures?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "facial weakness",
+    "body_parts": [
+      "face",
+      "nervous system",
+      "eyes",
+      "throat"
+    ],
+    "questions": [
+      {
+        "id": "symptom_progression",
+        "text": "What best describes your symptom progression?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "started_in_feet_legs_moved_up",
+            "weight": 5,
+            "description": "Started In Feet Legs Moved Up"
+          },
+          {
+            "value": "descending_paralysis",
+            "weight": 5,
+            "description": "Descending Paralysis"
+          }
+        ]
+      },
+      {
+        "id": "vision_symptoms",
+        "text": "What best describes your vision symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "blurred_or_double_vision",
+            "weight": 3.6,
+            "description": "Blurred Or Double Vision"
+          },
+          {
+            "value": "drooping_eyelids",
+            "weight": 3.6,
+            "description": "Drooping Eyelids"
+          }
+        ]
+      },
+      {
+        "id": "speech_symptoms",
+        "text": "What best describes your speech symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "slurred_speech",
+            "weight": 3.6,
+            "description": "Slurred Speech"
+          },
+          {
+            "value": "difficulty_swallowing",
+            "weight": 3.6,
+            "description": "Difficulty Swallowing"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "no_fever",
+            "weight": 3.5,
+            "description": "No Fever"
+          },
+          {
+            "value": "fever_present",
+            "weight": 3.6,
+            "description": "Fever Present"
+          }
+        ]
+      },
+      {
+        "id": "mental_status",
+        "text": "What best describes your mental status?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "alert_and_oriented",
+            "weight": 3.6,
+            "description": "Alert And Oriented"
+          }
+        ]
+      },
+      {
+        "id": "home_canned_food",
+        "text": "Have you been exposed to home canned food?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "infant_honey_consumption",
+        "text": "Have you been exposed to infant honey consumption?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "wound_contamination",
+        "text": "Have you been exposed to wound contamination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fatigue",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "small intestine",
+      "joints",
+      "muscles",
+      "liver",
+      "spleen",
+      "lungs",
+      "respiratory system",
+      "skin",
+      "lymph nodes"
+    ],
+    "questions": [
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "watery_explosive",
+            "weight": 1.8,
+            "description": "Watery Explosive"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "symptom_pattern",
+        "text": "What best describes your symptom pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "relapsing_remitting",
+            "weight": 1.6,
+            "description": "Relapsing Remitting"
+          }
+        ]
+      },
+      {
+        "id": "associated_symptoms",
+        "text": "What best describes your associated symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "significant_fatigue",
+            "weight": 1.6,
+            "description": "Significant Fatigue"
+          },
+          {
+            "value": "severe_loss_of_appetite",
+            "weight": 1.6,
+            "description": "Severe Loss Of Appetite"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "more_than_one_week",
+            "weight": 1.6,
+            "description": "More Than One Week"
+          }
+        ]
+      },
+      {
+        "id": "consumed_imported_produce",
+        "text": "Have you been exposed to consumed imported produce?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_to_tropical_regions",
+        "text": "Have you been exposed to travel to tropical regions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_raspberries_basil_cilantro",
+        "text": "Have you been exposed to consumed raw raspberries basil cilantro?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "systemic_involvement",
+        "text": "What best describes your systemic involvement?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "liver_or_spleen_enlargement",
+            "weight": 1.3,
+            "description": "Liver Or Spleen Enlargement"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_dairy",
+        "text": "Have you been exposed to unpasteurized dairy?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "livestock_exposure",
+        "text": "Have you been exposed to livestock exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "laboratory_exposure",
+        "text": "Have you been exposed to laboratory exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "infection_type",
+        "text": "What best describes your infection type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pulmonary",
+            "weight": 2.8,
+            "description": "Pulmonary"
+          },
+          {
+            "value": "cutaneous",
+            "weight": 2.2,
+            "description": "Cutaneous"
+          }
+        ]
+      },
+      {
+        "id": "chronic_lung_disease",
+        "text": "Have you been exposed to chronic lung disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "smoking",
+        "text": "Have you been exposed to smoking?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "environmental_exposure",
+        "text": "Have you been exposed to environmental exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "exposure_type",
+        "text": "What best describes your exposure type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "direct_contact",
+            "weight": 1.2,
+            "description": "Direct Contact"
+          },
+          {
+            "value": "indirect_contact",
+            "weight": 0.9,
+            "description": "Indirect Contact"
+          }
+        ]
+      },
+      {
+        "id": "animal_contact",
+        "text": "Have you been exposed to animal contact?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food",
+        "text": "Have you been exposed to contaminated food?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_hygiene",
+        "text": "Have you been exposed to poor hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fever",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "head",
+      "lymph nodes",
+      "lungs",
+      "bloodstream",
+      "joints",
+      "muscles",
+      "liver",
+      "spleen",
+      "skin",
+      "kidneys",
+      "chest",
+      "systemic",
+      "nervous system",
+      "blood",
+      "circulatory system",
+      "throat",
+      "tongue",
+      "respiratory system",
+      "varies",
+      "neck",
+      "varies (unspecified)"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "less_than_one_week",
+            "weight": 1.5,
+            "description": "Less Than One Week"
+          },
+          {
+            "value": "more_than_one_week",
+            "weight": 1.6,
+            "description": "More Than One Week"
+          }
+        ]
+      },
+      {
+        "id": "fever",
+        "text": "What best describes your fever?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "present",
+            "weight": 1.6,
+            "description": "Present"
+          },
+          {
+            "value": "absent",
+            "weight": 1.5,
+            "description": "Absent"
+          }
+        ]
+      },
+      {
+        "id": "travel_to_endemic_area",
+        "text": "Have you been exposed to travel to endemic area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food_water",
+        "text": "Have you been exposed to contaminated food water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person",
+        "text": "Have you been exposed to contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "2_to_5_days_after_exposure",
+            "weight": 1.7,
+            "description": "2 To 5 Days After Exposure"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.7,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery",
+            "weight": 1.6,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "fever_present",
+            "weight": 1.6,
+            "description": "Fever Present"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "undercooked_poultry",
+        "text": "Have you been exposed to undercooked poultry?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_milk",
+        "text": "Have you been exposed to unpasteurized milk?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "animal_contact",
+        "text": "Have you been exposed to animal contact?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "clinical_form",
+        "text": "What best describes your clinical form?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bubonic",
+            "weight": 3.6,
+            "description": "Bubonic"
+          },
+          {
+            "value": "pneumonic",
+            "weight": 5,
+            "description": "Pneumonic"
+          },
+          {
+            "value": "septicemic",
+            "weight": 5,
+            "description": "Septicemic"
+          }
+        ]
+      },
+      {
+        "id": "contact_with_rodents_or_fleas",
+        "text": "Have you been exposed to contact with rodents or fleas?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "living_in_outbreak_area",
+        "text": "Have you been exposed to living in outbreak area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handling_infected_animals",
+        "text": "Have you been exposed to handling infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "systemic_involvement",
+        "text": "What best describes your systemic involvement?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "liver_or_spleen_enlargement",
+            "weight": 1.3,
+            "description": "Liver Or Spleen Enlargement"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_dairy",
+        "text": "Have you been exposed to unpasteurized dairy?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "livestock_exposure",
+        "text": "Have you been exposed to livestock exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "laboratory_exposure",
+        "text": "Have you been exposed to laboratory exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "rash_present",
+        "text": "What best describes your rash present?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "yes",
+            "weight": 2.8,
+            "description": "Yes"
+          },
+          {
+            "value": "no",
+            "weight": 0.8,
+            "description": "No"
+          }
+        ]
+      },
+      {
+        "id": "unsafe_food_or_water",
+        "text": "Have you been exposed to unsafe food or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "exposure_type",
+        "text": "What best describes your exposure type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "freshwater",
+            "weight": 1.3,
+            "description": "Freshwater"
+          },
+          {
+            "value": "urban_area",
+            "weight": 0.8,
+            "description": "Urban Area"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_water",
+        "text": "Have you been exposed to contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "severity",
+        "text": "What best describes your severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pulmonary",
+            "weight": 3.8,
+            "description": "Pulmonary"
+          },
+          {
+            "value": "disseminated",
+            "weight": 4.5,
+            "description": "Disseminated"
+          }
+        ]
+      },
+      {
+        "id": "exposure_to_infected_animals",
+        "text": "Have you been exposed to exposure to infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_soil_or_water",
+        "text": "Have you been exposed to contaminated soil or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes",
+        "text": "Have you been exposed to diabetes?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "abdominal_pain_location",
+        "text": "What best describes your abdominal pain location?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "right_sided",
+            "weight": 1.7,
+            "description": "Right Sided"
+          },
+          {
+            "value": "generalized",
+            "weight": 1.6,
+            "description": "Generalized"
+          }
+        ]
+      },
+      {
+        "id": "age_group",
+        "text": "What best describes your age group?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "child",
+            "weight": 1.6,
+            "description": "Child"
+          },
+          {
+            "value": "adult",
+            "weight": 1.5,
+            "description": "Adult"
+          }
+        ]
+      },
+      {
+        "id": "later_symptoms",
+        "text": "What best describes your later symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "joint_pain",
+            "weight": 1.6,
+            "description": "Joint Pain"
+          },
+          {
+            "value": "skin_rash",
+            "weight": 1.5,
+            "description": "Skin Rash"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_undercooked_pork",
+        "text": "Have you been exposed to consumed raw undercooked pork?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_unpasteurized_milk",
+        "text": "Have you been exposed to consumed unpasteurized milk?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handled_raw_pork_chitterlings",
+        "text": "Have you been exposed to handled raw pork chitterlings?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_blood_transfusion",
+        "text": "Have you been exposed to recent blood transfusion?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food",
+        "text": "Have you been exposed to contaminated food?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pregnancy",
+        "text": "Have you been exposed to pregnancy?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "infection_source",
+        "text": "What best describes your infection source?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "skin_entry",
+            "weight": 2.2,
+            "description": "Skin Entry"
+          },
+          {
+            "value": "systemic_spread",
+            "weight": 3.4,
+            "description": "Systemic Spread"
+          }
+        ]
+      },
+      {
+        "id": "open_wounds",
+        "text": "Have you been exposed to open wounds?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_surgery_or_injury",
+        "text": "Have you been exposed to recent surgery or injury?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "tick_or_deerfly_bites",
+        "text": "Have you been exposed to tick or deerfly bites?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "landscaping_or_farming",
+        "text": "Have you been exposed to landscaping or farming?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_hand_hygiene_after_animals",
+        "text": "Have you been exposed to poor hand hygiene after animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "rash_severity",
+        "text": "What best describes your rash severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "mild",
+            "weight": 0.9,
+            "description": "Mild"
+          },
+          {
+            "value": "severe",
+            "weight": 1.3,
+            "description": "Severe"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_with_infected",
+        "text": "Have you been exposed to close contact with infected?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "school_age_children",
+        "text": "Have you been exposed to school age children?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_hygiene",
+        "text": "Have you been exposed to poor hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "rash_pattern",
+        "text": "What best describes your rash pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "hands_and_feet",
+            "weight": 3,
+            "description": "Hands And Feet"
+          }
+        ]
+      },
+      {
+        "id": "rat_or_rodent_bite",
+        "text": "Have you been exposed to rat or rodent bite?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_with_rodent_urine_or_saliva",
+        "text": "Have you been exposed to contact with rodent urine or saliva?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "cat_scratches_or_bites",
+        "text": "Have you been exposed to cat scratches or bites?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "flea_exposure",
+        "text": "Have you been exposed to flea exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "infection_site",
+        "text": "What best describes your infection site?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "throat",
+            "weight": 1.2,
+            "description": "Throat"
+          },
+          {
+            "value": "skin",
+            "weight": 0.8,
+            "description": "Skin"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_vaccination",
+        "text": "Have you been exposed to lack of vaccination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "crowded_living_conditions",
+        "text": "Have you been exposed to crowded living conditions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "cough_duration",
+        "text": "What best describes your cough duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "less_than_3_weeks",
+            "weight": 2,
+            "description": "Less Than 3 Weeks"
+          },
+          {
+            "value": "more_than_3_weeks",
+            "weight": 3,
+            "description": "More Than 3 Weeks"
+          }
+        ]
+      },
+      {
+        "id": "cough_sputum",
+        "text": "What best describes your cough sputum?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "coughing_up_blood",
+            "weight": 3.2,
+            "description": "Coughing Up Blood"
+          },
+          {
+            "value": "coughing_up_mucus",
+            "weight": 2.4,
+            "description": "Coughing Up Mucus"
+          }
+        ]
+      },
+      {
+        "id": "systemic_symptoms",
+        "text": "What best describes your systemic symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "night_sweats_present",
+            "weight": 2.4,
+            "description": "Night Sweats Present"
+          },
+          {
+            "value": "unexplained_weight_loss_present",
+            "weight": 2.4,
+            "description": "Unexplained Weight Loss Present"
+          }
+        ]
+      },
+      {
+        "id": "fever_pattern",
+        "text": "What best describes your fever pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 2,
+            "description": "Low Grade Fever"
+          }
+        ]
+      },
+      {
+        "id": "chest_pain",
+        "text": "What best describes your chest pain?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pain_with_breathing",
+            "weight": 2,
+            "description": "Pain With Breathing"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_hiv",
+        "text": "Have you been exposed to weakened immune system hiv?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_other",
+        "text": "Have you been exposed to weakened immune system other?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_infected_person",
+        "text": "Have you been exposed to close contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_high_tb_area",
+        "text": "Have you been exposed to travel high tb area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_high_risk_facility",
+        "text": "Have you been exposed to live in high risk facility?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_in_healthcare",
+        "text": "Have you been exposed to works in healthcare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "substance_abuse",
+        "text": "Have you been exposed to substance abuse?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "smoking",
+        "text": "Have you been exposed to smoking?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes_or_kidney_disease",
+        "text": "Have you been exposed to diabetes or kidney disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_surgery",
+        "text": "Have you been exposed to recent surgery?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_eggs",
+        "text": "Have you been exposed to consumed raw eggs?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_undercooked_poultry",
+        "text": "Have you been exposed to consumed undercooked poultry?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_meat",
+        "text": "Have you been exposed to consumed raw meat?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_reptiles_amphibians",
+        "text": "Have you been exposed to contact reptiles amphibians?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "fever or hypothermia",
+    "body_parts": [
+      "blood",
+      "circulatory system",
+      "immune system"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 2.4,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 3,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "infection_source",
+        "text": "What best describes your infection source?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pneumonia",
+            "weight": 3.2,
+            "description": "Pneumonia"
+          },
+          {
+            "value": "urinary_tract_infection",
+            "weight": 2.6,
+            "description": "Urinary Tract Infection"
+          },
+          {
+            "value": "skin_or_soft_tissue_infection",
+            "weight": 2.3,
+            "description": "Skin Or Soft Tissue Infection"
+          }
+        ]
+      },
+      {
+        "id": "severe_infection",
+        "text": "Have you been exposed to severe infection?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "chronic_illness",
+        "text": "Have you been exposed to chronic illness?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "invasive_medical_procedures",
+        "text": "Have you been exposed to invasive medical procedures?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "gas",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "small intestine"
+    ],
+    "questions": [
+      {
+        "id": "stool_characteristics",
+        "text": "What best describes your stool characteristics?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "foul_smelling",
+            "weight": 1.6,
+            "description": "Foul Smelling"
+          },
+          {
+            "value": "greasy_or_floating",
+            "weight": 1.6,
+            "description": "Greasy Or Floating"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "gi_symptoms",
+        "text": "What best describes your gi symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "excessive_gas",
+            "weight": 1.6,
+            "description": "Excessive Gas"
+          },
+          {
+            "value": "nausea",
+            "weight": 1.5,
+            "description": "Nausea"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "one_to_two_weeks",
+            "weight": 1.6,
+            "description": "One To Two Weeks"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_lake_river_water",
+        "text": "Have you been exposed to swallowed lake river water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare",
+        "text": "Have you been exposed to works at daycare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person_or_animal",
+        "text": "Have you been exposed to contact infected person or animal?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "backpacking_camping",
+        "text": "Have you been exposed to backpacking camping?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "genital discharge",
+    "body_parts": [
+      "reproductive system",
+      "urinary system",
+      "pelvis",
+      "urinary tract"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "infection_site",
+        "text": "What best describes your infection site?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "genital",
+            "weight": 1.3,
+            "description": "Genital"
+          },
+          {
+            "value": "rectal",
+            "weight": 1.1,
+            "description": "Rectal"
+          },
+          {
+            "value": "throat",
+            "weight": 1,
+            "description": "Throat"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "previous_sti",
+        "text": "Have you been exposed to previous sti?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "young_age",
+        "text": "Have you been exposed to young age?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "headache",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "head",
+      "skin"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          },
+          {
+            "value": "days",
+            "weight": 0.6,
+            "description": "Days"
+          }
+        ]
+      },
+      {
+        "id": "rash_present",
+        "text": "What best describes your rash present?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "yes",
+            "weight": 2.8,
+            "description": "Yes"
+          },
+          {
+            "value": "no",
+            "weight": 0.8,
+            "description": "No"
+          }
+        ]
+      },
+      {
+        "id": "travel_to_endemic_area",
+        "text": "Have you been exposed to travel to endemic area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unsafe_food_or_water",
+        "text": "Have you been exposed to unsafe food or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "jaw swelling",
+    "body_parts": [
+      "jaw",
+      "face",
+      "lungs",
+      "abdomen"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "months",
+            "weight": 3.2,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "sinus_tracts",
+        "text": "What best describes your sinus tracts?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "present",
+            "weight": 3.4,
+            "description": "Present"
+          }
+        ]
+      },
+      {
+        "id": "poor_oral_hygiene",
+        "text": "Have you been exposed to poor oral hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "dental_procedures",
+        "text": "Have you been exposed to dental procedures?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "joint pain",
+    "body_parts": [
+      "joints",
+      "muscles",
+      "liver",
+      "spleen",
+      "skin",
+      "systemic"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 1.3,
+            "description": "Weeks"
+          },
+          {
+            "value": "months",
+            "weight": 1.5,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "systemic_involvement",
+        "text": "What best describes your systemic involvement?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "liver_or_spleen_enlargement",
+            "weight": 1.3,
+            "description": "Liver Or Spleen Enlargement"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_dairy",
+        "text": "Have you been exposed to unpasteurized dairy?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "livestock_exposure",
+        "text": "Have you been exposed to livestock exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "laboratory_exposure",
+        "text": "Have you been exposed to laboratory exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "rash_pattern",
+        "text": "What best describes your rash pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "hands_and_feet",
+            "weight": 3,
+            "description": "Hands And Feet"
+          }
+        ]
+      },
+      {
+        "id": "rat_or_rodent_bite",
+        "text": "Have you been exposed to rat or rodent bite?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_with_rodent_urine_or_saliva",
+        "text": "Have you been exposed to contact with rodent urine or saliva?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "lockjaw",
+    "body_parts": [
+      "nervous system",
+      "jaw",
+      "neck",
+      "muscles"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1.2,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1.3,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "wound_type",
+        "text": "What best describes your wound type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "deep_puncture",
+            "weight": 1.3,
+            "description": "Deep Puncture"
+          },
+          {
+            "value": "surface_cut",
+            "weight": 0.8,
+            "description": "Surface Cut"
+          }
+        ]
+      },
+      {
+        "id": "open_wounds",
+        "text": "Have you been exposed to open wounds?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_vaccination",
+        "text": "Have you been exposed to lack of vaccination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_soil_exposure",
+        "text": "Have you been exposed to contaminated soil exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "loss of appetite",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "small intestine"
+    ],
+    "questions": [
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "watery_explosive",
+            "weight": 1.8,
+            "description": "Watery Explosive"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "symptom_pattern",
+        "text": "What best describes your symptom pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "relapsing_remitting",
+            "weight": 1.6,
+            "description": "Relapsing Remitting"
+          }
+        ]
+      },
+      {
+        "id": "associated_symptoms",
+        "text": "What best describes your associated symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "significant_fatigue",
+            "weight": 1.6,
+            "description": "Significant Fatigue"
+          },
+          {
+            "value": "severe_loss_of_appetite",
+            "weight": 1.6,
+            "description": "Severe Loss Of Appetite"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "more_than_one_week",
+            "weight": 1.6,
+            "description": "More Than One Week"
+          }
+        ]
+      },
+      {
+        "id": "consumed_imported_produce",
+        "text": "Have you been exposed to consumed imported produce?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_to_tropical_regions",
+        "text": "Have you been exposed to travel to tropical regions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_raspberries_basil_cilantro",
+        "text": "Have you been exposed to consumed raw raspberries basil cilantro?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "low blood pressure",
+    "body_parts": [
+      "blood",
+      "circulatory system",
+      "skin",
+      "immune system"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 2.3,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 3,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "infection_source",
+        "text": "What best describes your infection source?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "skin_entry",
+            "weight": 2.2,
+            "description": "Skin Entry"
+          },
+          {
+            "value": "systemic_spread",
+            "weight": 3.4,
+            "description": "Systemic Spread"
+          }
+        ]
+      },
+      {
+        "id": "open_wounds",
+        "text": "Have you been exposed to open wounds?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_surgery_or_injury",
+        "text": "Have you been exposed to recent surgery or injury?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "severe_infection",
+        "text": "Have you been exposed to severe infection?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "chronic_illness",
+        "text": "Have you been exposed to chronic illness?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "invasive_medical_procedures",
+        "text": "Have you been exposed to invasive medical procedures?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "muscle aches",
+    "body_parts": [
+      "digestive system",
+      "nervous system"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "severity",
+        "text": "What best describes your severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "mild",
+            "weight": 0.9,
+            "description": "Mild"
+          },
+          {
+            "value": "severe",
+            "weight": 1.4,
+            "description": "Severe"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_food",
+        "text": "Have you been exposed to contaminated food?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unpasteurized_dairy",
+        "text": "Have you been exposed to unpasteurized dairy?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "pregnancy",
+        "text": "Have you been exposed to pregnancy?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "muscle pain",
+    "body_parts": [
+      "liver",
+      "kidneys",
+      "skin",
+      "chest"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1.1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 0.9,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "exposure_type",
+        "text": "What best describes your exposure type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "freshwater",
+            "weight": 1.3,
+            "description": "Freshwater"
+          },
+          {
+            "value": "urban_area",
+            "weight": 0.8,
+            "description": "Urban Area"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_water",
+        "text": "Have you been exposed to contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "animal_contact",
+        "text": "Have you been exposed to animal contact?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "muscle stiffness",
+    "body_parts": [
+      "nervous system",
+      "jaw",
+      "neck",
+      "muscles"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1.2,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1.3,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "wound_type",
+        "text": "What best describes your wound type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "deep_puncture",
+            "weight": 1.3,
+            "description": "Deep Puncture"
+          },
+          {
+            "value": "surface_cut",
+            "weight": 0.8,
+            "description": "Surface Cut"
+          }
+        ]
+      },
+      {
+        "id": "open_wounds",
+        "text": "Have you been exposed to open wounds?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_vaccination",
+        "text": "Have you been exposed to lack of vaccination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_soil_exposure",
+        "text": "Have you been exposed to contaminated soil exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "nausea",
+    "body_parts": [
+      "abdomen",
+      "digestive system"
+    ],
+    "questions": [
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "sudden_onset",
+            "weight": 1.6,
+            "description": "Sudden Onset"
+          }
+        ]
+      },
+      {
+        "id": "prominent_symptom",
+        "text": "What best describes your prominent symptom?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "vomiting_is_major_symptom",
+            "weight": 1.6,
+            "description": "Vomiting Is Major Symptom"
+          },
+          {
+            "value": "diarrhea_is_major_symptom",
+            "weight": 1.6,
+            "description": "Diarrhea Is Major Symptom"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "1_to_3_days",
+            "weight": 1.6,
+            "description": "1 To 3 Days"
+          },
+          {
+            "value": "more_than_one_week",
+            "weight": 1.5,
+            "description": "More Than One Week"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 1.5,
+            "description": "Low Grade Fever"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "contact_sick_person",
+        "text": "Have you been exposed to contact sick person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ate_at_restaurant_outbreak",
+        "text": "Have you been exposed to ate at restaurant outbreak?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare_school",
+        "text": "Have you been exposed to works at daycare school?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_dorm_barracks",
+        "text": "Have you been exposed to live in dorm barracks?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_cruise_ship",
+        "text": "Have you been exposed to recent cruise ship?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "night sweats",
+    "body_parts": [
+      "lungs",
+      "chest",
+      "respiratory system"
+    ],
+    "questions": [
+      {
+        "id": "cough_duration",
+        "text": "What best describes your cough duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "less_than_3_weeks",
+            "weight": 2,
+            "description": "Less Than 3 Weeks"
+          },
+          {
+            "value": "more_than_3_weeks",
+            "weight": 3,
+            "description": "More Than 3 Weeks"
+          }
+        ]
+      },
+      {
+        "id": "cough_sputum",
+        "text": "What best describes your cough sputum?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "coughing_up_blood",
+            "weight": 3.2,
+            "description": "Coughing Up Blood"
+          },
+          {
+            "value": "coughing_up_mucus",
+            "weight": 2.4,
+            "description": "Coughing Up Mucus"
+          }
+        ]
+      },
+      {
+        "id": "systemic_symptoms",
+        "text": "What best describes your systemic symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "night_sweats_present",
+            "weight": 2.4,
+            "description": "Night Sweats Present"
+          },
+          {
+            "value": "unexplained_weight_loss_present",
+            "weight": 2.4,
+            "description": "Unexplained Weight Loss Present"
+          }
+        ]
+      },
+      {
+        "id": "fever_pattern",
+        "text": "What best describes your fever pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 2,
+            "description": "Low Grade Fever"
+          }
+        ]
+      },
+      {
+        "id": "chest_pain",
+        "text": "What best describes your chest pain?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pain_with_breathing",
+            "weight": 2,
+            "description": "Pain With Breathing"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_hiv",
+        "text": "Have you been exposed to weakened immune system hiv?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_other",
+        "text": "Have you been exposed to weakened immune system other?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_infected_person",
+        "text": "Have you been exposed to close contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_high_tb_area",
+        "text": "Have you been exposed to travel high tb area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_high_risk_facility",
+        "text": "Have you been exposed to live in high risk facility?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_in_healthcare",
+        "text": "Have you been exposed to works in healthcare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "substance_abuse",
+        "text": "Have you been exposed to substance abuse?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "smoking",
+        "text": "Have you been exposed to smoking?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes_or_kidney_disease",
+        "text": "Have you been exposed to diabetes or kidney disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "painful red lesion",
+    "body_parts": [
+      "skin (hands / fingers)"
+    ],
+    "questions": [
+      {
+        "id": "lesion_type",
+        "text": "What best describes your lesion type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "localized",
+            "weight": 1.2,
+            "description": "Localized"
+          },
+          {
+            "value": "spreading",
+            "weight": 1.4,
+            "description": "Spreading"
+          }
+        ]
+      },
+      {
+        "id": "handling_raw_fish_or_meat",
+        "text": "Have you been exposed to handling raw fish or meat?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "occupational_exposure",
+        "text": "Have you been exposed to occupational exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "minor_skin_trauma",
+        "text": "Have you been exposed to minor skin trauma?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "painful urination",
+    "body_parts": [
+      "reproductive system",
+      "urinary system",
+      "pelvis",
+      "urinary tract"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "infection_site",
+        "text": "What best describes your infection site?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "genital",
+            "weight": 1.3,
+            "description": "Genital"
+          },
+          {
+            "value": "rectal",
+            "weight": 1.1,
+            "description": "Rectal"
+          },
+          {
+            "value": "throat",
+            "weight": 1,
+            "description": "Throat"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "previous_sti",
+        "text": "Have you been exposed to previous sti?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "young_age",
+        "text": "Have you been exposed to young age?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "painless genital ulcers",
+    "body_parts": [
+      "reproductive system",
+      "lymphatic system",
+      "rectum",
+      "anus"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          },
+          {
+            "value": "months",
+            "weight": 1.4,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "infection_stage",
+        "text": "What best describes your infection stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "primary",
+            "weight": 1,
+            "description": "Primary"
+          },
+          {
+            "value": "secondary",
+            "weight": 1.2,
+            "description": "Secondary"
+          },
+          {
+            "value": "tertiary",
+            "weight": 1.5,
+            "description": "Tertiary"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "anal_intercourse",
+        "text": "Have you been exposed to anal intercourse?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "painless sores",
+    "body_parts": [
+      "reproductive system",
+      "skin",
+      "lymph nodes",
+      "immune system"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          },
+          {
+            "value": "months",
+            "weight": 1.4,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "disease_stage",
+        "text": "What best describes your disease stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "primary",
+            "weight": 1,
+            "description": "Primary"
+          },
+          {
+            "value": "secondary",
+            "weight": 1.2,
+            "description": "Secondary"
+          },
+          {
+            "value": "tertiary",
+            "weight": 1.5,
+            "description": "Tertiary"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "untreated_infection",
+        "text": "Have you been exposed to untreated infection?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "painless ulcer",
+    "body_parts": [
+      "genitals",
+      "skin",
+      "lymph nodes"
+    ],
+    "questions": [
+      {
+        "id": "stage",
+        "text": "What best describes your stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "primary",
+            "weight": 1.2,
+            "description": "Primary"
+          },
+          {
+            "value": "secondary",
+            "weight": 1.4,
+            "description": "Secondary"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "history_of_STI",
+        "text": "Have you been exposed to history of sti?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "persistent cough",
+    "body_parts": [
+      "lungs",
+      "chest",
+      "respiratory system"
+    ],
+    "questions": [
+      {
+        "id": "cough_duration",
+        "text": "What best describes your cough duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "less_than_3_weeks",
+            "weight": 2,
+            "description": "Less Than 3 Weeks"
+          },
+          {
+            "value": "more_than_3_weeks",
+            "weight": 3,
+            "description": "More Than 3 Weeks"
+          }
+        ]
+      },
+      {
+        "id": "cough_sputum",
+        "text": "What best describes your cough sputum?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "coughing_up_blood",
+            "weight": 3.2,
+            "description": "Coughing Up Blood"
+          },
+          {
+            "value": "coughing_up_mucus",
+            "weight": 2.4,
+            "description": "Coughing Up Mucus"
+          }
+        ]
+      },
+      {
+        "id": "systemic_symptoms",
+        "text": "What best describes your systemic symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "night_sweats_present",
+            "weight": 2.4,
+            "description": "Night Sweats Present"
+          },
+          {
+            "value": "unexplained_weight_loss_present",
+            "weight": 2.4,
+            "description": "Unexplained Weight Loss Present"
+          }
+        ]
+      },
+      {
+        "id": "fever_pattern",
+        "text": "What best describes your fever pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 2,
+            "description": "Low Grade Fever"
+          }
+        ]
+      },
+      {
+        "id": "chest_pain",
+        "text": "What best describes your chest pain?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pain_with_breathing",
+            "weight": 2,
+            "description": "Pain With Breathing"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_hiv",
+        "text": "Have you been exposed to weakened immune system hiv?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system_other",
+        "text": "Have you been exposed to weakened immune system other?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_infected_person",
+        "text": "Have you been exposed to close contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_high_tb_area",
+        "text": "Have you been exposed to travel high tb area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_high_risk_facility",
+        "text": "Have you been exposed to live in high risk facility?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_in_healthcare",
+        "text": "Have you been exposed to works in healthcare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "substance_abuse",
+        "text": "Have you been exposed to substance abuse?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "smoking",
+        "text": "Have you been exposed to smoking?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes_or_kidney_disease",
+        "text": "Have you been exposed to diabetes or kidney disease?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rash",
+    "body_parts": [
+      "genitals",
+      "skin",
+      "lymph nodes",
+      "bones",
+      "liver",
+      "spleen",
+      "joints",
+      "systemic"
+    ],
+    "questions": [
+      {
+        "id": "stage",
+        "text": "What best describes your stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "primary",
+            "weight": 1.2,
+            "description": "Primary"
+          },
+          {
+            "value": "secondary",
+            "weight": 1.4,
+            "description": "Secondary"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "history_of_STI",
+        "text": "Have you been exposed to history of sti?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "disease_stage",
+        "text": "What best describes your disease stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "early_infant",
+            "weight": 1.5,
+            "description": "Early Infant"
+          },
+          {
+            "value": "late_infant",
+            "weight": 1.6,
+            "description": "Late Infant"
+          }
+        ]
+      },
+      {
+        "id": "maternal_syphilis",
+        "text": "Have you been exposed to maternal syphilis?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_prenatal_screening",
+        "text": "Have you been exposed to lack of prenatal screening?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "rash_pattern",
+        "text": "What best describes your rash pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "hands_and_feet",
+            "weight": 3,
+            "description": "Hands And Feet"
+          }
+        ]
+      },
+      {
+        "id": "rat_or_rodent_bite",
+        "text": "Have you been exposed to rat or rodent bite?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_with_rodent_urine_or_saliva",
+        "text": "Have you been exposed to contact with rodent urine or saliva?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "red painful rash",
+    "body_parts": [
+      "skin (legs, face)"
+    ],
+    "questions": [
+      {
+        "id": "rash_extent",
+        "text": "What best describes your rash extent?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "widespread",
+            "weight": 1.4,
+            "description": "Widespread"
+          },
+          {
+            "value": "localized",
+            "weight": 1.2,
+            "description": "Localized"
+          }
+        ]
+      },
+      {
+        "id": "skin_break_or_trauma",
+        "text": "Have you been exposed to skin break or trauma?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "obesity",
+        "text": "Have you been exposed to obesity?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lymphedema",
+        "text": "Have you been exposed to lymphedema?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes",
+        "text": "Have you been exposed to diabetes?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "red rash",
+    "body_parts": [
+      "throat",
+      "skin",
+      "tongue",
+      "respiratory system"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1.1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "rash_severity",
+        "text": "What best describes your rash severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "mild",
+            "weight": 0.9,
+            "description": "Mild"
+          },
+          {
+            "value": "severe",
+            "weight": 1.3,
+            "description": "Severe"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_with_infected",
+        "text": "Have you been exposed to close contact with infected?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "school_age_children",
+        "text": "Have you been exposed to school age children?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_hygiene",
+        "text": "Have you been exposed to poor hygiene?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.1,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "severe abdominal cramping",
+    "body_parts": [
+      "abdomen",
+      "digestive system"
+    ],
+    "questions": [
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 1.8,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery_then_bloody",
+            "weight": 1.8,
+            "description": "Watery Then Bloody"
+          },
+          {
+            "value": "watery_only",
+            "weight": 1.6,
+            "description": "Watery Only"
+          }
+        ]
+      },
+      {
+        "id": "cramping_severity",
+        "text": "What best describes your cramping severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "severe_stomach_cramps",
+            "weight": 1.8,
+            "description": "Severe Stomach Cramps"
+          },
+          {
+            "value": "mild_cramps",
+            "weight": 1.5,
+            "description": "Mild Cramps"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 1.5,
+            "description": "Low Grade Fever"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          },
+          {
+            "value": "high_fever",
+            "weight": 1.6,
+            "description": "High Fever"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "3_to_4_days_after_exposure",
+            "weight": 1.7,
+            "description": "3 To 4 Days After Exposure"
+          }
+        ]
+      },
+      {
+        "id": "consumed_undercooked_ground_beef",
+        "text": "Have you been exposed to consumed undercooked ground beef?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_milk_juice",
+        "text": "Have you been exposed to consumed raw milk juice?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_sprouts_lettuce",
+        "text": "Have you been exposed to consumed raw sprouts lettuce?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_lake_pool_water",
+        "text": "Have you been exposed to swallowed lake pool water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_farm_animals",
+        "text": "Have you been exposed to contact farm animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person",
+        "text": "Have you been exposed to contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "shortness of breath",
+    "body_parts": [
+      "skin",
+      "lungs",
+      "gastrointestinal tract"
+    ],
+    "questions": [
+      {
+        "id": "clinical_form",
+        "text": "What best describes your clinical form?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "cutaneous",
+            "weight": 3.6,
+            "description": "Cutaneous"
+          },
+          {
+            "value": "inhalation",
+            "weight": 5,
+            "description": "Inhalation"
+          },
+          {
+            "value": "gastrointestinal",
+            "weight": 4,
+            "description": "Gastrointestinal"
+          }
+        ]
+      },
+      {
+        "id": "animal_products_exposure",
+        "text": "Have you been exposed to animal products exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handling_fur_or_wool",
+        "text": "Have you been exposed to handling fur or wool?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "biolaboratory_exposure",
+        "text": "Have you been exposed to biolaboratory exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 4.5,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "skin rash",
+    "body_parts": [
+      "reproductive system",
+      "skin",
+      "lymph nodes",
+      "immune system"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          },
+          {
+            "value": "months",
+            "weight": 1.4,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "disease_stage",
+        "text": "What best describes your disease stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "primary",
+            "weight": 1,
+            "description": "Primary"
+          },
+          {
+            "value": "secondary",
+            "weight": 1.2,
+            "description": "Secondary"
+          },
+          {
+            "value": "tertiary",
+            "weight": 1.5,
+            "description": "Tertiary"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "untreated_infection",
+        "text": "Have you been exposed to untreated infection?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "skin ulcer/abscess",
+    "body_parts": [
+      "lungs",
+      "skin",
+      "systemic"
+    ],
+    "questions": [
+      {
+        "id": "severity",
+        "text": "What best describes your severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "pulmonary",
+            "weight": 3.8,
+            "description": "Pulmonary"
+          },
+          {
+            "value": "disseminated",
+            "weight": 4.5,
+            "description": "Disseminated"
+          }
+        ]
+      },
+      {
+        "id": "exposure_to_infected_animals",
+        "text": "Have you been exposed to exposure to infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contaminated_soil_or_water",
+        "text": "Have you been exposed to contaminated soil or water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diabetes",
+        "text": "Have you been exposed to diabetes?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sore throat",
+    "body_parts": [
+      "throat",
+      "respiratory system",
+      "neck"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 1.1,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "infection_site",
+        "text": "What best describes your infection site?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "throat",
+            "weight": 1.2,
+            "description": "Throat"
+          },
+          {
+            "value": "skin",
+            "weight": 0.8,
+            "description": "Skin"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_vaccination",
+        "text": "Have you been exposed to lack of vaccination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_with_infected",
+        "text": "Have you been exposed to close contact with infected?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "crowded_living_conditions",
+        "text": "Have you been exposed to crowded living conditions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "stiff neck",
+    "body_parts": [
+      "nervous system",
+      "brain (meninges)",
+      "skin"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 3.6,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 3.8,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "disease_stage",
+        "text": "What best describes your disease stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "early",
+            "weight": 3.5,
+            "description": "Early"
+          },
+          {
+            "value": "advanced",
+            "weight": 4.5,
+            "description": "Advanced"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_with_infected",
+        "text": "Have you been exposed to close contact with infected?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "crowded_living_conditions",
+        "text": "Have you been exposed to crowded living conditions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_vaccination",
+        "text": "Have you been exposed to lack of vaccination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "stomach cramps",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "small intestine"
+    ],
+    "questions": [
+      {
+        "id": "stool_characteristics",
+        "text": "What best describes your stool characteristics?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "foul_smelling",
+            "weight": 1.6,
+            "description": "Foul Smelling"
+          },
+          {
+            "value": "greasy_or_floating",
+            "weight": 1.6,
+            "description": "Greasy Or Floating"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "gi_symptoms",
+        "text": "What best describes your gi symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "excessive_gas",
+            "weight": 1.6,
+            "description": "Excessive Gas"
+          },
+          {
+            "value": "nausea",
+            "weight": 1.5,
+            "description": "Nausea"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "one_to_two_weeks",
+            "weight": 1.6,
+            "description": "One To Two Weeks"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_lake_river_water",
+        "text": "Have you been exposed to swallowed lake river water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare",
+        "text": "Have you been exposed to works at daycare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person_or_animal",
+        "text": "Have you been exposed to contact infected person or animal?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "backpacking_camping",
+        "text": "Have you been exposed to backpacking camping?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "profuse_watery",
+            "weight": 1.8,
+            "description": "Profuse Watery"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "immune_status",
+        "text": "What best describes your immune status?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "immunocompromised",
+            "weight": 1.9,
+            "description": "Immunocompromised"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 1.5,
+            "description": "Low Grade Fever"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_pool_water",
+        "text": "Have you been exposed to swallowed pool water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.9,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_cattle_calves",
+        "text": "Have you been exposed to contact cattle calves?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person",
+        "text": "Have you been exposed to contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "stomach pain",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "colon",
+      "liver"
+    ],
+    "questions": [
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bloody",
+            "weight": 0.3,
+            "description": "Bloody"
+          },
+          {
+            "value": "watery_only",
+            "weight": 0,
+            "description": "Watery Only"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "fever_present",
+            "weight": 0.2,
+            "description": "Fever Present"
+          },
+          {
+            "value": "no_fever",
+            "weight": 0,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "pain_location",
+        "text": "What best describes your pain location?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "right_upper_quadrant_pain",
+            "weight": 0.2,
+            "description": "Right Upper Quadrant Pain"
+          },
+          {
+            "value": "generalized_abdominal_pain",
+            "weight": 0.1,
+            "description": "Generalized Abdominal Pain"
+          }
+        ]
+      },
+      {
+        "id": "travel_history",
+        "text": "What best describes your travel history?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "recent_travel_endemic_area",
+            "weight": 0.3,
+            "description": "Recent Travel Endemic Area"
+          }
+        ]
+      },
+      {
+        "id": "travel_tropical_area",
+        "text": "Have you been exposed to travel tropical area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_area_poor_sanitation",
+        "text": "Have you been exposed to live in area poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_unwashed_fruit_veg",
+        "text": "Have you been exposed to consumed unwashed fruit veg?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_contaminated_water",
+        "text": "Have you been exposed to consumed contaminated water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 0.3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sudden fever",
+    "body_parts": [
+      "nervous system",
+      "brain (meninges)",
+      "skin"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 3.6,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 3.8,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "disease_stage",
+        "text": "What best describes your disease stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "early",
+            "weight": 3.5,
+            "description": "Early"
+          },
+          {
+            "value": "advanced",
+            "weight": 4.5,
+            "description": "Advanced"
+          }
+        ]
+      },
+      {
+        "id": "close_contact_with_infected",
+        "text": "Have you been exposed to close contact with infected?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "crowded_living_conditions",
+        "text": "Have you been exposed to crowded living conditions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "lack_of_vaccination",
+        "text": "Have you been exposed to lack of vaccination?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "swollen lymph nodes",
+    "body_parts": [
+      "lymph nodes",
+      "lungs",
+      "bloodstream",
+      "skin"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "days",
+            "weight": 3.8,
+            "description": "Days"
+          },
+          {
+            "value": "weeks",
+            "weight": 3.6,
+            "description": "Weeks"
+          }
+        ]
+      },
+      {
+        "id": "clinical_form",
+        "text": "What best describes your clinical form?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bubonic",
+            "weight": 3.6,
+            "description": "Bubonic"
+          },
+          {
+            "value": "pneumonic",
+            "weight": 5,
+            "description": "Pneumonic"
+          },
+          {
+            "value": "septicemic",
+            "weight": 5,
+            "description": "Septicemic"
+          }
+        ]
+      },
+      {
+        "id": "contact_with_rodents_or_fleas",
+        "text": "Have you been exposed to contact with rodents or fleas?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "living_in_outbreak_area",
+        "text": "Have you been exposed to living in outbreak area?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handling_infected_animals",
+        "text": "Have you been exposed to handling infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "severity",
+        "text": "What best describes your severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "bacillary_angio",
+            "weight": 3.4,
+            "description": "Bacillary Angio"
+          },
+          {
+            "value": "uncomplicated",
+            "weight": 2.2,
+            "description": "Uncomplicated"
+          }
+        ]
+      },
+      {
+        "id": "cat_scratches_or_bites",
+        "text": "Have you been exposed to cat scratches or bites?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "flea_exposure",
+        "text": "Have you been exposed to flea exposure?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immunocompromised",
+        "text": "Have you been exposed to immunocompromised?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 2.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "swollen lymph nodes in groin",
+    "body_parts": [
+      "reproductive system",
+      "lymphatic system",
+      "rectum",
+      "anus"
+    ],
+    "questions": [
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "weeks",
+            "weight": 1.2,
+            "description": "Weeks"
+          },
+          {
+            "value": "months",
+            "weight": 1.4,
+            "description": "Months"
+          }
+        ]
+      },
+      {
+        "id": "infection_stage",
+        "text": "What best describes your infection stage?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "primary",
+            "weight": 1,
+            "description": "Primary"
+          },
+          {
+            "value": "secondary",
+            "weight": 1.2,
+            "description": "Secondary"
+          },
+          {
+            "value": "tertiary",
+            "weight": 1.5,
+            "description": "Tertiary"
+          }
+        ]
+      },
+      {
+        "id": "unprotected_sex",
+        "text": "Have you been exposed to unprotected sex?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "anal_intercourse",
+        "text": "Have you been exposed to anal intercourse?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "multiple_partners",
+        "text": "Have you been exposed to multiple partners?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ulcer with swollen nodes",
+    "body_parts": [
+      "skin",
+      "lymph nodes",
+      "lungs"
+    ],
+    "questions": [
+      {
+        "id": "clinical_form",
+        "text": "What best describes your clinical form?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "ulceroglandular",
+            "weight": 1.3,
+            "description": "Ulceroglandular"
+          },
+          {
+            "value": "pneumonic",
+            "weight": 1.5,
+            "description": "Pneumonic"
+          }
+        ]
+      },
+      {
+        "id": "tick_or_deerfly_bites",
+        "text": "Have you been exposed to tick or deerfly bites?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "handling_infected_animals",
+        "text": "Have you been exposed to handling infected animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.4,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "landscaping_or_farming",
+        "text": "Have you been exposed to landscaping or farming?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.3,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_hand_hygiene_after_animals",
+        "text": "Have you been exposed to poor hand hygiene after animals?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.2,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "vomiting",
+    "body_parts": [
+      "abdomen",
+      "digestive system"
+    ],
+    "questions": [
+      {
+        "id": "stool_character",
+        "text": "What best describes your stool character?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "rice_water",
+            "weight": 5,
+            "description": "Rice Water"
+          },
+          {
+            "value": "watery",
+            "weight": 3.6,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "hours",
+            "weight": 3.8,
+            "description": "Hours"
+          },
+          {
+            "value": "days",
+            "weight": 3.6,
+            "description": "Days"
+          }
+        ]
+      },
+      {
+        "id": "leg_cramps",
+        "text": "What best describes your leg cramps?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "yes",
+            "weight": 3.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unsafe_water",
+        "text": "Have you been exposed to unsafe water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "raw_shellfish",
+        "text": "Have you been exposed to raw shellfish?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "sudden_onset",
+            "weight": 1.6,
+            "description": "Sudden Onset"
+          }
+        ]
+      },
+      {
+        "id": "prominent_symptom",
+        "text": "What best describes your prominent symptom?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "vomiting_is_major_symptom",
+            "weight": 1.6,
+            "description": "Vomiting Is Major Symptom"
+          },
+          {
+            "value": "diarrhea_is_major_symptom",
+            "weight": 1.6,
+            "description": "Diarrhea Is Major Symptom"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 1.5,
+            "description": "Low Grade Fever"
+          },
+          {
+            "value": "no_fever",
+            "weight": 1.5,
+            "description": "No Fever"
+          }
+        ]
+      },
+      {
+        "id": "contact_sick_person",
+        "text": "Have you been exposed to contact sick person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ate_at_restaurant_outbreak",
+        "text": "Have you been exposed to ate at restaurant outbreak?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare_school",
+        "text": "Have you been exposed to works at daycare school?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_dorm_barracks",
+        "text": "Have you been exposed to live in dorm barracks?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_cruise_ship",
+        "text": "Have you been exposed to recent cruise ship?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "watery diarrhea",
+    "body_parts": [
+      "abdomen",
+      "digestive system",
+      "small intestine",
+      "colon"
+    ],
+    "questions": [
+      {
+        "id": "stool_character",
+        "text": "What best describes your stool character?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "rice_water",
+            "weight": 5,
+            "description": "Rice Water"
+          },
+          {
+            "value": "watery",
+            "weight": 3.6,
+            "description": "Watery"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "text": "What best describes your duration?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "hours",
+            "weight": 3.8,
+            "description": "Hours"
+          },
+          {
+            "value": "days",
+            "weight": 3.6,
+            "description": "Days"
+          }
+        ]
+      },
+      {
+        "id": "leg_cramps",
+        "text": "What best describes your leg cramps?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "yes",
+            "weight": 3.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "unsafe_water",
+        "text": "Have you been exposed to unsafe water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "poor_sanitation",
+        "text": "Have you been exposed to poor sanitation?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "raw_shellfish",
+        "text": "Have you been exposed to raw shellfish?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 3.2,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_type",
+        "text": "What best describes your diarrhea type?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "watery_explosive",
+            "weight": 1.8,
+            "description": "Watery Explosive"
+          },
+          {
+            "value": "bloody",
+            "weight": 1.5,
+            "description": "Bloody"
+          }
+        ]
+      },
+      {
+        "id": "symptom_pattern",
+        "text": "What best describes your symptom pattern?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "relapsing_remitting",
+            "weight": 1.6,
+            "description": "Relapsing Remitting"
+          }
+        ]
+      },
+      {
+        "id": "associated_symptoms",
+        "text": "What best describes your associated symptoms?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "significant_fatigue",
+            "weight": 1.6,
+            "description": "Significant Fatigue"
+          },
+          {
+            "value": "severe_loss_of_appetite",
+            "weight": 1.6,
+            "description": "Severe Loss Of Appetite"
+          }
+        ]
+      },
+      {
+        "id": "consumed_imported_produce",
+        "text": "Have you been exposed to consumed imported produce?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "travel_to_tropical_regions",
+        "text": "Have you been exposed to travel to tropical regions?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "consumed_raw_raspberries_basil_cilantro",
+        "text": "Have you been exposed to consumed raw raspberries basil cilantro?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "symptom_onset",
+        "text": "What best describes your symptom onset?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "during_antibiotic_use",
+            "weight": 1.8,
+            "description": "During Antibiotic Use"
+          },
+          {
+            "value": "weeks_after_antibiotic_use",
+            "weight": 1.8,
+            "description": "Weeks After Antibiotic Use"
+          }
+        ]
+      },
+      {
+        "id": "diarrhea_frequency",
+        "text": "What best describes your diarrhea frequency?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "3_to_5_times_day",
+            "weight": 1.6,
+            "description": "3 To 5 Times Day"
+          },
+          {
+            "value": "6_to_9_times_day",
+            "weight": 1.8,
+            "description": "6 To 9 Times Day"
+          },
+          {
+            "value": "10_plus_times_day",
+            "weight": 2,
+            "description": "10 Plus Times Day"
+          }
+        ]
+      },
+      {
+        "id": "cramping_severity",
+        "text": "What best describes your cramping severity?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "severe_cramping",
+            "weight": 1.9,
+            "description": "Severe Cramping"
+          },
+          {
+            "value": "mild_cramping",
+            "weight": 1.6,
+            "description": "Mild Cramping"
+          }
+        ]
+      },
+      {
+        "id": "stool_appearance",
+        "text": "What best describes your stool appearance?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "blood_in_stool",
+            "weight": 1.8,
+            "description": "Blood In Stool"
+          },
+          {
+            "value": "pus_in_stool",
+            "weight": 1.8,
+            "description": "Pus In Stool"
+          },
+          {
+            "value": "watery_only",
+            "weight": 1.6,
+            "description": "Watery Only"
+          }
+        ]
+      },
+      {
+        "id": "recent_antibiotic_use",
+        "text": "Have you been exposed to recent antibiotic use?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.9,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_hospitalization",
+        "text": "Have you been exposed to recent hospitalization?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.8,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "age_65_plus",
+        "text": "Have you been exposed to age 65 plus?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "weakened_immune_system",
+        "text": "Have you been exposed to weakened immune system?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "use_ppi_stomach_acid_reducer",
+        "text": "Have you been exposed to use ppi stomach acid reducer?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "previous_cdiff_infection",
+        "text": "Have you been exposed to previous cdiff infection?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.9,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "immune_status",
+        "text": "What best describes your immune status?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "immunocompromised",
+            "weight": 1.9,
+            "description": "Immunocompromised"
+          }
+        ]
+      },
+      {
+        "id": "fever_presence",
+        "text": "What best describes your fever presence?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "low_grade_fever",
+            "weight": 1.5,
+            "description": "Low Grade Fever"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_pool_water",
+        "text": "Have you been exposed to swallowed pool water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "swallowed_lake_river_water",
+        "text": "Have you been exposed to swallowed lake river water?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare",
+        "text": "Have you been exposed to works at daycare?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_cattle_calves",
+        "text": "Have you been exposed to contact cattle calves?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "contact_infected_person",
+        "text": "Have you been exposed to contact infected person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.5,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "prominent_symptom",
+        "text": "What best describes your prominent symptom?",
+        "type": "mcq",
+        "options": [
+          {
+            "value": "vomiting_is_major_symptom",
+            "weight": 1.6,
+            "description": "Vomiting Is Major Symptom"
+          },
+          {
+            "value": "diarrhea_is_major_symptom",
+            "weight": 1.6,
+            "description": "Diarrhea Is Major Symptom"
+          }
+        ]
+      },
+      {
+        "id": "contact_sick_person",
+        "text": "Have you been exposed to contact sick person?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "ate_at_restaurant_outbreak",
+        "text": "Have you been exposed to ate at restaurant outbreak?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.7,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "works_at_daycare_school",
+        "text": "Have you been exposed to works at daycare school?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "live_in_dorm_barracks",
+        "text": "Have you been exposed to live in dorm barracks?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "recent_cruise_ship",
+        "text": "Have you been exposed to recent cruise ship?",
+        "type": "yesno",
+        "options": [
+          {
+            "value": true,
+            "weight": 1.6,
+            "description": "Yes"
+          }
+        ]
+      }
+    ]
+  }
+]

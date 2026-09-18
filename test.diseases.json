@@ -1,0 +1,1942 @@
+[{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f237d"
+  },
+  "icd": "A00",
+  "name": "Cholera",
+  "symptoms": [
+    "watery diarrhea",
+    "vomiting",
+    "leg cramps",
+    "rapid heart rate",
+    "dry mucous membranes",
+    "sunken eyes",
+    "severe dehydration"
+  ],
+  "chief_complaints": [
+    "watery diarrhea",
+    "vomiting"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system"
+  ],
+  "prevalence": 0.1,
+  "category": "Infectious",
+  "risk_factors": {
+    "unsafe_water": 3.8,
+    "poor_sanitation": 3.6,
+    "raw_shellfish": 3.2
+  },
+  "modifiers": {
+    "stool_character": {
+      "rice_water": 5,
+      "watery": 3.6
+    },
+    "duration": {
+      "hours": 3.8,
+      "days": 3.6
+    },
+    "leg_cramps": {
+      "yes": 3.8
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f238a"
+  },
+  "icd": "A074",
+  "name": "Cyclosporiasis",
+  "symptoms": [
+    "watery diarrhea (often explosive)",
+    "loss of appetite",
+    "significant weight loss",
+    "stomach cramps",
+    "bloating",
+    "gas",
+    "nausea",
+    "fatigue"
+  ],
+  "prevalence": 0.1,
+  "category": "Infectious",
+  "chief_complaints": [
+    "watery diarrhea",
+    "loss of appetite",
+    "fatigue"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "small intestine"
+  ],
+  "risk_factors": {
+    "consumed_imported_produce": 1.8,
+    "travel_to_tropical_regions": 1.6,
+    "consumed_raw_raspberries_basil_cilantro": 1.7
+  },
+  "modifiers": {
+    "diarrhea_type": {
+      "watery_explosive": 1.8,
+      "bloody": 1.5
+    },
+    "symptom_pattern": {
+      "relapsing_remitting": 1.6
+    },
+    "associated_symptoms": {
+      "significant_fatigue": 1.6,
+      "severe_loss_of_appetite": 1.6
+    },
+    "duration": {
+      "more_than_one_week": 1.6
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f2375"
+  },
+  "icd": "A51",
+  "name": "Early syphilis",
+  "symptoms": [
+    "painless genital ulcer (chancre)",
+    "rash on palms and soles",
+    "fever",
+    "fatigue",
+    "swollen lymph nodes"
+  ],
+  "chief_complaints": [
+    "painless ulcer",
+    "rash"
+  ],
+  "body_parts": [
+    "genitals",
+    "skin",
+    "lymph nodes"
+  ],
+  "prevalence": 0.7,
+  "category": "Infectious",
+  "risk_factors": {
+    "unprotected_sex": 1.6,
+    "multiple_partners": 1.5,
+    "history_of_STI": 1.3
+  },
+  "modifiers": {
+    "stage": {
+      "primary": 1.2,
+      "secondary": 1.4
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2382"
+  },
+  "icd": "A040",
+  "name": "Escherichia coli infection",
+  "symptoms": [
+    "diarrhea (sometimes bloody)",
+    "severe abdominal cramping",
+    "nausea",
+    "vomiting",
+    "fatigue",
+    "low-grade fever"
+  ],
+  "prevalence": 1.5,
+  "category": "Infectious",
+  "chief_complaints": [
+    "diarrhea (sometimes bloody)",
+    "severe abdominal cramping"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system"
+  ],
+  "risk_factors": {
+    "consumed_undercooked_ground_beef": 1.8,
+    "consumed_raw_milk_juice": 1.6,
+    "consumed_raw_sprouts_lettuce": 1.6,
+    "swallowed_lake_pool_water": 1.6,
+    "contact_farm_animals": 1.6,
+    "contact_infected_person": 1.5
+  },
+  "modifiers": {
+    "diarrhea_type": {
+      "bloody": 1.8,
+      "watery_then_bloody": 1.8,
+      "watery_only": 1.6
+    },
+    "cramping_severity": {
+      "severe_stomach_cramps": 1.8,
+      "mild_cramps": 1.5
+    },
+    "fever_presence": {
+      "low_grade_fever": 1.5,
+      "no_fever": 1.5,
+      "high_fever": 1.6
+    },
+    "symptom_onset": {
+      "3_to_4_days_after_exposure": 1.7
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f2371"
+  },
+  "icd": "A46",
+  "name": "Erysipelas",
+  "symptoms": [
+    "bright red swollen skin",
+    "sharp raised borders",
+    "fever",
+    "chills",
+    "painful rash"
+  ],
+  "chief_complaints": [
+    "red painful rash"
+  ],
+  "body_parts": [
+    "skin (legs, face)"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious",
+  "risk_factors": {
+    "skin_break_or_trauma": 1.5,
+    "obesity": 1.3,
+    "lymphedema": 1.4,
+    "diabetes": 1.3
+  },
+  "modifiers": {
+    "rash_extent": {
+      "widespread": 1.4,
+      "localized": 1.2
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2385"
+  },
+  "icd": "A047",
+  "name": "Clostridioides difficile infection",
+  "symptoms": [
+    "watery diarrhea (at least 3x/day)",
+    "abdominal cramping (mild to severe)",
+    "fever",
+    "blood in stool",
+    "nausea",
+    "loss of appetite",
+    "dehydration"
+  ],
+  "prevalence": 0.7,
+  "category": "Infectious",
+  "chief_complaints": [
+    "watery diarrhea",
+    "abdominal cramping"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "colon"
+  ],
+  "risk_factors": {
+    "recent_antibiotic_use": 1.9,
+    "recent_hospitalization": 1.8,
+    "age_65_plus": 1.7,
+    "weakened_immune_system": 1.7,
+    "use_ppi_stomach_acid_reducer": 1.6,
+    "previous_cdiff_infection": 1.9
+  },
+  "modifiers": {
+    "symptom_onset": {
+      "during_antibiotic_use": 1.8,
+      "weeks_after_antibiotic_use": 1.8
+    },
+    "diarrhea_frequency": {
+      "3_to_5_times_day": 1.6,
+      "6_to_9_times_day": 1.8,
+      "10_plus_times_day": 2
+    },
+    "cramping_severity": {
+      "severe_cramping": 1.9,
+      "mild_cramping": 1.6
+    },
+    "stool_appearance": {
+      "blood_in_stool": 1.8,
+      "pus_in_stool": 1.8,
+      "watery_only": 1.6
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f237f"
+  },
+  "icd": "A011",
+  "name": "Paratyphoid fever",
+  "symptoms": [
+    "fever",
+    "headache",
+    "abdominal pain",
+    "malaise",
+    "loss of appetite",
+    "constipation",
+    "diarrhea",
+    "rash"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious",
+  "chief_complaints": [
+    "fever",
+    "abdominal pain"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "head"
+  ],
+  "risk_factors": {
+    "travel_to_endemic_area": 1.7,
+    "contaminated_food_water": 1.8,
+    "contact_infected_person": 1.6
+  },
+  "modifiers": {
+    "duration": {
+      "less_than_one_week": 1.5,
+      "more_than_one_week": 1.6
+    },
+    "fever": {
+      "present": 1.6,
+      "absent": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2383"
+  },
+  "icd": "A045",
+  "name": "Campylobacter infection",
+  "symptoms": [
+    "diarrhea (sometimes bloody)",
+    "fever",
+    "abdominal cramps",
+    "nausea",
+    "vomiting",
+    "headache",
+    "malaise"
+  ],
+  "prevalence": 1,
+  "category": "Infectious",
+  "chief_complaints": [
+    "diarrhea (sometimes bloody)",
+    "fever",
+    "abdominal cramps"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system"
+  ],
+  "risk_factors": {
+    "undercooked_poultry": 1.8,
+    "unpasteurized_milk": 1.7,
+    "animal_contact": 1.6
+  },
+  "modifiers": {
+    "symptom_onset": {
+      "2_to_5_days_after_exposure": 1.7
+    },
+    "diarrhea_type": {
+      "bloody": 1.7,
+      "watery": 1.6
+    },
+    "fever_presence": {
+      "fever_present": 1.6,
+      "no_fever": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2388"
+  },
+  "icd": "A071",
+  "name": "Giardiasis",
+  "symptoms": [
+    "watery diarrhea",
+    "gas",
+    "foul-smelling stool",
+    "greasy floating stool",
+    "stomach cramps",
+    "nausea",
+    "dehydration",
+    "weight loss"
+  ],
+  "prevalence": 0.6,
+  "category": "Infectious",
+  "chief_complaints": [
+    "diarrhea",
+    "stomach cramps",
+    "gas"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "small intestine"
+  ],
+  "risk_factors": {
+    "swallowed_lake_river_water": 1.7,
+    "works_at_daycare": 1.5,
+    "contact_infected_person_or_animal": 1.5,
+    "backpacking_camping": 1.6,
+    "consumed_contaminated_water": 1.6
+  },
+  "modifiers": {
+    "stool_characteristics": {
+      "foul_smelling": 1.6,
+      "greasy_or_floating": 1.6,
+      "bloody": 1.5
+    },
+    "gi_symptoms": {
+      "excessive_gas": 1.6,
+      "nausea": 1.5
+    },
+    "duration": {
+      "one_to_two_weeks": 1.6
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2389"
+  },
+  "icd": "A072",
+  "name": "Cryptosporidiosis",
+  "symptoms": [
+    "profuse watery diarrhea",
+    "stomach cramps",
+    "nausea",
+    "vomiting",
+    "fever",
+    "dehydration",
+    "weight loss"
+  ],
+  "prevalence": 0.5,
+  "category": "Infectious",
+  "chief_complaints": [
+    "watery diarrhea",
+    "stomach cramps"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "small intestine"
+  ],
+  "risk_factors": {
+    "swallowed_pool_water": 1.7,
+    "swallowed_lake_river_water": 1.6,
+    "weakened_immune_system": 1.9,
+    "works_at_daycare": 1.6,
+    "contact_cattle_calves": 1.6,
+    "contact_infected_person": 1.5
+  },
+  "modifiers": {
+    "diarrhea_type": {
+      "profuse_watery": 1.8,
+      "bloody": 1.5
+    },
+    "duration": {
+      "one_to_two_weeks": 1.6,
+      "comes_and_goes": 1.6
+    },
+    "immune_status": {
+      "immunocompromised": 1.9
+    },
+    "fever_presence": {
+      "low_grade_fever": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f235c"
+  },
+  "icd": "A20",
+  "name": "Plague",
+  "symptoms": [
+    "fever",
+    "chills",
+    "severe weakness",
+    "swollen painful lymph nodes (buboes)",
+    "cough",
+    "shortness of breath",
+    "bloody sputum",
+    "abdominal pain",
+    "nausea",
+    "vomiting"
+  ],
+  "prevalence": 0.02,
+  "category": "Infectious",
+  "chief_complaints": [
+    "fever",
+    "swollen lymph nodes",
+    "cough"
+  ],
+  "body_parts": [
+    "lymph nodes",
+    "lungs",
+    "bloodstream"
+  ],
+  "risk_factors": {
+    "contact_with_rodents_or_fleas": 3.6,
+    "living_in_outbreak_area": 3.4,
+    "handling_infected_animals": 3.2,
+    "poor_sanitation": 3
+  },
+  "modifiers": {
+    "duration": {
+      "days": 3.8,
+      "weeks": 3.6
+    },
+    "clinical_form": {
+      "bubonic": 3.6,
+      "pneumonic": 5,
+      "septicemic": 5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f235f"
+  },
+  "icd": "A23",
+  "name": "Brucellosis",
+  "symptoms": [
+    "fever (recurrent/undulating)",
+    "joint pain",
+    "muscle aches",
+    "fatigue",
+    "weight loss"
+  ],
+  "chief_complaints": [
+    "fever",
+    "joint pain",
+    "fatigue"
+  ],
+  "body_parts": [
+    "joints",
+    "muscles",
+    "liver",
+    "spleen"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious",
+  "risk_factors": {
+    "unpasteurized_dairy": 1.5,
+    "livestock_exposure": 1.4,
+    "laboratory_exposure": 1.3
+  },
+  "modifiers": {
+    "duration": {
+      "weeks": 1.3,
+      "months": 1.5
+    },
+    "systemic_involvement": {
+      "liver_or_spleen_enlargement": 1.3
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2365"
+  },
+  "icd": "A31",
+  "name": "Nontuberculous Mycobacterial infections",
+  "symptoms": [
+    "chronic cough",
+    "fatigue",
+    "fever",
+    "shortness of breath",
+    "loss of energy",
+    "night sweats",
+    "decreased appetite",
+    "blood in the sputum",
+    "rashes",
+    "weight loss"
+  ],
+  "chief_complaints": [
+    "chronic cough",
+    "fatigue"
+  ],
+  "body_parts": [
+    "lungs",
+    "respiratory system",
+    "skin",
+    "lymph nodes"
+  ],
+  "prevalence": 0.25,
+  "category": "Infectious (Bacterial – Opportunistic)",
+  "risk_factors": {
+    "chronic_lung_disease": 2.2,
+    "smoking": 2,
+    "immunocompromised": 2.6,
+    "environmental_exposure": 2.1
+  },
+  "modifiers": {
+    "duration": {
+      "weeks": 2.4,
+      "months": 3.5
+    },
+    "infection_type": {
+      "pulmonary": 2.8,
+      "cutaneous": 2.2
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f237e"
+  },
+  "icd": "A010",
+  "name": "Typhoid fever",
+  "symptoms": [
+    "fever",
+    "headache",
+    "stomach pain",
+    "weakness and tiredness",
+    "loss of appetite",
+    "rash"
+  ],
+  "chief_complaints": [
+    "fever",
+    "headache",
+    "abdominal pain"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "head",
+    "skin"
+  ],
+  "prevalence": 0.05,
+  "category": "Infectious",
+  "risk_factors": {
+    "travel_to_endemic_area": 1.2,
+    "unsafe_food_or_water": 1.3,
+    "poor_sanitation": 1.1
+  },
+  "modifiers": {
+    "duration": {
+      "weeks": 1.2,
+      "days": 0.6
+    },
+    "rash_present": {
+      "yes": 2.8,
+      "no": 0.8
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f2362"
+  },
+  "icd": "A26",
+  "name": "Erysipeloid",
+  "symptoms": [
+    "purple-red skin lesion",
+    "burning sensation",
+    "swelling",
+    "tender lymph nodes"
+  ],
+  "chief_complaints": [
+    "painful red lesion"
+  ],
+  "body_parts": [
+    "skin (hands / fingers)"
+  ],
+  "prevalence": 0.03,
+  "category": "Infectious",
+  "risk_factors": {
+    "handling_raw_fish_or_meat": 1.5,
+    "occupational_exposure": 1.4,
+    "minor_skin_trauma": 1.3
+  },
+  "modifiers": {
+    "lesion_type": {
+      "localized": 1.2,
+      "spreading": 1.4
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2363"
+  },
+  "icd": "A27",
+  "name": "Leptospirosis",
+  "symptoms": [
+    "fever",
+    "chills",
+    "headache",
+    "muscle pain",
+    "vomiting",
+    "red eyes",
+    "rash",
+    "chest pain",
+    "jaundice"
+  ],
+  "chief_complaints": [
+    "fever",
+    "muscle pain"
+  ],
+  "body_parts": [
+    "liver",
+    "kidneys",
+    "skin",
+    "chest"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious (Bacterial, Zoonotic)",
+  "risk_factors": {
+    "contaminated_water": 1.3,
+    "animal_contact": 1.2,
+    "poor_sanitation": 1.1
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1.1,
+      "weeks": 0.9
+    },
+    "exposure_type": {
+      "freshwater": 1.3,
+      "urban_area": 0.8
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f2360"
+  },
+  "icd": "A24",
+  "name": "Glanders and Melioidosis",
+  "symptoms": [
+    "fever",
+    "cough",
+    "chest pain",
+    "skin ulcers",
+    "joint pain",
+    "abscess formation",
+    "sepsis"
+  ],
+  "chief_complaints": [
+    "fever",
+    "cough",
+    "skin ulcer/abscess"
+  ],
+  "body_parts": [
+    "lungs",
+    "skin",
+    "systemic"
+  ],
+  "prevalence": 0.1,
+  "category": "Infectious",
+  "risk_factors": {
+    "exposure_to_infected_animals": 3.2,
+    "contaminated_soil_or_water": 3.4,
+    "diabetes": 3
+  },
+  "modifiers": {
+    "severity": {
+      "pulmonary": 3.8,
+      "disseminated": 4.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f2374"
+  },
+  "icd": "A50",
+  "name": "Congenital syphilis",
+  "symptoms": [
+    "rash",
+    "fever",
+    "hepatosplenomegaly",
+    "rhinitis",
+    "bone pain"
+  ],
+  "chief_complaints": [
+    "rash",
+    "congenital symptoms after birth"
+  ],
+  "body_parts": [
+    "skin",
+    "bones",
+    "liver",
+    "spleen"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious",
+  "risk_factors": {
+    "maternal_syphilis": 1.6,
+    "lack_of_prenatal_screening": 1.5
+  },
+  "modifiers": {
+    "disease_stage": {
+      "early_infant": 1.5,
+      "late_infant": 1.6
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2384"
+  },
+  "icd": "A046",
+  "name": "Yersinia enterocolitica infection",
+  "symptoms": [
+    "fever",
+    "abdominal pain (often right-sided)",
+    "diarrhea (often bloody)",
+    "nausea",
+    "vomiting",
+    "joint pain"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious",
+  "chief_complaints": [
+    "abdominal pain",
+    "diarrhea",
+    "fever"
+  ],
+  "body_parts": [
+    "abdomen",
+    "joints",
+    "digestive system"
+  ],
+  "risk_factors": {
+    "consumed_raw_undercooked_pork": 1.7,
+    "consumed_unpasteurized_milk": 1.6,
+    "consumed_contaminated_water": 1.6,
+    "handled_raw_pork_chitterlings": 1.7,
+    "recent_blood_transfusion": 1.5
+  },
+  "modifiers": {
+    "abdominal_pain_location": {
+      "right_sided": 1.7,
+      "generalized": 1.6
+    },
+    "symptom_onset": {
+      "4_to_7_days_after_exposure": 1.6
+    },
+    "age_group": {
+      "child": 1.6,
+      "adult": 1.5
+    },
+    "later_symptoms": {
+      "joint_pain": 1.6,
+      "skin_rash": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2366"
+  },
+  "icd": "A32",
+  "name": "Listeriosis",
+  "symptoms": [
+    "fever",
+    "muscle aches",
+    "nausea",
+    "diarrhea"
+  ],
+  "chief_complaints": [
+    "fever",
+    "muscle aches"
+  ],
+  "body_parts": [
+    "digestive system",
+    "nervous system"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious (Foodborne Bacterial)",
+  "risk_factors": {
+    "contaminated_food": 1.3,
+    "unpasteurized_dairy": 1.2,
+    "pregnancy": 1.4,
+    "weakened_immune_system": 1.3
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1,
+      "weeks": 1.2
+    },
+    "severity": {
+      "mild": 0.9,
+      "severe": 1.4
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f236b"
+  },
+  "icd": "A40",
+  "name": "Streptococcal Sepsis",
+  "symptoms": [
+    "fever",
+    "rapid heartbeat",
+    "confusion",
+    "dizziness",
+    "blisters",
+    "nausea",
+    "vomiting",
+    "low blood pressure"
+  ],
+  "chief_complaints": [
+    "fever",
+    "low blood pressure"
+  ],
+  "body_parts": [
+    "blood",
+    "circulatory system",
+    "skin"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious (Bacterial – Streptococcal)",
+  "risk_factors": {
+    "open_wounds": 2.5,
+    "weakened_immune_system": 2.6,
+    "recent_surgery_or_injury": 2.3
+  },
+  "modifiers": {
+    "duration": {
+      "days": 2.3,
+      "weeks": 3
+    },
+    "infection_source": {
+      "skin_entry": 2.2,
+      "systemic_spread": 3.4
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f236e"
+  },
+  "icd": "A42",
+  "name": "Actinomycosis",
+  "symptoms": [
+    "lumpy jaw",
+    "draining sinus tracts",
+    "facial swelling",
+    "abdominal pain",
+    "chronic cough (in thoracic form)"
+  ],
+  "chief_complaints": [
+    "jaw swelling",
+    "draining sinus tracts"
+  ],
+  "body_parts": [
+    "jaw",
+    "face",
+    "lungs",
+    "abdomen"
+  ],
+  "prevalence": 0.05,
+  "category": "Infectious",
+  "risk_factors": {
+    "poor_oral_hygiene": 2.4,
+    "dental_procedures": 2.3,
+    "immunocompromised": 2.2
+  },
+  "modifiers": {
+    "duration": {
+      "months": 3.2
+    },
+    "sinus_tracts": {
+      "present": 3.4
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f235d"
+  },
+  "icd": "A21",
+  "name": "Tularemia",
+  "symptoms": [
+    "fever",
+    "skin ulcer",
+    "swollen lymph nodes",
+    "cough",
+    "chest pain",
+    "fatigue"
+  ],
+  "chief_complaints": [
+    "fever",
+    "ulcer with swollen nodes"
+  ],
+  "body_parts": [
+    "skin",
+    "lymph nodes",
+    "lungs"
+  ],
+  "prevalence": 0.03,
+  "category": "Infectious",
+  "risk_factors": {
+    "tick_or_deerfly_bites": 1.5,
+    "handling_infected_animals": 1.4,
+    "landscaping_or_farming": 1.3,
+    "poor_hand_hygiene_after_animals": 1.2
+  },
+  "modifiers": {
+    "clinical_form": {
+      "ulceroglandular": 1.3,
+      "pneumonic": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2369"
+  },
+  "icd": "A38",
+  "name": "Scarlet Fever",
+  "symptoms": [
+    "sore throat",
+    "fever",
+    "red rash",
+    "nausea",
+    "strawberry tongue"
+  ],
+  "chief_complaints": [
+    "fever",
+    "red rash"
+  ],
+  "body_parts": [
+    "throat",
+    "skin",
+    "tongue",
+    "respiratory system"
+  ],
+  "prevalence": 0.5,
+  "category": "Infectious (Bacterial – Streptococcal)",
+  "risk_factors": {
+    "close_contact_with_infected": 1.3,
+    "school_age_children": 1.2,
+    "poor_hygiene": 1.1
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1.1,
+      "weeks": 1
+    },
+    "rash_severity": {
+      "mild": 0.9,
+      "severe": 1.3
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fe89b6a2bcb3a36f2376"
+  },
+  "icd": "A51–A53",
+  "name": "Syphilis",
+  "symptoms": [
+    "painless sores",
+    "skin rash",
+    "fever",
+    "patchy hair loss",
+    "weight loss",
+    "swollen lymph nodes"
+  ],
+  "chief_complaints": [
+    "painless sores",
+    "skin rash"
+  ],
+  "body_parts": [
+    "reproductive system",
+    "skin",
+    "lymph nodes",
+    "immune system"
+  ],
+  "prevalence": 0.4,
+  "category": "Infectious (Sexually Transmitted – Bacterial)",
+  "risk_factors": {
+    "unprotected_sex": 1.4,
+    "multiple_partners": 1.3,
+    "untreated_infection": 1.2
+  },
+  "modifiers": {
+    "duration": {
+      "weeks": 1.2,
+      "months": 1.4
+    },
+    "disease_stage": {
+      "primary": 1,
+      "secondary": 1.2,
+      "tertiary": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f2361"
+  },
+  "icd": "A25",
+  "name": "Rat-bite fever",
+  "symptoms": [
+    "fever",
+    "vomiting",
+    "headache",
+    "joint pain",
+    "rash"
+  ],
+  "chief_complaints": [
+    "fever",
+    "joint pain",
+    "rash"
+  ],
+  "body_parts": [
+    "skin",
+    "joints",
+    "systemic"
+  ],
+  "prevalence": 0.04,
+  "category": "Infectious",
+  "risk_factors": {
+    "rat_or_rodent_bite": 2.6,
+    "contact_with_rodent_urine_or_saliva": 2.4,
+    "poor_sanitation": 2.1
+  },
+  "modifiers": {
+    "rash_pattern": {
+      "hands_and_feet": 3
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f236a"
+  },
+  "icd": "A39",
+  "name": "Meningococcal Infection",
+  "symptoms": [
+    "sudden fever",
+    "headache",
+    "stiff neck",
+    "sensitivity to light",
+    "nausea",
+    "vomiting",
+    "confusion",
+    "rash"
+  ],
+  "chief_complaints": [
+    "sudden fever",
+    "stiff neck"
+  ],
+  "body_parts": [
+    "nervous system",
+    "brain (meninges)",
+    "skin"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious (Bacterial – Meningococcal)",
+  "risk_factors": {
+    "close_contact_with_infected": 3.4,
+    "crowded_living_conditions": 3.2,
+    "lack_of_vaccination": 3,
+    "weakened_immune_system": 3
+  },
+  "modifiers": {
+    "duration": {
+      "days": 3.6,
+      "weeks": 3.8
+    },
+    "disease_stage": {
+      "early": 3.5,
+      "advanced": 4.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f2372"
+  },
+  "icd": "A48",
+  "name": "Other bacterial diseases",
+  "symptoms": [
+    "fever",
+    "chills",
+    "fatigue",
+    "localized pain depending on infection site"
+  ],
+  "chief_complaints": [
+    "fever"
+  ],
+  "body_parts": [
+    "varies"
+  ],
+  "prevalence": 0.1,
+  "category": "Infectious",
+  "risk_factors": {
+    "open_wounds": 1.4,
+    "poor_hygiene": 1.2,
+    "immunocompromised": 1.3
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1.1,
+      "weeks": 1.2
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2367"
+  },
+  "icd": "A33–A35",
+  "name": "Tetanus",
+  "symptoms": [
+    "muscle stiffness",
+    "lockjaw",
+    "difficulty swallowing",
+    "headache",
+    "changes in blood pressure or fast heart rate",
+    "muscle spasms"
+  ],
+  "chief_complaints": [
+    "muscle stiffness",
+    "lockjaw"
+  ],
+  "body_parts": [
+    "nervous system",
+    "jaw",
+    "neck",
+    "muscles"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious (Neurotoxic Bacterial)",
+  "risk_factors": {
+    "open_wounds": 1.3,
+    "lack_of_vaccination": 1.4,
+    "contaminated_soil_exposure": 1.2
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1.2,
+      "weeks": 1.3
+    },
+    "wound_type": {
+      "deep_puncture": 1.3,
+      "surface_cut": 0.8
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f2370"
+  },
+  "icd": "A44",
+  "name": "Bartonellosis",
+  "symptoms": [
+    "fever",
+    "fatigue",
+    "enlarged lymph nodes",
+    "rash",
+    "weight loss"
+  ],
+  "chief_complaints": [
+    "fever",
+    "swollen lymph nodes"
+  ],
+  "body_parts": [
+    "lymph nodes",
+    "skin",
+    "bloodstream"
+  ],
+  "prevalence": 0.2,
+  "category": "Infectious",
+  "risk_factors": {
+    "cat_scratches_or_bites": 2.6,
+    "flea_exposure": 2.3,
+    "immunocompromised": 2.2
+  },
+  "modifiers": {
+    "severity": {
+      "bacillary_angio": 3.4,
+      "uncomplicated": 2.2
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fe89b6a2bcb3a36f2379"
+  },
+  "icd": "A56",
+  "name": "Chlamydia Infection",
+  "symptoms": [
+    "painful urination",
+    "genital discharge",
+    "pelvic pain",
+    "pain and swelling in one or both testicles",
+    "lower abdominal pain"
+  ],
+  "chief_complaints": [
+    "painful urination",
+    "genital discharge"
+  ],
+  "body_parts": [
+    "reproductive system",
+    "urinary system",
+    "pelvis"
+  ],
+  "prevalence": 0.7,
+  "category": "Infectious (Sexually Transmitted – Bacterial)",
+  "risk_factors": {
+    "unprotected_sex": 1.4,
+    "multiple_partners": 1.3,
+    "previous_sti": 1.2,
+    "young_age": 1.1
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1,
+      "weeks": 1.2
+    },
+    "infection_site": {
+      "genital": 1.3,
+      "rectal": 1.1,
+      "throat": 1
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2368"
+  },
+  "icd": "A36",
+  "name": "Diphtheria",
+  "symptoms": [
+    "sore throat",
+    "fever",
+    "swollen glands",
+    "thick gray coating in throat"
+  ],
+  "chief_complaints": [
+    "sore throat",
+    "fever"
+  ],
+  "body_parts": [
+    "throat",
+    "respiratory system",
+    "neck"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious (Respiratory Bacterial)",
+  "risk_factors": {
+    "lack_of_vaccination": 1.4,
+    "close_contact_with_infected": 1.3,
+    "crowded_living_conditions": 1.2
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1.1,
+      "weeks": 1.2
+    },
+    "infection_site": {
+      "throat": 1.2,
+      "skin": 0.8
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fe89b6a2bcb3a36f2377"
+  },
+  "icd": "A54",
+  "name": "Gonorrhea",
+  "symptoms": [
+    "painful urination",
+    "genital discharge",
+    "pelvic pain",
+    "increased vaginal discharge",
+    "swollen testicles"
+  ],
+  "chief_complaints": [
+    "painful urination",
+    "genital discharge"
+  ],
+  "body_parts": [
+    "reproductive system",
+    "urinary tract",
+    "pelvis"
+  ],
+  "prevalence": 0.6,
+  "category": "Infectious (Sexually Transmitted – Bacterial)",
+  "risk_factors": {
+    "unprotected_sex": 1.4,
+    "multiple_partners": 1.3,
+    "previous_sti": 1.2
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1.1,
+      "weeks": 1.3
+    },
+    "infection_site": {
+      "genital": 1.3,
+      "throat": 1.1,
+      "rectal": 1.2
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913042bb6a2bcb3a36f238f"
+  },
+  "icd": "A15",
+  "name": "Pulmonary tuberculosis",
+  "symptoms": [
+    "persistent cough (3+ weeks)",
+    "coughing up blood (hemoptysis)",
+    "chest pain (with breathing or coughing)",
+    "fatigue",
+    "fever",
+    "night sweats",
+    "unexplained weight loss",
+    "loss of appetite",
+    "chills"
+  ],
+  "prevalence": 0.3,
+  "category": "Respiratory",
+  "chief_complaints": [
+    "persistent cough",
+    "fever",
+    "night sweats",
+    "coughing up blood"
+  ],
+  "body_parts": [
+    "lungs",
+    "chest",
+    "respiratory system"
+  ],
+  "risk_factors": {
+    "weakened_immune_system_hiv": 2.8,
+    "weakened_immune_system_other": 2.6,
+    "close_contact_infected_person": 2.7,
+    "travel_high_tb_area": 2.4,
+    "live_in_high_risk_facility": 2.3,
+    "works_in_healthcare": 2.2,
+    "substance_abuse": 2.1,
+    "smoking": 2,
+    "diabetes_or_kidney_disease": 2.1
+  },
+  "modifiers": {
+    "cough_duration": {
+      "less_than_3_weeks": 2,
+      "more_than_3_weeks": 3
+    },
+    "cough_sputum": {
+      "coughing_up_blood": 3.2,
+      "coughing_up_mucus": 2.4
+    },
+    "systemic_symptoms": {
+      "night_sweats_present": 2.4,
+      "unexplained_weight_loss_present": 2.4
+    },
+    "fever_pattern": {
+      "low_grade_fever": 2
+    },
+    "chest_pain": {
+      "pain_with_breathing": 2
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2381"
+  },
+  "icd": "A03",
+  "name": "Shigellosis",
+  "symptoms": [
+    "diarrhea that can be bloody",
+    "fever",
+    "stomach pain",
+    "feeling of needing to pass stool even when bowels empty"
+  ],
+  "chief_complaints": [
+    "bloody diarrhea",
+    "abdominal pain"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system"
+  ],
+  "prevalence": 0.8,
+  "category": "Infectious",
+  "risk_factors": {
+    "poor_hygiene": 1.2,
+    "contaminated_food_or_water": 1.3
+  },
+  "modifiers": {
+    "diarrhea_character": {
+      "bloody": 1.3,
+      "watery": 1
+    },
+    "duration": {
+      "days": 1,
+      "weeks": 0.7
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f238b"
+  },
+  "icd": "A09",
+  "name": "Infectious gastroenteritis",
+  "symptoms": [
+    "watery diarrhea",
+    "vomiting",
+    "stomach cramps",
+    "nausea",
+    "fever",
+    "muscle aches",
+    "headache"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious",
+  "chief_complaints": [
+    "watery diarrhea",
+    "vomiting",
+    "nausea"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system"
+  ],
+  "risk_factors": {
+    "contact_sick_person": 1.7,
+    "ate_at_restaurant_outbreak": 1.7,
+    "works_at_daycare_school": 1.6,
+    "live_in_dorm_barracks": 1.6,
+    "recent_cruise_ship": 1.6
+  },
+  "modifiers": {
+    "symptom_onset": {
+      "sudden_onset": 1.6
+    },
+    "prominent_symptom": {
+      "vomiting_is_major_symptom": 1.6,
+      "diarrhea_is_major_symptom": 1.6
+    },
+    "duration": {
+      "1_to_3_days": 1.6,
+      "more_than_one_week": 1.5
+    },
+    "fever_presence": {
+      "low_grade_fever": 1.5,
+      "no_fever": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f236c"
+  },
+  "icd": "A41",
+  "name": "Bacterial Sepsis (General)",
+  "symptoms": [
+    "fever or hypothermia",
+    "rapid breathing",
+    "confusion",
+    "clammy and sweaty skin",
+    "high heart rate, weak pulse or low blood pressure",
+    "low urine output"
+  ],
+  "chief_complaints": [
+    "fever or hypothermia",
+    "low blood pressure"
+  ],
+  "body_parts": [
+    "blood",
+    "circulatory system",
+    "immune system"
+  ],
+  "prevalence": 0.5,
+  "category": "Infectious (Systemic Bacterial)",
+  "risk_factors": {
+    "severe_infection": 2.6,
+    "weakened_immune_system": 2.5,
+    "chronic_illness": 2.3,
+    "invasive_medical_procedures": 2.1
+  },
+  "modifiers": {
+    "duration": {
+      "days": 2.4,
+      "weeks": 3
+    },
+    "infection_source": {
+      "pneumonia": 3.2,
+      "urinary_tract_infection": 2.6,
+      "skin_or_soft_tissue_infection": 2.3
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2387"
+  },
+  "icd": "A06",
+  "name": "Amebiasis",
+  "symptoms": [
+    "loose stool",
+    "stomach pain",
+    "severe cramping",
+    "bloody diarrhea",
+    "fever",
+    "fatigue",
+    "weight loss",
+    "liver tenderness"
+  ],
+  "prevalence": 0.4,
+  "category": "Infectious",
+  "chief_complaints": [
+    "bloody diarrhea",
+    "stomach pain"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system",
+    "colon",
+    "liver"
+  ],
+  "risk_factors": {
+    "travel_tropical_area": 0.4,
+    "live_in_area_poor_sanitation": 0.3,
+    "consumed_unwashed_fruit_veg": 0.2,
+    "consumed_contaminated_water": 0.3
+  },
+  "modifiers": {
+    "diarrhea_type": {
+      "bloody": 0.3,
+      "watery_only": 0
+    },
+    "fever_presence": {
+      "fever_present": 0.2,
+      "no_fever": 0
+    },
+    "pain_location": {
+      "right_upper_quadrant_pain": 0.2,
+      "generalized_abdominal_pain": 0.1
+    },
+    "travel_history": {
+      "recent_travel_endemic_area": 0.3
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc28b6a2bcb3a36f235e"
+  },
+  "icd": "A22",
+  "name": "Anthrax",
+  "symptoms": [
+    "fever",
+    "fatigue",
+    "nausea",
+    "vomiting",
+    "black eschar skin lesion",
+    "shortness of breath",
+    "chest discomfort",
+    "bloody diarrhea"
+  ],
+  "chief_complaints": [
+    "black painless ulcer",
+    "shortness of breath"
+  ],
+  "body_parts": [
+    "skin",
+    "lungs",
+    "gastrointestinal tract"
+  ],
+  "prevalence": 0.01,
+  "category": "Infectious",
+  "risk_factors": {
+    "animal_products_exposure": 3.5,
+    "handling_fur_or_wool": 3.3,
+    "biolaboratory_exposure": 4.5
+  },
+  "modifiers": {
+    "clinical_form": {
+      "cutaneous": 3.6,
+      "inhalation": 5,
+      "gastrointestinal": 4
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f2373"
+  },
+  "icd": "A49",
+  "name": "Bacterial infection (unspecified site)",
+  "symptoms": [
+    "fever",
+    "fatigue",
+    "localized symptoms depending on site"
+  ],
+  "chief_complaints": [
+    "fever"
+  ],
+  "body_parts": [
+    "varies (unspecified)"
+  ],
+  "prevalence": 0.1,
+  "category": "Infectious",
+  "risk_factors": {
+    "open_wounds": 1.4,
+    "recent_surgery": 1.5,
+    "immunocompromised": 1.4
+  },
+  "modifiers": {
+    "severity": {
+      "systemic": 1.4,
+      "localized": 1.1
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2380"
+  },
+  "icd": "A02",
+  "name": "Salmonella infection",
+  "symptoms": [
+    "diarrhea",
+    "abdominal cramps",
+    "fever",
+    "nausea",
+    "vomiting",
+    "chills",
+    "headache",
+    "bloody stool"
+  ],
+  "prevalence": 1.2,
+  "category": "Infectious",
+  "chief_complaints": [
+    "diarrhea",
+    "fever",
+    "abdominal cramps"
+  ],
+  "body_parts": [
+    "abdomen",
+    "digestive system"
+  ],
+  "risk_factors": {
+    "consumed_raw_eggs": 1.7,
+    "consumed_undercooked_poultry": 1.8,
+    "consumed_raw_meat": 1.6,
+    "contact_reptiles_amphibians": 1.6
+  },
+  "modifiers": {
+    "symptom_onset": {
+      "6_to_48_hours_after_meal": 1.8,
+      "more_than_3_days_after_meal": 1.5
+    },
+    "diarrhea_type": {
+      "bloody": 1.6,
+      "watery": 1.6
+    },
+    "fever_presence": {
+      "fever_present": 1.6,
+      "no_fever": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fe89b6a2bcb3a36f2378"
+  },
+  "icd": "A55",
+  "name": "Lymphogranuloma Venereum (LGV)",
+  "symptoms": [
+    "small painless genital ulcers",
+    "swollen lymph nodes in groin",
+    "abdominal pain",
+    "anal pain",
+    "body aches",
+    "constipation",
+    "fatigue",
+    "rectal bleeding, itching or discharge",
+    "inflammation of the rectum and anus",
+    "rectal pain"
+  ],
+  "chief_complaints": [
+    "painless genital ulcers",
+    "swollen lymph nodes in groin"
+  ],
+  "body_parts": [
+    "reproductive system",
+    "lymphatic system",
+    "rectum",
+    "anus"
+  ],
+  "prevalence": 0.3,
+  "category": "Infectious (Sexually Transmitted – Chlamydial)",
+  "risk_factors": {
+    "unprotected_sex": 1.4,
+    "anal_intercourse": 1.3,
+    "multiple_partners": 1.2
+  },
+  "modifiers": {
+    "duration": {
+      "weeks": 1.2,
+      "months": 1.4
+    },
+    "infection_stage": {
+      "primary": 1,
+      "secondary": 1.2,
+      "tertiary": 1.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6913010db6a2bcb3a36f2386"
+  },
+  "icd": "A051",
+  "name": "Botulism",
+  "symptoms": [
+    "difficulty swallowing or speaking",
+    "facial weakness on both sides",
+    "blurred or double vision",
+    "drooping eyelids",
+    "slurred speech",
+    "difficulty breathing",
+    "descending paralysis",
+    "nausea",
+    "vomiting"
+  ],
+  "prevalence": 0.01,
+  "category": "Neurological",
+  "chief_complaints": [
+    "difficulty swallowing or speaking",
+    "blurred vision",
+    "facial weakness"
+  ],
+  "body_parts": [
+    "face",
+    "nervous system",
+    "eyes",
+    "throat"
+  ],
+  "risk_factors": {
+    "home_canned_food": 4,
+    "infant_honey_consumption": 3.6,
+    "wound_contamination": 3.4
+  },
+  "modifiers": {
+    "symptom_progression": {
+      "started_in_feet_legs_moved_up": 5,
+      "descending_paralysis": 5
+    },
+    "vision_symptoms": {
+      "blurred_or_double_vision": 3.6,
+      "drooping_eyelids": 3.6
+    },
+    "speech_symptoms": {
+      "slurred_speech": 3.6,
+      "difficulty_swallowing": 3.6
+    },
+    "fever_presence": {
+      "no_fever": 3.5,
+      "fever_present": 3.6
+    },
+    "mental_status": {
+      "alert_and_oriented": 3.6
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fc74b6a2bcb3a36f2364"
+  },
+  "icd": "A28",
+  "name": "Zoonotic bacterial diseases",
+  "symptoms": [
+    "fever",
+    "fatigue",
+    "swollen lymph nodes",
+    "vomiting",
+    "muscle pain"
+  ],
+  "chief_complaints": [
+    "fever",
+    "fatigue"
+  ],
+  "body_parts": [
+    "lymph nodes",
+    "muscles",
+    "digestive system"
+  ],
+  "prevalence": 0.4,
+  "category": "Infectious (Zoonotic Bacterial)",
+  "risk_factors": {
+    "animal_contact": 1.3,
+    "contaminated_food": 1.2,
+    "poor_hygiene": 1.1
+  },
+  "modifiers": {
+    "duration": {
+      "days": 1,
+      "weeks": 1.1
+    },
+    "exposure_type": {
+      "direct_contact": 1.2,
+      "indirect_contact": 0.9
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6912fca2b6a2bcb3a36f236f"
+  },
+  "icd": "A43",
+  "name": "Nocardiosis",
+  "symptoms": [
+    "chronic cough",
+    "chest pain",
+    "difficulty breathing",
+    "skin nodules",
+    "weight loss",
+    "fatigue"
+  ],
+  "chief_complaints": [
+    "chronic cough",
+    "chest pain"
+  ],
+  "body_parts": [
+    "lungs",
+    "brain",
+    "skin"
+  ],
+  "prevalence": 0.03,
+  "category": "Infectious",
+  "risk_factors": {
+    "immunocompromised": 2.8,
+    "chronic_steroid_use": 2.5,
+    "lung_disease": 2.2
+  },
+  "modifiers": {
+    "spread": {
+      "central_nervous_system": 3.4,
+      "only_lung": 2.6
+    }
+  }
+}]
