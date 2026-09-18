@@ -221,7 +221,7 @@ export default class AdaptiveChiefEngine {
     if (!remainingQuestions || remainingQuestions.length === 0) return null;
 
     try {
-      const response = await axios.post("http://localhost:5000/api/ai-booster", {
+      const response = await axios.post("https://talk2doc-be.onrender.com/api/ai-booster", {
         state: this.getState(),
         remainingQuestions
       }, { timeout: 12000 });
