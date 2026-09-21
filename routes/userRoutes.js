@@ -12,6 +12,7 @@ router.get("/doctors/nearby", getNearbyDoctors);//need change test only
 router.post("/save", verifyToken, saveAssessment)//need change test only
 
 router.get(
+
   "/assessments/my",
   verifyToken,
   allowRoles("PATIENT"),
