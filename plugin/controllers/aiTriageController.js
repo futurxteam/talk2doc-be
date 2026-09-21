@@ -379,7 +379,7 @@ RESPOND WITH ONLY VALID JSON:
     const completion = await client.chat.completions.create({
       model: AI_MODEL,
       temperature: 0.1,
-      max_tokens: 500,
+      max_completion_tokens: 450,
       response_format: { type: 'json_object' },
       messages: [
         { role: 'system', content: systemPrompt },
