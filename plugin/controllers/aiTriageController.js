@@ -1,9 +1,57 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import SymptomSynonym from '../../models/SymptomSynonym.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Background auto-learn helper
+const autoLearnFromExtraction = async (message, extracted) => {
+  if (!extracted || !message) return;
+  try {
+    const rawMsg = message.toLowerCase().trim();
+    if (rawMsg.length > 2 && rawMsg.length < 80) {
+      if (extracted.symptomId) {
+        await SymptomSynonym.findOneAndUpdate(
+          { type: 'symptom', canonicalId: extracted.symptomId },
+          {
+            $setOnInsert: {
+              canonicalName: extracted.symptomName || extracted.symptomId,
+              bodyArea: extracted.bodyArea || null,
+              source: 'ai_learned'
+            },
+            $addToSet: { keywords: rawMsg },
+            $inc: { hitCount: 1 }
+          },
+          { upsert: true }
+        );
+      }
+      if (extracted.durationId && rawMsg.length < 40) {
+        await SymptomSynonym.findOneAndUpdate(
+          { type: 'duration', canonicalId: extracted.durationId },
+          {
+            $addToSet: { keywords: rawMsg },
+            $inc: { hitCount: 1 }
+          },
+          { upsert: true }
+        );
+      }
+      if (extracted.severityId && rawMsg.length < 40) {
+        await SymptomSynonym.findOneAndUpdate(
+          { type: 'severity', canonicalId: extracted.severityId },
+          {
+            $addToSet: { keywords: rawMsg },
+            $inc: { hitCount: 1 }
+          },
+          { upsert: true }
+        );
+      }
+    }
+  } catch {
+    // Non-blocking auto-learn
+  }
+};
 
 // Load departmentMap.json from backend/plugin/data/departmentMap.json
 const dataPath = path.join(__dirname, '..', 'data', 'departmentMap.json');
@@ -212,7 +260,7 @@ function heuristicExtract(message, currentStep, currentContext = {}) {
     };
   }
 
-  // Generate empathetic conversational reply
+  // Generate genuinely warm, informal conversational reply
   let conversationalReply = '';
   if (matchedSymptomName) {
     const sevPhrase = severityId ? ` ${severityId}` : '';
@@ -220,13 +268,23 @@ function heuristicExtract(message, currentStep, currentContext = {}) {
     if (durationText) {
       durPhrase = durationText.startsWith('since') ? ` ${durationText}` : ` for ${durationText}`;
     }
-    const extraPhrase = extraSymptoms.length > 0 ? ` alongside ${extraSymptoms.join(', ')}` : '';
-    conversationalReply = `I understand you are experiencing${sevPhrase} ${matchedSymptomName}${durPhrase}${extraPhrase}. Let's evaluate this safely.`;
+    const extraPhrase = extraSymptoms.length > 0 ? ` with ${extraSymptoms.join(', ')}` : '';
+
+    if (durationId && severityId) {
+      conversationalReply = `Oh bless you, I hear you — having${sevPhrase} ${matchedSymptomName.toLowerCase()}${durPhrase}${extraPhrase} sounds really tough! Don't worry at all, I've got everything I need to guide you to the right specialist.`;
+    } else if (durationId) {
+      conversationalReply = `Aww, so sorry you've had ${matchedSymptomName.toLowerCase()}${durPhrase}! Just one quick thing — how intense is it feeling right now? Mild, moderate, or severe?`;
+    } else if (severityId) {
+      conversationalReply = `Oh gosh, ${sevPhrase.trim()} ${matchedSymptomName.toLowerCase()} sounds so miserable! Roughly when did this first start? Today, a few days ago, or longer?`;
+    } else {
+      conversationalReply = `Oh no, I'm so sorry you're dealing with ${matchedSymptomName.toLowerCase()}! Let's get you checked out — when did this first start?`;
+    }
   } else if (matchedBodyArea) {
-    conversationalReply = `Got it, discomfort around your ${matchedBodyArea.replace(/_/g, ' ')}. Which specific symptom are you experiencing?`;
+    conversationalReply = `Got it, discomfort around your ${matchedBodyArea.replace(/_/g, ' ')}. Don't worry, what sort of trouble are you having there?`;
   } else {
-    conversationalReply = `Thank you for sharing. Could you select your primary discomfort area or provide more details?`;
+    conversationalReply = `Hey, I'm right here with you! Could you tell me roughly where you're feeling unwell — like your head, tummy, chest, or somewhere else?`;
   }
+
 
   return {
     source: 'heuristic_fallback',
@@ -333,18 +391,22 @@ Analyze if user's input answers this question. If so, return decisionAnswer with
       content: turn.text || ''
     }));
 
-    const systemPrompt = `You are an expert clinical triage NLP assistant for talk2doc.
-Your goal is to parse a patient's natural language statement into structured clinical data.
-The patient may speak Indian English or use informal terms.
+    const systemPrompt = `You are Talk2Doc, a warm, caring, sweet, and informal medical triage companion.
+Your goal is to parse a patient's natural language statement into structured clinical data while sounding like an empathetic friend or caring nurse.
+The patient may speak Indian English or use informal, emotional expressions.
 
 CRITICAL INSTRUCTIONS:
 1. Extract bodyArea and symptomId ONLY from the catalog below.
 2. Extract durationId from: [${durationOptions}].
 3. Extract severityId from: [${severityOptions}].
 4. List co-occurring symptoms under extraSymptoms.
-5. Write an empathetic 1-2 sentence conversationalReply for text-to-speech. Reference what they said. Be warm.
-6. Set nextStep to one of: "tree_node", "duration", "severity", "result", or null (unknown).
+5. Write a genuinely warm, informal, friendly, and sweet 1-2 sentence conversationalReply for speech. Talk like a caring friend holding their hand (e.g. "Oh gosh, that severe headache sounds so exhausting!", "Aww bless you, let's get you checked out right away!"). NEVER sound robotic, clinical, or stiff.
+6. STEP-BY-STEP QUESTIONING RULES:
+   - If a symptom is identified but duration is NOT provided: Acknowledge the symptom with empathy and ask ONLY about the timeframe/duration (e.g. "Oh dear, I'm sorry you're feeling feverish! Roughly when did it start — today, a few days ago, or longer?"). DO NOT ask whether it's mild, moderate, or severe yet! The patient must answer duration first.
+   - If duration is already known, but severity is missing: Ask ONLY about severity (e.g. "Got it. Would you describe the discomfort as mild, moderate, or severe?").
+   - If the patient provided symptom + duration + severity all in one single sentence (e.g. "severe fever for 2 days"): Acknowledge everything and set nextStep to "result".
 7. DO NOT prescribe medications or diagnose.
+
 
 ${symptomSummary}
 
@@ -392,9 +454,36 @@ RESPOND WITH ONLY VALID JSON:
     let parsed = {};
     try {
       parsed = JSON.parse(rawContent);
+
+      // --- Safety Sanitizer: Ensure speech question matches the UI step ---
+      // If symptom is present but duration is NOT yet answered, the UI will show Duration chips.
+      // Therefore, the conversational speech must NEVER ask about mild/moderate/severe yet!
+      const hasDuration = parsed.extracted?.durationId || currentContext.duration;
+      const hasSeverity = parsed.extracted?.severityId || currentContext.severity;
+
+      if (!hasDuration && parsed.conversationalReply) {
+        // Strip out any premature mild/moderate/severe questions bundled by the LLM
+        parsed.conversationalReply = parsed.conversationalReply
+          .replace(/(,\s*)?(and\s+)?(is\s+it|would\s+you\s+(call|say|describe)\s+it|how\s+intense\s+is\s+it|is\s+that)\s+(mild|moderate|severe)[^.!?]*[.!?]?/gi, '.')
+          .replace(/\s{2,}/g, ' ')
+          .replace(/\.\./g, '.')
+          .trim();
+
+        // Ensure there is a duration question if it got stripped
+        if (!/(how long|when did|since when|days|hours|timeframe)/i.test(parsed.conversationalReply)) {
+          parsed.conversationalReply = parsed.conversationalReply.replace(/[.!?]$/, '') + '. Roughly how long has this been going on?';
+        }
+      }
+
+      if (parsed?.extracted) {
+        autoLearnFromExtraction(message, parsed.extracted).catch(() => {});
+      }
     } catch (parseErr) {
       console.warn('[AI Triage Controller] JSON parse failed, using heuristic fallback:', parseErr.message);
       const fallbackResult = heuristicExtract(message, currentStep, currentContext);
+      if (fallbackResult?.extracted) {
+        autoLearnFromExtraction(message, fallbackResult.extracted).catch(() => {});
+      }
       return res.json({ success: true, ...fallbackResult });
     }
 
@@ -407,6 +496,9 @@ RESPOND WITH ONLY VALID JSON:
   } catch (error) {
     console.error('[AI Triage Controller] Error in understandSymptoms:', error.message);
     const fallbackResult = heuristicExtract(req.body?.message, req.body?.currentStep, req.body?.currentContext);
+    if (fallbackResult?.extracted) {
+      autoLearnFromExtraction(req.body?.message, fallbackResult.extracted).catch(() => {});
+    }
     return res.json({
       success: true,
       source: 'heuristic_fallback_on_error',

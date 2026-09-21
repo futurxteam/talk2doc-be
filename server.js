@@ -14,6 +14,8 @@ import adminRoutes from "./routes/adminRoutes.js";
 import hospitalRoutes from "./routes/hospitalRoutes.js";
 import pluginDepartmentRoutes from "./plugin/routes/departmentRoutes.js";
 import triageRoutes from "./routes/triageRoutes.js";
+import synonymRoutes from "./routes/synonymRoutes.js";
+import { seedSynonymsIfEmpty } from "./controllers/synonymController.js";
 import dns from "dns";
 
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
@@ -40,6 +42,7 @@ app.post("/api/ai-booster", handler);
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api", pluginDepartmentRoutes); // Handles /api/bodyparts, /api/triage, /api/recommend
+app.use("/api/synonyms", synonymRoutes);  // Handles /api/synonyms, /api/synonyms/learn
 app.use("/api/triage", triageRoutes);    // Handles /api/triage/doctors
 app.use("/api/symptoms", symptomRoutes);
 app.use("/api/cc", chiefComplaintRoutes);
@@ -53,11 +56,13 @@ app.use("/api/appointments", appointmentRoutes);
    ================================ */
 mongoose
    .connect(process.env.MONGO_URI)
-   .then(() => {
+   .then(async () => {
       console.log("✅ MongoDB connected");
+      await seedSynonymsIfEmpty();
       const PORT = process.env.PORT || 6000;
       app.listen(PORT, () =>
          console.log(`✅ Server running on http://localhost:${PORT}`)
       );
    })
    .catch(err => console.error("❌ MongoDB error:", err));
+

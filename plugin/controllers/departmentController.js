@@ -92,16 +92,13 @@ export const getBodyParts = (req, res) => {
  */
 export const triageDecisionTree = (req, res) => {
   try {
-    const { bodyArea, symptomId, treeId, answersMap } = req.body;
-    if (!treeId || !answersMap) {
-      return res.status(400).json({ success: false, message: 'treeId and answersMap are required' });
-    }
+    const { bodyArea, symptomId, treeId, answersMap = {} } = req.body || {};
 
-    const outcome = resolveDecisionTree(treeId, answersMap);
+    const outcome = treeId ? resolveDecisionTree(treeId, answersMap) : null;
     const areaConfig = departmentData.bodyParts?.[bodyArea];
     const symptom = areaConfig?.symptoms?.find(s => s.id === symptomId);
 
-    // If unresolved or ambiguous, fallback to General Medicine
+    // If unresolved or ambiguous, fallback safely to General Medicine or symptom department
     if (!outcome) {
       return res.json({
         success: true,
@@ -110,16 +107,17 @@ export const triageDecisionTree = (req, res) => {
           bodyAreaName: areaConfig?.displayName || 'General / Multi-System',
           symptomId: symptomId || 'general_symptom',
           symptomName: symptom?.label || 'General Discomfort',
-          department: 'General Medicine',
-          altDepartment: 'Primary Care / Family Physician',
+          department: symptom?.department || 'General Medicine',
+          altDepartment: symptom?.altDepartment || 'Primary Care / Family Physician',
           urgency: 'ROUTINE',
-          reason: 'Your symptoms present with mixed or overlapping clinical features. An initial comprehensive physical evaluation and routine diagnostics by a General Medicine physician is the safest starting point.',
-          advice: 'Consult a primary care physician / internist for clinical evaluation and baseline laboratory triage.',
+          reason: symptom?.reason || 'An initial physical examination and routine evaluation by a General Medicine physician is recommended.',
+          advice: symptom?.advice || 'Consult a primary care physician for clinical evaluation.',
           isEmergency: false,
           emergencyNotice: null
         }
       });
     }
+
 
     const recommendation = {
       bodyArea,

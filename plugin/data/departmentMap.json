@@ -3,295 +3,176 @@
     "head_and_neck": {
       "displayName": "Head & Neck",
       "symptoms": [
-        {
-          "id": "headache",
-          "label": "Headache / Migraine",
-          "hasDecisionTree": true,
-          "decisionTreeId": "headache_tree",
-          "department": "Neurology",
-          "reason": "Neurologists specialize in diagnosing recurrent headaches, migraines, nerve-related cranial pain, and intracranial concerns.",
-          "advice": "Note the trigger factors, frequency, and whether light or sound sensitivity is present."
-        },
-        {
-          "id": "dizziness",
-          "label": "Dizziness / Vertigo",
-          "department": "ENT",
-          "altDepartment": "Neurology",
-          "reason": "Vertigo and balance issues commonly stem from inner ear vestibular disturbances, or neurological equilibrium issues.",
-          "advice": "Keep track of whether turning your head triggers spinning sensations."
-        },
-        {
-          "id": "eye_pain",
-          "label": "Eye Pain / Vision Issue",
-          "department": "Ophthalmology",
-          "reason": "Ophthalmologists handle ocular inflammation, acute eye pain, visual disturbances, and cornea/retina examinations.",
-          "advice": "Avoid rubbing your eyes; seek emergency care immediately if sudden vision loss occurs."
-        },
-        {
-          "id": "ear_pain",
-          "label": "Ear Pain / Hearing Difficulty",
-          "department": "ENT (Otolaryngology)",
-          "reason": "ENT specialists treat middle and inner ear infections, eustachian tube blockages, and hearing disturbances.",
-          "advice": "Avoid inserting cotton buds or foreign objects into the ear canal."
-        },
-        {
-          "id": "sore_throat",
-          "label": "Sore Throat / Difficulty Swallowing",
-          "department": "ENT (Otolaryngology)",
-          "altDepartment": "General Medicine",
-          "reason": "Pharyngeal inflammation, tonsillitis, and vocal cord irritation are evaluated by ENT or General Physicians.",
-          "advice": "Stay hydrated and monitor if accompanied by high fever or swollen glands."
-        },
-        {
-          "id": "neck_pain",
-          "label": "Neck Pain / Stiffness",
-          "department": "Orthopedics",
-          "reason": "Cervical spine strain, disc compression, and musculoskeletal stiffness are managed by Orthopedic specialists.",
-          "advice": "Avoid sudden neck jerks; maintain ergonomic posture while reading or working."
-        }
+        { "id": "headache", "label": "Headache / Migraine", "department": "Neurology", "reason": "Neurologists specialize in diagnosing recurrent headaches, migraines, nerve-related cranial pain, and intracranial concerns.", "advice": "Note the trigger factors, frequency, and whether light or sound sensitivity is present." },
+        { "id": "dizziness", "label": "Dizziness / Vertigo", "department": "ENT", "altDepartment": "Neurology", "reason": "Vertigo and balance issues commonly stem from inner ear vestibular disturbances, or neurological equilibrium issues.", "advice": "Keep track of whether turning your head triggers spinning sensations." },
+        { "id": "eye_pain", "label": "Eye Pain / Vision Issue", "department": "Ophthalmology", "reason": "Ophthalmologists handle ocular inflammation, acute eye pain, visual disturbances, and cornea/retina examinations.", "advice": "Avoid rubbing your eyes; seek emergency care immediately if sudden vision loss occurs." },
+        { "id": "blurred_vision", "label": "Blurred Vision / Visual Disturbance", "department": "Ophthalmology", "reason": "Blurred or changed vision requires assessment of the eye and visual system.", "advice": "Seek emergency care for sudden vision loss or sudden double vision." },
+        { "id": "red_eye", "label": "Red / Irritated Eye", "department": "Ophthalmology", "reason": "Persistent or painful eye redness may require examination for infection or inflammation.", "advice": "Avoid rubbing the eye and seek urgent care if there is severe pain or reduced vision." },
+        { "id": "eye_discharge", "label": "Eye Discharge / Sticky Eyes", "department": "Ophthalmology", "reason": "Eye discharge may occur with conjunctival or other ocular infections.", "advice": "Avoid sharing towels and touching the eye with unwashed hands." },
+        { "id": "ear_pain", "label": "Ear Pain / Hearing Difficulty", "department": "ENT (Otolaryngology)", "reason": "ENT specialists treat middle and inner ear infections, eustachian tube blockages, and hearing disturbances.", "advice": "Avoid inserting cotton buds or foreign objects into the ear canal." },
+        { "id": "tinnitus", "label": "Ringing / Buzzing in Ear", "department": "ENT (Otolaryngology)", "reason": "Persistent tinnitus may require hearing and ear evaluation.", "advice": "Note whether it is in one or both ears and whether it started suddenly." },
+        { "id": "ear_discharge", "label": "Ear Discharge", "department": "ENT (Otolaryngology)", "reason": "Ear discharge may occur with ear canal or middle-ear infection and requires examination when persistent.", "advice": "Do not insert cotton buds or liquids into the ear unless advised by a clinician." },
+        { "id": "sore_throat", "label": "Sore Throat / Difficulty Swallowing", "department": "ENT (Otolaryngology)", "altDepartment": "General Medicine", "reason": "Pharyngeal inflammation, tonsillitis, and vocal cord irritation are evaluated by ENT or General Physicians.", "advice": "Stay hydrated and monitor if accompanied by high fever or swollen glands." },
+        { "id": "hoarseness", "label": "Hoarseness / Voice Change", "department": "ENT (Otolaryngology)", "reason": "Persistent voice changes may involve the vocal cords or upper airway and can require ENT assessment.", "advice": "Seek evaluation if hoarseness persists or is accompanied by difficulty breathing or swallowing." },
+        { "id": "blocked_nose", "label": "Blocked / Stuffy Nose", "department": "ENT (Otolaryngology)", "reason": "Nasal blockage is commonly evaluated for allergic, infectious, sinus, or structural causes.", "advice": "Note fever, facial pain, sneezing, or nasal discharge." },
+        { "id": "runny_nose", "label": "Runny Nose", "department": "ENT (Otolaryngology)", "reason": "Runny nose commonly occurs with viral infections or allergies.", "advice": "Note associated sneezing, fever, sore throat, or cough." },
+        { "id": "sneezing", "label": "Frequent Sneezing", "department": "ENT (Otolaryngology)", "reason": "Frequent sneezing is commonly associated with allergic or upper respiratory conditions.", "advice": "Note possible triggers such as dust, pollen, pets, or seasonal changes." },
+        { "id": "sinus_pressure", "label": "Sinus / Facial Pressure", "department": "ENT (Otolaryngology)", "reason": "Facial pressure with nasal symptoms can occur with sinus inflammation or infection.", "advice": "Note nasal blockage, discharge, fever, or reduced smell." },
+        { "id": "nosebleed", "label": "Nosebleed", "department": "ENT (Otolaryngology)", "reason": "Recurrent or significant nosebleeds may require examination of the nasal passages and contributing factors.", "advice": "Seek urgent care if bleeding is heavy, persistent, or associated with fainting or significant weakness." },
+        { "id": "neck_pain", "label": "Neck Pain / Stiffness", "department": "Orthopedics", "reason": "Cervical spine strain, disc compression, and musculoskeletal stiffness are managed by Orthopedic specialists.", "advice": "Avoid sudden neck jerks; maintain ergonomic posture while reading or working." },
+        { "id": "seizure", "label": "Seizure / Convulsion", "department": "Emergency Medicine", "altDepartment": "Neurology", "reason": "A first or unexplained seizure requires urgent assessment.", "advice": "Seek emergency care for a first seizure, prolonged or repeated seizures, injury, pregnancy, or persistent confusion.", "isRedFlagCandidate": true },
+        { "id": "speech_difficulty", "label": "Sudden Speech Difficulty / Slurred Speech", "department": "Emergency Medicine", "altDepartment": "Neurology", "reason": "Sudden speech difficulty can be a neurological emergency.", "advice": "Seek emergency care immediately, especially with facial drooping, weakness, numbness, or severe headache.", "isRedFlagCandidate": true },
+        { "id": "facial_weakness", "label": "Facial Weakness / Drooping", "department": "Emergency Medicine", "altDepartment": "Neurology", "reason": "Sudden facial weakness can indicate an acute neurological condition and requires prompt assessment.", "advice": "Seek emergency care immediately if onset is sudden or accompanied by arm weakness or speech difficulty.", "isRedFlagCandidate": true },
+        { "id": "tremor", "label": "Tremor / Shaking", "department": "Neurology", "altDepartment": "General Medicine", "reason": "Persistent or unexplained tremor may have neurological, medication-related, metabolic, or other causes.", "advice": "Note whether it occurs at rest, during movement, or with stress." },
+        { "id": "memory_confusion", "label": "Memory Problems / Confusion", "department": "Neurology", "altDepartment": "General Medicine", "reason": "Persistent memory or cognitive changes require assessment for neurological, metabolic, medication-related, or other causes.", "advice": "Seek emergency care for sudden confusion or rapid change in mental status." }
       ]
     },
     "chest": {
       "displayName": "Chest",
       "symptoms": [
-        {
-          "id": "chest_pain",
-          "label": "Chest Pain / Heavy Pressure",
-          "department": "Cardiology",
-          "reason": "Chest pressure or pain warrants immediate cardiac evaluation to assess coronary artery circulation and heart function.",
-          "advice": "If the pain radiates to the jaw, left arm, or causes cold sweats/breathlessness, call emergency services immediately.",
-          "isRedFlagCandidate": true
-        },
-        {
-          "id": "burning_chest",
-          "label": "Burning Sensation / Acid Reflux",
-          "department": "Gastroenterology",
-          "reason": "Substernal burning after meals is typically gastroesophageal reflux disease (GERD) or esophageal irritation.",
-          "advice": "Avoid lying down flat immediately after eating and note trigger foods."
-        },
-        {
-          "id": "palpitations",
-          "label": "Palpitations / Rapid Heartbeat",
-          "department": "Cardiology",
-          "reason": "Irregular rhythm, fluttering sensations, or tachyarrhythmias are investigated by Cardiologists.",
-          "advice": "Monitor if episodes occur at rest or during exertion, and limit caffeine."
-        },
-        {
-          "id": "breathing_difficulty",
-          "label": "Shortness of Breath / Wheezing",
-          "department": "Pulmonology",
-          "reason": "Pulmonologists specialize in airways, asthma, bronchitis, and lung parenchymal disorders.",
-          "advice": "Seek immediate medical care if breathing becomes rapidly labored or lips turn pale/blue.",
-          "isRedFlagCandidate": true
-        },
-        {
-          "id": "persistent_cough",
-          "label": "Persistent Cough",
-          "department": "Pulmonology",
-          "reason": "Coughs extending past 2-3 weeks require respiratory evaluation, chest radiography, and airway assessment.",
-          "advice": "Note if the cough produces colored phlegm or occurs mainly during night."
-        }
+        { "id": "chest_pain", "label": "Chest Pain / Heavy Pressure", "department": "Cardiology", "reason": "Chest pressure or pain warrants immediate cardiac evaluation to assess coronary artery circulation and heart function.", "advice": "If the pain radiates to the jaw, left arm, or causes cold sweats/breathlessness, call emergency services immediately.", "isRedFlagCandidate": true },
+        { "id": "burning_chest", "label": "Burning Sensation / Acid Reflux", "department": "Gastroenterology", "reason": "Substernal burning after meals is typically gastroesophageal reflux disease (GERD) or esophageal irritation.", "advice": "Avoid lying down flat immediately after eating and note trigger foods." },
+        { "id": "palpitations", "label": "Palpitations / Rapid Heartbeat", "department": "Cardiology", "reason": "Irregular rhythm, fluttering sensations, or tachyarrhythmias are investigated by Cardiologists.", "advice": "Monitor if episodes occur at rest or during exertion, and limit caffeine." },
+        { "id": "breathing_difficulty", "label": "Shortness of Breath / Wheezing", "department": "Pulmonology", "reason": "Pulmonologists specialize in airways, asthma, bronchitis, and lung parenchymal disorders.", "advice": "Seek immediate medical care if breathing becomes rapidly labored or lips turn pale/blue.", "isRedFlagCandidate": true },
+        { "id": "persistent_cough", "label": "Persistent Cough", "department": "Pulmonology", "reason": "Coughs extending past 2-3 weeks require respiratory evaluation, chest radiography, and airway assessment.", "advice": "Note if the cough produces colored phlegm or occurs mainly during night." },
+        { "id": "chest_congestion", "label": "Chest Congestion / Phlegm", "department": "Pulmonology", "altDepartment": "General Medicine", "reason": "Chest congestion and phlegm can occur with airway infections, bronchitis, asthma, or other respiratory conditions.", "advice": "Note the color and amount of phlegm and whether there is fever or breathing difficulty." },
+        { "id": "blood_in_sputum", "label": "Blood in Sputum / Coughing Blood", "department": "Pulmonology", "reason": "Coughing blood requires medical evaluation to identify the respiratory or other source.", "advice": "Seek urgent medical care, especially if the amount is more than a small streak or breathing is difficult.", "isRedFlagCandidate": true },
+        { "id": "painful_breathing", "label": "Chest Pain When Breathing", "department": "Pulmonology", "altDepartment": "Emergency Medicine", "reason": "Pain associated with breathing can arise from the lungs, pleura, chest wall, or other causes.", "advice": "Seek urgent care if it is sudden, severe, or accompanied by shortness of breath.", "isRedFlagCandidate": true },
+        { "id": "fainting", "label": "Fainting / Loss of Consciousness", "department": "Emergency Medicine", "altDepartment": "Cardiology", "reason": "Loss of consciousness can have cardiac, neurological, metabolic, or other causes and requires medical assessment.", "advice": "Seek urgent care for a first episode, injury, chest pain, abnormal heartbeat, seizure-like activity, or persistent confusion.", "isRedFlagCandidate": true },
+        { "id": "leg_swelling", "label": "Leg / Ankle Swelling", "department": "General Medicine", "altDepartment": "Cardiology", "reason": "Leg swelling may have cardiac, kidney, venous, medication-related, or local causes.", "advice": "Seek urgent care if one leg suddenly swells with pain or if swelling is accompanied by chest pain or breathlessness." }
       ]
     },
     "abdomen": {
       "displayName": "Upper Abdomen",
       "symptoms": [
-        {
-          "id": "stomach_pain",
-          "label": "Stomach Pain / Cramping",
-          "department": "Gastroenterology",
-          "reason": "Gastroenterologists diagnose gastritis, peptic ulcers, gall bladder issues, and digestive tract disorders.",
-          "advice": "Note whether the pain happens before meals, after eating, or wakes you at night."
-        },
-        {
-          "id": "nausea_vomiting",
-          "label": "Nausea / Vomiting",
-          "department": "Gastroenterology",
-          "altDepartment": "General Medicine",
-          "reason": "Frequent nausea and gastrointestinal intolerance should be evaluated for viral gastritis or metabolic causes.",
-          "advice": "Sip electrolyte fluids frequently in small amounts to prevent dehydration."
-        },
-        {
-          "id": "bloating_indigestion",
-          "label": "Bloating / Indigestion",
-          "department": "Gastroenterology",
-          "reason": "Digestive enzyme deficiencies, gut dysmotility, or irritable bowel patterns are treated by gastroenterologists.",
-          "advice": "Keep a 3-day food log to pinpoint specific digestive sensitivities."
-        }
+        { "id": "stomach_pain", "label": "Stomach Pain / Cramping", "department": "Gastroenterology", "reason": "Gastroenterologists diagnose gastritis, peptic ulcers, gall bladder issues, and digestive tract disorders.", "advice": "Note whether the pain happens before meals, after eating, or wakes you at night." },
+        { "id": "nausea_vomiting", "label": "Nausea / Vomiting", "department": "Gastroenterology", "altDepartment": "General Medicine", "reason": "Frequent nausea and gastrointestinal intolerance should be evaluated for viral gastritis or metabolic causes.", "advice": "Sip electrolyte fluids frequently in small amounts to prevent dehydration." },
+        { "id": "bloating_indigestion", "label": "Bloating / Indigestion", "department": "Gastroenterology", "reason": "Digestive enzyme deficiencies, gut dysmotility, or irritable bowel patterns are treated by gastroenterologists.", "advice": "Keep a 3-day food log to pinpoint specific digestive sensitivities." },
+        { "id": "diarrhea", "label": "Loose Motion / Diarrhea", "department": "Gastroenterology", "altDepartment": "General Medicine", "reason": "Diarrhea may result from infection, food-related illness, medication effects, or gastrointestinal disorders.", "advice": "Maintain fluids and electrolytes and seek care for blood in stool, severe dehydration, severe pain, or persistent diarrhea." },
+        { "id": "constipation", "label": "Constipation / Difficulty Passing Stool", "department": "Gastroenterology", "altDepartment": "General Medicine", "reason": "Persistent constipation may be related to diet, medications, bowel disorders, or other medical causes.", "advice": "Note bowel frequency, stool consistency, abdominal pain, vomiting, or blood in stool." },
+        { "id": "heartburn_acidity", "label": "Heartburn / Acidity", "department": "Gastroenterology", "reason": "Burning behind the breastbone or upper abdomen can occur with acid reflux and other upper gastrointestinal conditions.", "advice": "Note whether symptoms follow meals or worsen when lying down." },
+        { "id": "blood_in_stool", "label": "Blood in Stool / Rectal Bleeding", "department": "Gastroenterology", "altDepartment": "General Surgery", "reason": "Blood in stool can arise from hemorrhoids, intestinal inflammation, bleeding lesions, or other gastrointestinal causes and should be assessed.", "advice": "Seek urgent care for heavy bleeding, black stool, dizziness, fainting, or severe abdominal pain.", "isRedFlagCandidate": true },
+        { "id": "black_stool", "label": "Black / Tarry Stool", "department": "Gastroenterology", "altDepartment": "Emergency Medicine", "reason": "Black tarry stool can indicate bleeding higher in the digestive tract and requires prompt medical evaluation.", "advice": "Seek urgent medical care, particularly with weakness, dizziness, vomiting blood, or fainting.", "isRedFlagCandidate": true },
+        { "id": "jaundice", "label": "Yellow Eyes / Yellow Skin (Jaundice)", "department": "Gastroenterology", "altDepartment": "General Medicine", "reason": "Jaundice can arise from liver, bile duct, blood, or other systemic conditions and requires evaluation.", "advice": "Note dark urine, pale stool, abdominal pain, fever, or itching." }
       ]
     },
     "lower_abdomen": {
       "displayName": "Lower Abdomen & Pelvis",
       "symptoms": [
-        {
-          "id": "lower_belly_pain",
-          "label": "Lower Abdominal Pain",
-          "department": "Gastroenterology",
-          "altDepartment": "General Surgery",
-          "reason": "Lower quadrant discomfort may indicate bowel irritation, diverticulitis, or acute appendiceal inflammation.",
-          "advice": "Consult immediately if pain localizes sharply to the lower right side with fever."
-        },
-        {
-          "id": "burning_urination",
-          "label": "Painful / Frequent Urination",
-          "department": "Urology",
-          "reason": "Urologists specialize in the urinary tract, bladder infections, urethral inflammation, and kidney stones.",
-          "advice": "Increase fluid intake and avoid holding urine for prolonged periods."
-        },
-        {
-          "id": "pelvic_pain",
-          "label": "Pelvic Pain / Cramps",
-          "department": "Gynecology / Urology",
-          "reason": "Pelvic region issues require targeted evaluation of reproductive organs or lower urinary tract pathways.",
-          "advice": "Document the correlation with menstrual cycles or physical movement."
-        }
+        { "id": "lower_belly_pain", "label": "Lower Abdominal Pain", "department": "Gastroenterology", "altDepartment": "General Surgery", "reason": "Lower quadrant discomfort may indicate bowel irritation, diverticulitis, or acute appendiceal inflammation.", "advice": "Consult immediately if pain localizes sharply to the lower right side with fever." },
+        { "id": "burning_urination", "label": "Painful / Frequent Urination", "department": "Urology", "reason": "Urologists specialize in the urinary tract, bladder infections, urethral inflammation, and kidney stones.", "advice": "Increase fluid intake and avoid holding urine for prolonged periods." },
+        { "id": "pelvic_pain", "label": "Pelvic Pain / Cramps", "department": "Gynecology / Urology", "reason": "Pelvic region issues require targeted evaluation of reproductive organs or lower urinary tract pathways.", "advice": "Document the correlation with menstrual cycles or physical movement." },
+        { "id": "flank_pain", "label": "Side / Flank / Kidney Area Pain", "department": "Urology", "altDepartment": "General Medicine", "reason": "Flank pain may be related to kidney stones, urinary infection, or other urinary or abdominal causes.", "advice": "Note blood in urine, fever, vomiting, or pain radiating toward the groin." },
+        { "id": "blood_in_urine", "label": "Blood in Urine", "department": "Urology", "reason": "Blood in urine can occur with infection, stones, kidney disease, or other urinary tract conditions and should be evaluated.", "advice": "Seek prompt medical evaluation, especially with clots, severe pain, fever, or inability to urinate.", "isRedFlagCandidate": true },
+        { "id": "difficulty_urinating", "label": "Difficulty Starting / Passing Urine", "department": "Urology", "reason": "Difficulty urinating may result from obstruction, prostate problems, infection, medication effects, or other urinary conditions.", "advice": "Seek urgent care if you are unable to pass urine." },
+        { "id": "urinary_urgency", "label": "Urgent / Frequent Need to Urinate", "department": "Urology", "altDepartment": "General Medicine", "reason": "Urinary urgency and frequency can occur with urinary infections, bladder conditions, diabetes, or other causes.", "advice": "Note burning, fever, blood in urine, increased thirst, or increased urine volume." },
+        { "id": "urinary_leakage", "label": "Urine Leakage / Incontinence", "department": "Urology", "reason": "Urinary leakage can result from bladder, pelvic floor, neurological, or other causes.", "advice": "Note whether leakage occurs with coughing, urgency, exercise, or during sleep." }
       ]
     },
     "left_arm": {
       "displayName": "Left Arm & Shoulder",
       "symptoms": [
-        {
-          "id": "arm_joint_pain",
-          "label": "Shoulder / Elbow Joint Pain",
-          "department": "Orthopedics",
-          "reason": "Orthopedic doctors assess rotator cuff tears, tendonitis, arthritis, and joint dislocations.",
-          "advice": "Avoid heavy overhead lifting until clinically evaluated."
-        },
-        {
-          "id": "arm_numbness",
-          "label": "Numbness / Tingling in Hand",
-          "department": "Neurology",
-          "altDepartment": "Orthopedics",
-          "reason": "Tingling or pins-and-needles down the arm points to cervical nerve root compression or carpal tunnel syndrome.",
-          "advice": "Note if symptoms worsen when typing or resting your wrist on hard surfaces."
-        },
-        {
-          "id": "arm_muscle_pain",
-          "label": "Muscle Strain / Weakness",
-          "department": "Orthopedics",
-          "reason": "Musculoskeletal strain or acute trauma to the upper limb is best addressed by Orthopedic specialists.",
-          "advice": "Apply cold compression for acute sprains within the first 48 hours."
-        }
+        { "id": "arm_joint_pain", "label": "Shoulder / Elbow Joint Pain", "department": "Orthopedics", "reason": "Orthopedic doctors assess rotator cuff tears, tendonitis, arthritis, and joint dislocations.", "advice": "Avoid heavy overhead lifting until clinically evaluated." },
+        { "id": "arm_numbness", "label": "Numbness / Tingling in Hand", "department": "Neurology", "altDepartment": "Orthopedics", "reason": "Tingling or pins-and-needles down the arm points to cervical nerve root compression or carpal tunnel syndrome.", "advice": "Note if symptoms worsen when typing or resting your wrist on hard surfaces." },
+        { "id": "arm_muscle_pain", "label": "Muscle Strain / Weakness", "department": "Orthopedics", "reason": "Musculoskeletal strain or acute trauma to the upper limb is best addressed by Orthopedic specialists.", "advice": "Apply cold compression for acute sprains within the first 48 hours." },
+        { "id": "arm_swelling", "label": "Arm / Hand Swelling", "department": "General Medicine", "altDepartment": "Orthopedics", "reason": "Arm or hand swelling may have local, inflammatory, vascular, or systemic causes.", "advice": "Seek urgent care if swelling is sudden, severe, painful, or accompanied by chest pain or breathing difficulty." },
+        { "id": "hand_joint_pain", "label": "Hand / Finger Joint Pain or Swelling", "department": "Orthopedics", "reason": "Hand and finger joint symptoms may arise from injury, arthritis, inflammation, or other musculoskeletal conditions.", "advice": "Note whether multiple joints are affected and whether there is morning stiffness." }
       ]
     },
     "right_arm": {
       "displayName": "Right Arm & Shoulder",
       "symptoms": [
-        {
-          "id": "arm_joint_pain",
-          "label": "Shoulder / Elbow Joint Pain",
-          "department": "Orthopedics",
-          "reason": "Orthopedic doctors assess rotator cuff tears, tendonitis, arthritis, and joint dislocations.",
-          "advice": "Avoid heavy overhead lifting until clinically evaluated."
-        },
-        {
-          "id": "arm_numbness",
-          "label": "Numbness / Tingling in Hand",
-          "department": "Neurology",
-          "altDepartment": "Orthopedics",
-          "reason": "Numbness or pins-and-needles down the arm points to peripheral neuropathy or nerve entrapment.",
-          "advice": "Note if symptoms worsen when typing or working on screens."
-        },
-        {
-          "id": "arm_muscle_pain",
-          "label": "Muscle Strain / Weakness",
-          "department": "Orthopedics",
-          "reason": "Musculoskeletal strain or acute trauma to the arm is best addressed by Orthopedic specialists.",
-          "advice": "Apply cold compression for acute sprains within the first 48 hours."
-        }
+        { "id": "arm_joint_pain", "label": "Shoulder / Elbow Joint Pain", "department": "Orthopedics", "reason": "Orthopedic doctors assess rotator cuff tears, tendonitis, arthritis, and joint dislocations.", "advice": "Avoid heavy overhead lifting until clinically evaluated." },
+        { "id": "arm_numbness", "label": "Numbness / Tingling in Hand", "department": "Neurology", "altDepartment": "Orthopedics", "reason": "Numbness or pins-and-needles down the arm points to peripheral neuropathy or nerve entrapment.", "advice": "Note if symptoms worsen when typing or working on screens." },
+        { "id": "arm_muscle_pain", "label": "Muscle Strain / Weakness", "department": "Orthopedics", "reason": "Musculoskeletal strain or acute trauma to the arm is best addressed by Orthopedic specialists.", "advice": "Apply cold compression for acute sprains within the first 48 hours." },
+        { "id": "arm_swelling", "label": "Arm / Hand Swelling", "department": "General Medicine", "altDepartment": "Orthopedics", "reason": "Arm or hand swelling may have local, inflammatory, vascular, or systemic causes.", "advice": "Seek urgent care if swelling is sudden, severe, painful, or accompanied by chest pain or breathing difficulty." },
+        { "id": "hand_joint_pain", "label": "Hand / Finger Joint Pain or Swelling", "department": "Orthopedics", "reason": "Hand and finger joint symptoms may arise from injury, arthritis, inflammation, or other musculoskeletal conditions.", "advice": "Note whether multiple joints are affected and whether there is morning stiffness." }
       ]
     },
     "left_leg": {
       "displayName": "Left Leg & Foot",
       "symptoms": [
-        {
-          "id": "knee_joint_pain",
-          "label": "Knee Pain / Swelling",
-          "department": "Orthopedics",
-          "reason": "Orthopedists diagnose ligament tears (ACL/meniscus), osteoarthritis, patellar tendonitis, and joint effusion.",
-          "advice": "Avoid high-impact jumping or squatting until the joint is evaluated."
-        },
-        {
-          "id": "ankle_foot_pain",
-          "label": "Ankle / Foot Pain",
-          "department": "Orthopedics",
-          "reason": "Sprains, plantar fasciitis, and stress fractures are managed by Orthopedic and Podiatric specialists.",
-          "advice": "Rest the foot elevated and wear supportive, cushioned footwear."
-        },
-        {
-          "id": "walking_difficulty",
-          "label": "Difficulty Walking / Weakness",
-          "department": "Orthopedics",
-          "altDepartment": "Neurology",
-          "reason": "Gait disturbances can be caused by joint degeneration or lumbar nerve root impingement (sciatica).",
-          "advice": "Use support while walking if balance feels compromised."
-        }
+        { "id": "knee_joint_pain", "label": "Knee Pain / Swelling", "department": "Orthopedics", "reason": "Orthopedists diagnose ligament tears (ACL/meniscus), osteoarthritis, patellar tendonitis, and joint effusion.", "advice": "Avoid high-impact jumping or squatting until the joint is evaluated." },
+        { "id": "ankle_foot_pain", "label": "Ankle / Foot Pain", "department": "Orthopedics", "reason": "Sprains, plantar fasciitis, and stress fractures are managed by Orthopedic and Podiatric specialists.", "advice": "Rest the foot elevated and wear supportive, cushioned footwear." },
+        { "id": "walking_difficulty", "label": "Difficulty Walking / Weakness", "department": "Orthopedics", "altDepartment": "Neurology", "reason": "Gait disturbances can be caused by joint degeneration or lumbar nerve root impingement (sciatica).", "advice": "Use support while walking if balance feels compromised." },
+        { "id": "leg_swelling_local", "label": "Leg / Foot Swelling", "department": "General Medicine", "altDepartment": "Orthopedics", "reason": "Leg swelling can have local, vascular, medication-related, kidney, or heart-related causes.", "advice": "Seek urgent care if one leg suddenly swells with pain or if swelling is accompanied by chest pain or breathlessness." },
+        { "id": "leg_numbness", "label": "Leg / Foot Numbness or Tingling", "department": "Neurology", "altDepartment": "Orthopedics", "reason": "Numbness or tingling may arise from nerve compression, neuropathy, spine conditions, or other neurological causes.", "advice": "Seek urgent care for sudden one-sided weakness or numbness." }
       ]
     },
     "right_leg": {
       "displayName": "Right Leg & Foot",
       "symptoms": [
-        {
-          "id": "knee_joint_pain",
-          "label": "Knee Pain / Swelling",
-          "department": "Orthopedics",
-          "reason": "Orthopedists diagnose ligament tears (ACL/meniscus), osteoarthritis, patellar tendonitis, and joint effusion.",
-          "advice": "Avoid high-impact jumping or squatting until the joint is evaluated."
-        },
-        {
-          "id": "ankle_foot_pain",
-          "label": "Ankle / Foot Pain",
-          "department": "Orthopedics",
-          "reason": "Sprains, plantar fasciitis, and stress fractures are managed by Orthopedic specialists.",
-          "advice": "Rest the foot elevated and wear supportive, cushioned footwear."
-        },
-        {
-          "id": "walking_difficulty",
-          "label": "Difficulty Walking / Weakness",
-          "department": "Orthopedics",
-          "altDepartment": "Neurology",
-          "reason": "Gait disturbances can be caused by joint degeneration or lumbar nerve root impingement (sciatica).",
-          "advice": "Use support while walking if balance feels compromised."
-        }
+        { "id": "knee_joint_pain", "label": "Knee Pain / Swelling", "department": "Orthopedics", "reason": "Orthopedists diagnose ligament tears (ACL/meniscus), osteoarthritis, patellar tendonitis, and joint effusion.", "advice": "Avoid high-impact jumping or squatting until the joint is evaluated." },
+        { "id": "ankle_foot_pain", "label": "Ankle / Foot Pain", "department": "Orthopedics", "reason": "Sprains, plantar fasciitis, and stress fractures are managed by Orthopedic specialists.", "advice": "Rest the foot elevated and wear supportive, cushioned footwear." },
+        { "id": "walking_difficulty", "label": "Difficulty Walking / Weakness", "department": "Orthopedics", "altDepartment": "Neurology", "reason": "Gait disturbances can be caused by joint degeneration or lumbar nerve root impingement (sciatica).", "advice": "Use support while walking if balance feels compromised." },
+        { "id": "leg_swelling_local", "label": "Leg / Foot Swelling", "department": "General Medicine", "altDepartment": "Orthopedics", "reason": "Leg swelling can have local, vascular, medication-related, kidney, or heart-related causes.", "advice": "Seek urgent care if one leg suddenly swells with pain or if swelling is accompanied by chest pain or breathlessness." },
+        { "id": "leg_numbness", "label": "Leg / Foot Numbness or Tingling", "department": "Neurology", "altDepartment": "Orthopedics", "reason": "Numbness or tingling may arise from nerve compression, neuropathy, spine conditions, or other neurological causes.", "advice": "Seek urgent care for sudden one-sided weakness or numbness." }
       ]
     },
     "skin": {
       "displayName": "Skin & General",
       "symptoms": [
-        {
-          "id": "skin_rash",
-          "label": "Rash / Redness / Itching",
-          "department": "Dermatology",
-          "reason": "Dermatologists manage eczema, contact dermatitis, fungal/bacterial skin infections, and allergic eruptions.",
-          "advice": "Avoid scratching and refrain from applying harsh fragranced lotions."
-        },
-        {
-          "id": "acne_lesions",
-          "label": "Acne / Skin Blemish / Lesion",
-          "department": "Dermatology",
-          "reason": "Dermatologists specialize in follicular inflammation, cystic acne, and abnormal mole/pigment changes.",
-          "advice": "Keep the area gently cleansed; do not pop or pinch blemishes."
-        }
+        { "id": "skin_rash", "label": "Rash / Redness / Itching", "department": "Dermatology", "reason": "Dermatologists manage eczema, contact dermatitis, fungal/bacterial skin infections, and allergic eruptions.", "advice": "Avoid scratching and refrain from applying harsh fragranced lotions." },
+        { "id": "acne_lesions", "label": "Acne / Skin Blemish / Lesion", "department": "Dermatology", "reason": "Dermatologists specialize in follicular inflammation, cystic acne, and abnormal mole/pigment changes.", "advice": "Keep the area gently cleansed; do not pop or pinch blemishes." },
+        { "id": "hives", "label": "Hives / Raised Itchy Rash", "department": "Dermatology", "altDepartment": "General Medicine", "reason": "Hives commonly result from allergic or immune reactions and may require assessment of triggers.", "advice": "Seek emergency care if hives occur with swelling of the lips or tongue or difficulty breathing." },
+        { "id": "boils_skin_infection", "label": "Boil / Skin Infection / Pus-filled Lump", "department": "Dermatology", "altDepartment": "General Surgery", "reason": "Boils and localized skin infections may require medical assessment and sometimes drainage or treatment.", "advice": "Do not squeeze the lesion; seek care if redness spreads, fever develops, or pain is severe." },
+        { "id": "hair_loss", "label": "Hair Loss", "department": "Dermatology", "altDepartment": "General Medicine", "reason": "Hair loss may have dermatological, nutritional, hormonal, medication-related, or systemic causes.", "advice": "Note whether hair loss is sudden, patchy, or generalized." },
+        { "id": "dry_skin", "label": "Dry / Cracked Skin", "department": "Dermatology", "reason": "Persistent dry or cracked skin can be related to skin conditions, environmental factors, medications, or systemic causes.", "advice": "Note itching, redness, scaling, or new products that may have triggered the problem." },
+        { "id": "non_healing_wound", "label": "Non-healing Wound / Skin Ulcer", "department": "General Medicine", "altDepartment": "Dermatology", "reason": "A wound that does not heal normally may require assessment for infection, circulation problems, diabetes, or skin disease.", "advice": "Seek medical evaluation for persistent wounds, increasing redness, discharge, or fever." }
       ]
     },
     "back": {
       "displayName": "Back & Spine",
       "symptoms": [
-        {
-          "id": "lower_back_pain",
-          "label": "Lower Back Pain",
-          "department": "Orthopedics",
-          "reason": "Orthopedic spine specialists evaluate lumbar muscle strain, herniated discs, and facet joint arthritis.",
-          "advice": "Avoid heavy lifting or bending from the waist; maintain a neutral spine."
-        },
-        {
-          "id": "upper_back_pain",
-          "label": "Upper Back / Shoulder Blade Pain",
-          "department": "Orthopedics",
-          "altDepartment": "General Medicine",
-          "reason": "Thoracic paraspinal tension, postural strain, or rib cage mechanics are treated by Orthopedics.",
-          "advice": "Perform gentle chest openers and check desk ergonomics."
-        }
+        { "id": "lower_back_pain", "label": "Lower Back Pain", "department": "Orthopedics", "reason": "Orthopedic spine specialists evaluate lumbar muscle strain, herniated discs, and facet joint arthritis.", "advice": "Avoid heavy lifting or bending from the waist; maintain a neutral spine." },
+        { "id": "upper_back_pain", "label": "Upper Back / Shoulder Blade Pain", "department": "Orthopedics", "altDepartment": "General Medicine", "reason": "Thoracic paraspinal tension, postural strain, or rib cage mechanics are treated by Orthopedics.", "advice": "Perform gentle chest openers and check desk ergonomics." },
+        { "id": "back_numbness", "label": "Back Pain with Numbness / Tingling", "department": "Orthopedics", "altDepartment": "Neurology", "reason": "Back pain with neurological symptoms may involve nerve or spinal structures and needs clinical assessment.", "advice": "Seek emergency care for new bladder/bowel loss, saddle-area numbness, or severe leg weakness." }
+      ]
+    },
+    "general": {
+      "displayName": "Common / Whole Body",
+      "symptoms": [
+        { "id": "fever", "label": "Fever / High Temperature", "department": "General Medicine", "reason": "Fever is a common systemic symptom caused by infections and many other medical conditions.", "advice": "Note the temperature, duration, chills, and associated symptoms." },
+        { "id": "fatigue", "label": "Fatigue / Extreme Tiredness", "department": "General Medicine", "reason": "Persistent unexplained fatigue can have infectious, metabolic, nutritional, hormonal, sleep-related, or other causes.", "advice": "Note duration and whether it is associated with sleep problems, weight change, fever, or weakness." },
+        { "id": "general_weakness", "label": "General Weakness / Low Energy", "department": "General Medicine", "reason": "Generalized weakness requires assessment for common systemic, metabolic, nutritional, infectious, or medication-related causes.", "advice": "Seek urgent care if weakness is sudden, severe, or affects one side of the body." },
+        { "id": "body_ache", "label": "Body Ache / Muscle Aches", "department": "General Medicine", "reason": "Generalized body aches commonly occur with infections, fever, exertion, and other systemic conditions.", "advice": "Note whether body aches occur with fever, cough, rash, or recent physical exertion." },
+        { "id": "chills", "label": "Chills / Shivering", "department": "General Medicine", "reason": "Chills can accompany fever and infections and should be evaluated with the associated symptoms.", "advice": "Check your temperature and note whether chills are accompanied by sweating or fever." },
+        { "id": "loss_of_appetite", "label": "Loss of Appetite", "department": "General Medicine", "reason": "Reduced appetite can occur with infections, digestive disorders, medications, metabolic conditions, and other systemic illnesses.", "advice": "Note duration and any associated weight loss, nausea, vomiting, abdominal symptoms, or fever." },
+        { "id": "unexplained_weight_loss", "label": "Unexplained Weight Loss", "department": "General Medicine", "reason": "Unintentional weight loss may have metabolic, endocrine, gastrointestinal, infectious, nutritional, or other causes.", "advice": "Record the amount and time period of weight loss and any change in appetite or bowel habits." },
+        { "id": "unexplained_weight_gain", "label": "Unexplained Weight Gain", "department": "General Medicine", "reason": "Unexplained weight gain may be related to fluid retention, hormonal conditions, medications, or lifestyle factors.", "advice": "Note how quickly the weight changed and whether there is swelling or breathlessness." },
+        { "id": "body_swelling", "label": "Swelling of Legs / Body", "department": "General Medicine", "reason": "New swelling can have heart, kidney, liver, venous, medication-related, or local causes.", "advice": "Seek urgent care if swelling is sudden or accompanied by chest pain or breathing difficulty." },
+        { "id": "dehydration", "label": "Dehydration / Excessive Fluid Loss", "department": "General Medicine", "reason": "Dehydration can result from vomiting, diarrhea, fever, poor intake, or excessive fluid loss.", "advice": "Watch for very low urine output, severe dizziness, confusion, or inability to keep fluids down." }
+      ]
+    },
+    "reproductive": {
+      "displayName": "Reproductive / Women's Health",
+      "symptoms": [
+        { "id": "missed_period", "label": "Missed / Delayed Period", "department": "Gynecology / Obstetrics", "reason": "A missed period can have pregnancy-related, hormonal, stress-related, medication-related, or other causes.", "advice": "Consider pregnancy testing when appropriate and note cycle changes or associated pain/bleeding." },
+        { "id": "irregular_periods", "label": "Irregular Periods", "department": "Gynecology / Obstetrics", "reason": "Irregular menstrual cycles can be related to hormonal, reproductive, metabolic, stress-related, or other causes.", "advice": "Track cycle dates, duration, bleeding amount, and associated symptoms." },
+        { "id": "heavy_periods", "label": "Heavy Menstrual Bleeding", "department": "Gynecology / Obstetrics", "reason": "Heavy or prolonged menstrual bleeding may require evaluation for hormonal, structural, blood-related, or other causes.", "advice": "Seek urgent care for very heavy bleeding with dizziness, fainting, or severe weakness." },
+        { "id": "vaginal_discharge", "label": "Abnormal Vaginal Discharge / Itching", "department": "Gynecology / Obstetrics", "reason": "Changes in vaginal discharge, odor, or itching may occur with infections or other gynecological conditions.", "advice": "Note color, odor, itching, pain, and other associated symptoms." },
+        { "id": "vaginal_bleeding", "label": "Unexpected Vaginal Bleeding", "department": "Gynecology / Obstetrics", "reason": "Unexpected bleeding may have several gynecological causes and requires assessment based on age, pregnancy status, and severity.", "advice": "Seek urgent care for heavy bleeding, fainting, severe pain, or bleeding during pregnancy.", "isRedFlagCandidate": true },
+        { "id": "pregnancy_pain", "label": "Pregnancy-related Abdominal / Pelvic Pain", "department": "Gynecology / Obstetrics", "reason": "Pain during pregnancy requires assessment because the cause can range from benign conditions to pregnancy complications.", "advice": "Seek urgent assessment for severe pain, bleeding, fainting, fever, or reduced fetal movement.", "isRedFlagCandidate": true },
+        { "id": "breast_lump", "label": "Breast Lump / New Breast Change", "department": "Gynecology / Obstetrics", "altDepartment": "General Surgery", "reason": "A new breast lump or persistent breast change should be clinically examined.", "advice": "Arrange a medical examination for a new, persistent, or changing lump." }
+      ]
+    },
+    "metabolic": {
+      "displayName": "Metabolic / Diabetes",
+      "symptoms": [
+        { "id": "excessive_thirst", "label": "Excessive Thirst", "department": "General Medicine", "altDepartment": "Endocrinology / Diabetology", "reason": "Persistent excessive thirst can occur with dehydration, diabetes, medications, or other metabolic conditions.", "advice": "Note whether it is accompanied by frequent urination, weight loss, or weakness." },
+        { "id": "excessive_urination", "label": "Excessive Urination", "department": "General Medicine", "altDepartment": "Endocrinology / Diabetology", "reason": "Excessive urine production can occur with diabetes, high fluid intake, medications, or other metabolic and urinary causes.", "advice": "Note whether urine volume is actually increased and whether excessive thirst or weight loss is present." },
+        { "id": "heat_cold_intolerance", "label": "Unusual Sensitivity to Heat / Cold", "department": "General Medicine", "altDepartment": "Endocrinology / Diabetology", "reason": "Persistent temperature intolerance can be associated with thyroid and other metabolic conditions.", "advice": "Note whether it is new and associated with weight, heart-rate, bowel, or sleep changes." },
+        { "id": "neck_swelling_thyroid", "label": "Neck Swelling / Thyroid-area Lump", "department": "General Medicine", "altDepartment": "Endocrinology / Diabetology", "reason": "A swelling in the front of the neck may involve the thyroid and requires clinical assessment.", "advice": "Seek evaluation if the swelling is new, enlarging, painful, or associated with swallowing or breathing difficulty." }
+      ]
+    },
+    "mental_health": {
+      "displayName": "Mental Health",
+      "symptoms": [
+        { "id": "anxiety", "label": "Anxiety / Excessive Worry", "department": "Psychiatry / Mental Health", "reason": "Persistent or disruptive anxiety may require mental-health assessment, while physical symptoms should also be considered.", "advice": "Seek urgent help if anxiety is accompanied by thoughts of self-harm or inability to stay safe." },
+        { "id": "panic_attack", "label": "Panic Attack / Sudden Intense Fear", "department": "General Medicine", "altDepartment": "Psychiatry / Mental Health", "reason": "Panic symptoms can resemble physical conditions, so new or severe episodes may need medical assessment.", "advice": "Seek emergency care for new chest pain, severe breathing difficulty, fainting, or other concerning physical symptoms." },
+        { "id": "depressed_mood", "label": "Persistent Low Mood / Depression", "department": "Psychiatry / Mental Health", "reason": "Persistent low mood, loss of interest, or functional impairment can require professional mental-health assessment.", "advice": "Seek urgent help if you have thoughts of self-harm or suicide." },
+        { "id": "sleep_problem", "label": "Insomnia / Sleep Problem", "department": "General Medicine", "altDepartment": "Psychiatry / Mental Health", "reason": "Persistent sleep problems can be related to stress, mental health, medications, sleep disorders, or medical conditions.", "advice": "Note sleep duration, timing, snoring, daytime sleepiness, and stress or mood changes." },
+        { "id": "suicidal_thoughts", "label": "Thoughts of Self-harm / Suicide", "department": "Emergency Medicine", "altDepartment": "Psychiatry / Mental Health", "reason": "Thoughts of suicide or self-harm require immediate safety assessment and urgent professional support.", "advice": "Seek emergency help immediately and stay with a trusted person rather than being alone.", "isRedFlagCandidate": true }
       ]
     }
   },
@@ -380,44 +261,12 @@
         }
       },
       "outcomes": {
-        "emergency": {
-          "urgency": "EMERGENCY",
-          "department": "Emergency Room (A&E)",
-          "reason": "One or more of your reported symptoms are red flags that require immediate emergency evaluation to rule out life-threatening conditions such as subarachnoid haemorrhage, meningitis, or stroke.",
-          "advice": "Please call emergency services (108 / 999 / 911) or go to the nearest Emergency Room immediately. Do not drive yourself.",
-          "emergencyNotice": "🚨 CRITICAL ALERT: Do not wait. Seek emergency care NOW."
-        },
-        "outcome_primary_care_migraine": {
-          "urgency": "ROUTINE",
-          "department": "Primary Care / General Medicine",
-          "altDepartment": "Neurology (if recurrent)",
-          "reason": "Your headache features are consistent with a migraine pattern. A first or occasional migraine episode is best managed initially by a General Physician, who can confirm the diagnosis and initiate standard treatment.",
-          "advice": "Keep a headache diary (triggers, frequency, duration). Avoid known triggers such as skipped meals, poor sleep, or caffeine changes. Your doctor may prescribe triptans if appropriate."
-        },
-        "outcome_neurology_migraine": {
-          "urgency": "PRIORITY",
-          "department": "Neurology",
-          "reason": "You are experiencing frequent migraines (more than 4 days/month). Neurologists specialise in migraine prophylaxis, acute rescue therapy, and identifying any structural causes for recurrent episodes.",
-          "advice": "Request a neurology referral from your GP. Preventive medications (beta-blockers, topiramate, CGRP antagonists) or specialised procedures may be appropriate."
-        },
-        "outcome_neurology_chronic": {
-          "urgency": "PRIORITY",
-          "department": "Neurology",
-          "reason": "Daily or near-daily headaches may indicate Chronic Daily Headache (CDH) or Medication Overuse Headache (MOH), requiring specialist neurological evaluation.",
-          "advice": "Track all medications taken for headache relief — overuse of painkillers can worsen chronic headache. A neurologist will guide a supervised detox and preventive regimen."
-        },
-        "outcome_general_medicine": {
-          "urgency": "ROUTINE",
-          "department": "General Medicine",
-          "reason": "Your headache is responding to rest and basic pain relief, and no concerning features are present. This is likely a tension-type or stress-related headache best managed at primary care level.",
-          "advice": "Stay hydrated, maintain regular sleep, and consider stress-reduction techniques. See a GP if headaches become more frequent or resistant to simple relief."
-        },
-        "outcome_neurology_refractory": {
-          "urgency": "PRIORITY",
-          "department": "Neurology",
-          "reason": "A headache that is persistent and refractory to standard pain relief warrants specialist evaluation to rule out secondary causes such as raised intracranial pressure, cervicogenic headache, or structural abnormalities.",
-          "advice": "Avoid exceeding the recommended dose of any pain medication. A neurologist may order imaging (MRI/CT) or refer to a headache clinic."
-        }
+        "emergency": { "urgency": "EMERGENCY", "department": "Emergency Room (A&E)", "reason": "One or more of your reported symptoms are red flags that require immediate emergency evaluation to rule out life-threatening conditions such as subarachnoid haemorrhage, meningitis, or stroke.", "advice": "Please call emergency services (108 / 999 / 911) or go to the nearest Emergency Room immediately. Do not drive yourself.", "emergencyNotice": "🚨 CRITICAL ALERT: Do not wait. Seek emergency care NOW." },
+        "outcome_primary_care_migraine": { "urgency": "ROUTINE", "department": "Primary Care / General Medicine", "altDepartment": "Neurology (if recurrent)", "reason": "Your headache features are consistent with a migraine pattern. A first or occasional migraine episode is best managed initially by a General Physician, who can confirm the diagnosis and initiate standard treatment.", "advice": "Keep a headache diary (triggers, frequency, duration). Avoid known triggers such as skipped meals, poor sleep, or caffeine changes. Your doctor may prescribe triptans if appropriate." },
+        "outcome_neurology_migraine": { "urgency": "PRIORITY", "department": "Neurology", "reason": "You are experiencing frequent migraines (more than 4 days/month). Neurologists specialise in migraine prophylaxis, acute rescue therapy, and identifying any structural causes for recurrent episodes.", "advice": "Request a neurology referral from your GP. Preventive medications (beta-blockers, topiramate, CGRP antagonists) or specialised procedures may be appropriate." },
+        "outcome_neurology_chronic": { "urgency": "PRIORITY", "department": "Neurology", "reason": "Daily or near-daily headaches may indicate Chronic Daily Headache (CDH) or Medication Overuse Headache (MOH), requiring specialist neurological evaluation.", "advice": "Track all medications taken for headache relief — overuse of painkillers can worsen chronic headache. A neurologist will guide a supervised detox and preventive regimen." },
+        "outcome_general_medicine": { "urgency": "ROUTINE", "department": "General Medicine", "reason": "Your headache is responding to rest and basic pain relief, and no concerning features are present. This is likely a tension-type or stress-related headache best managed at primary care level.", "advice": "Stay hydrated, maintain regular sleep, and consider stress-reduction techniques. See a GP if headaches become more frequent or resistant to simple relief." },
+        "outcome_neurology_refractory": { "urgency": "PRIORITY", "department": "Neurology", "reason": "A headache that is persistent and refractory to standard pain relief warrants specialist evaluation to rule out secondary causes such as raised intracranial pressure, cervicogenic headache, or structural abnormalities.", "advice": "Avoid exceeding the recommended dose of any pain medication. A neurologist may order imaging (MRI/CT) or refer to a headache clinic." }
       }
     }
   }
