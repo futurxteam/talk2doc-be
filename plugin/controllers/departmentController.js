@@ -5,6 +5,79 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Maps specific symptom IDs to user-friendly symptom location labels
+// so the result card shows "Mouth / Teeth" instead of the processing category "Head & Neck"
+const SYMPTOM_AREA_LABELS = {
+  // Head & Neck sub-areas
+  toothache: 'Mouth / Teeth',
+  mouth_ulcer: 'Mouth / Oral',
+  gum_pain_swelling: 'Gums / Oral',
+  loss_of_smell: 'Nose / Nasal',
+  loss_of_taste: 'Mouth / Oral',
+  difficulty_swallowing: 'Throat / Neck',
+  headache: 'Head',
+  migraine: 'Head',
+  dizziness: 'Head',
+  ear_pain: 'Ear',
+  eye_pain: 'Eye',
+  throat_pain: 'Throat',
+  neck_pain: 'Neck',
+  nasal_congestion: 'Nose / Sinuses',
+  nosebleed: 'Nose',
+  jaw_pain: 'Jaw / Face',
+  common_cold: 'Head & Neck (Cold / Flu)',
+  head_injury_trauma: 'Head',
+  seizure: 'Brain / Nervous System',
+  speech_difficulty: 'Brain / Nervous System',
+  facial_weakness: 'Face / Nervous System',
+  tremor: 'Nervous System',
+  memory_confusion: 'Brain / Cognitive',
+  // Chest
+  chest_pain: 'Chest / Heart',
+  breathing_difficulty: 'Chest / Lungs',
+  palpitations: 'Chest / Heart',
+  blood_in_sputum: 'Chest / Lungs',
+  // Abdomen
+  abdominal_pain: 'Abdomen',
+  abdominal_cramps: 'Abdomen',
+  blood_in_vomit: 'Stomach / GI',
+  nausea_vomiting: 'Stomach',
+  diarrhea: 'Digestive System',
+  constipation: 'Digestive System',
+  // Lower Abdomen
+  pelvic_pain: 'Lower Abdomen / Pelvis',
+  urinary_pain: 'Urinary System',
+  urinary_incontinence: 'Urinary System',
+  kidney_pain: 'Kidney / Back',
+  // Skin
+  skin_rash: 'Skin',
+  itching: 'Skin',
+  // Back
+  back_pain: 'Back / Spine',
+  // Arms
+  arm_muscle_pain: 'Arm',
+  arm_fracture_trauma: 'Arm',
+  shoulder_pain: 'Shoulder',
+  // Legs
+  knee_pain: 'Knee',
+  leg_fracture_trauma: 'Leg',
+  ankle_pain: 'Ankle / Foot',
+  foot_pain: 'Foot',
+  // General
+  fever: 'General / Systemic',
+  fatigue: 'General / Systemic',
+  weight_loss: 'General / Metabolic',
+  weight_gain: 'General / Metabolic',
+  joint_pain: 'Joints / Musculoskeletal',
+  muscle_cramps: 'Muscles',
+  swelling: 'Soft Tissue',
+  hair_loss: 'Skin / Hair',
+  excessive_sweating: 'General / Endocrine',
+  excessive_sleepiness: 'General / Neurological',
+  numbness_tingling: 'Nerves / Extremities',
+  night_sweats: 'General / Systemic',
+};
+
 // Load department mapping from data/departmentMap.json
 const dataPath = path.join(__dirname, '..', 'data', 'departmentMap.json');
 let departmentData = {};
@@ -122,6 +195,7 @@ export const triageDecisionTree = (req, res) => {
     const recommendation = {
       bodyArea,
       bodyAreaName: areaConfig?.displayName || bodyArea,
+      symptomArea: SYMPTOM_AREA_LABELS[symptomId] || areaConfig?.displayName || bodyArea,
       symptomId,
       symptomName: symptom?.label || symptomId,
       department: outcome.department || 'General Medicine',
@@ -148,10 +222,10 @@ export const recommendDepartment = (req, res) => {
     const { bodyArea, symptomId, duration, severity } = req.body;
 
     const areaConfig = departmentData.bodyParts?.[bodyArea];
-    const symptom = areaConfig?.symptoms?.find(s => s.id === symptomId) || areaConfig?.symptoms?.[0];
+    const symptom = areaConfig?.symptoms?.find(s => s.id === symptomId);
 
-    // If bodyArea or symptom is not found or ambiguous, fallback to General Medicine
-    if (!areaConfig || !symptom) {
+    // If bodyArea not found, fallback to General Medicine
+    if (!areaConfig) {
       return res.json({
         success: true,
         recommendation: {
@@ -181,8 +255,9 @@ export const recommendDepartment = (req, res) => {
     const recommendation = {
       bodyArea,
       bodyAreaName: areaConfig.displayName,
-      symptomId: symptom?.id,
-      symptomName: symptom?.label,
+      symptomArea: SYMPTOM_AREA_LABELS[symptomId] || areaConfig.displayName,
+      symptomId: symptom?.id || symptomId,
+      symptomName: symptom?.label || symptomId,
       department: symptom?.department || 'General Medicine',
       altDepartment: symptom?.altDepartment || null,
       urgency: isEmergency ? 'EMERGENCY' : 'ROUTINE',
