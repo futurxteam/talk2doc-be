@@ -358,7 +358,7 @@ function heuristicExtract(message, currentStep, currentContext = {}) {
       } else if (severityId) {
         conversationalReply = `Ayyoo, ${matchedSymptomName} karanam kashtamayi! Ithu evide muthal thudangi — inno, kurachu divasam munpe, atho athil kooduthal naalaayo?`;
       } else {
-        conversationalReply = `Ayyoo, ${matchedSymptomName} und ennu ketto! Ithu evide muthal thudangi — inno thudangiyo, atho innale / kurachu divasam aayiyo?`;
+        conversationalReply = `Ayyoo, ${matchedSymptomName} undo! Ithu evide muthal thudangi — inno thudangiyo, atho innale / kurachu divasam aayiyo?`;
       }
     } else if (matchedBodyArea) {
       conversationalReply = `Seri, ${matchedBodyArea.replace(/_/g, ' ')} bhagath budhimuttundalle. Avide enthanu prashnam ennu parayamo?`;
@@ -513,7 +513,7 @@ CRITICAL INSTRUCTIONS:
      You MUST formulate your conversationalReply in natural, empathetic, caring, sweet MANGLISH (Malayalam words written in English/Latin letters).
      DO NOT reply in Malayalam script. DO NOT reply in formal English.
      Example Manglish conversationalReply:
-     * "Ayyoo, vayaru vedana und ennu ketto! Ithu evide muthal thudangi — inno thudangiyo, atho kurachu divasam aayiyo?"
+     * "Ayyoo, vayaru vedana undo! Ithu evide muthal thudangi — inno thudangiyo, atho kurachu divasam aayiyo?"
      * "Ayyoo, pallu vedana bayankara kashtam! Vedana engane und — cheruthano, nallonam indo, bayankara aano?"
      * "Pedikkanda, namukku nalla specialist-e kandam. Ellaam sheri aakum!"
    - IF the user writes in Malayalam script (മലയാളം, e.g. "എനിക്ക് തലവേദനയുണ്ട്"):
