@@ -147,7 +147,23 @@ export const getNearbyDoctors = async (req, res) => {
 export const saveAssessment = async (req, res) => {
   try {
     const userId = req.user.id;
-    const { emergency, emergencyReason, recommendation, results, collected, activeSyndromes } = req.body;
+    const {
+      emergency,
+      emergencyReason,
+      recommendation,
+      results,
+      collected,
+      activeSyndromes,
+      department,
+      alternativeDepartment,
+      urgencyLevel,
+      primarySymptom,
+      bodyArea,
+      duration,
+      severity,
+      reportType,
+      reportData,
+    } = req.body;
 
     const assessment = await AssessmentResult.create({
       user: userId,
@@ -157,6 +173,15 @@ export const saveAssessment = async (req, res) => {
       results,
       collected,
       activeSyndromes,
+      department,
+      alternativeDepartment,
+      urgencyLevel,
+      primarySymptom,
+      bodyArea,
+      duration,
+      severity,
+      reportType: reportType || "TRIAGE_EVALUATION",
+      reportData,
     });
 
     res.json({ success: true, assessmentId: assessment._id });

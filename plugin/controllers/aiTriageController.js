@@ -100,16 +100,24 @@ export function detectMessageLanguage(text) {
     return 'malayalam_script';
   }
   const manglishSignals = [
-    'enikku', 'eniku', 'vedana', 'vedanikkunnu', 'pallu', 'thala', 'thalavedana',
+    'enikku', 'eniku', 'enik', 'vedana', 'vedanikkunnu', 'pallu', 'thala', 'thalavedana',
     'vayaru', 'vayar', 'vayattil', 'kazhuthu', 'nenju', 'nenjil', 'chardi', 'chuma',
     'pani', 'sheenam', 'ksheenam', 'tharippu', 'veekkam', 'chori', 'chorichil',
-    'moothram', 'innu', 'innumuthal', 'innale', 'ravile', 'ippol', 'kurachu',
+    'moothram', 'innu', 'inn', 'innumuthal', 'innale', 'ravile', 'ippol', 'kurachu',
     'kure', 'neram', 'neramayi', 'divasam', 'divasamayi', 'bayankara', 'bhayankara',
-    'cheriya', 'und', 'undu', 'illa', 'vannu', 'poyi', 'aayi', 'kayyu', 'kaalu',
-    'potti', 'odivu', 'aano', 'alla', 'kooduthal', 'sahikkan', 'muthal', 'koluthipidutham',
-    'koluthal', 'chora', 'kazhikkan', 'urakkam', 'maravippu', 'ayyo', 'ayyoo', 'kashtam'
+    'cheriya', 'und', 'undu', 'undo', 'ind', 'indo', 'illa', 'illanne', 'onnumilla', 'onnumillaa',
+    'vannu', 'poyi', 'aayi', 'aayo', 'aayilla', 'kayyu', 'kaalu',
+    'potti', 'odivu', 'aano', 'aanu', 'alla', 'allayo', 'allaayo', 'kooduthal', 'kooduthalaano', 'sahikkan', 'muthal', 'koluthipidutham',
+    'koluthal', 'chora', 'raktham', 'kazhikkan', 'urakkam', 'maravippu', 'ayyo', 'ayyoo', 'kashtam',
+    'prashnam', 'prashnangal', 'sambandhichu', 'sambandhicha', 'thudangi', 'thudangiyittu',
+    'vedanayo', 'cheruthaano', 'cheruthano', 'budhimuttu', 'budhimuttundalle', 'ethra', 'engane', 'ithu',
+    'thavana', 'thavano', 'thavanaayi', 'pravashyam', 'pravisham', 'vatam'
   ];
-  const words = text.toLowerCase().split(/[^a-zA-Z]+/);
+  const lower = text.toLowerCase();
+  if (/\b\d+\s*(thavana|pravashyam|vatam)\b/i.test(lower)) {
+    return 'manglish';
+  }
+  const words = lower.split(/[^a-zA-Z]+/);
   if (words.some(w => manglishSignals.includes(w))) {
     return 'manglish';
   }
@@ -349,12 +357,19 @@ function heuristicExtract(message, currentStep, currentContext = {}) {
 
   // Generate genuinely warm, informal conversational reply
   let conversationalReply = '';
+  const profile = matchedSymptomId ? departmentData.followUpProfiles?.[matchedSymptomId] : null;
+
   if (inputLang === 'manglish') {
     if (matchedSymptomName) {
       if (durationId && severityId) {
         conversationalReply = `Ayyoo, ${matchedSymptomName} karanam valare kashtamayi! Pedikkanda — namukku nalla specialist-e kandam.`;
       } else if (durationId) {
-        conversationalReply = `Seri, ${matchedSymptomName} und ennu arinjhu. Vedana engane und — cheruthano, nallonam indo, atho sahikkan pattatha bayankara vedana aano?`;
+        if (profile && profile.requiresSeverity === false && profile.questions?.[0]) {
+          const qObj = profile.questions[0];
+          conversationalReply = `Seri, ${matchedSymptomName} ${durationText} aayi und ennu arinjhu. ${qObj.manglish || qObj.question}`;
+        } else {
+          conversationalReply = `Seri, ${matchedSymptomName} und ennu arinjhu. Vedana engane und — cheruthano, idatharam aano, atho sahikkan pattatha bayankara vedana aano?`;
+        }
       } else if (severityId) {
         conversationalReply = `Ayyoo, ${matchedSymptomName} karanam kashtamayi! Ithu evide muthal thudangi — inno, kurachu divasam munpe, atho athil kooduthal naalaayo?`;
       } else {
@@ -377,7 +392,12 @@ function heuristicExtract(message, currentStep, currentContext = {}) {
       if (durationId && severityId) {
         conversationalReply = `Oh bless you, I hear you — having${sevPhrase} ${matchedSymptomName.toLowerCase()}${durPhrase}${extraPhrase} sounds really tough! Don't worry at all, I've got everything I need to guide you to the right specialist.`;
       } else if (durationId) {
-        conversationalReply = `Aww, so sorry you've had ${matchedSymptomName.toLowerCase()}${durPhrase}! Just one quick thing — how intense is it feeling right now? Mild, moderate, or severe?`;
+        if (profile && profile.requiresSeverity === false && profile.questions?.[0]) {
+          const qObj = profile.questions[0];
+          conversationalReply = `Got it, you've had ${matchedSymptomName.toLowerCase()}${durPhrase}. ${qObj.question}`;
+        } else {
+          conversationalReply = `Aww, so sorry you've had ${matchedSymptomName.toLowerCase()}${durPhrase}! Just one quick thing — how intense is it feeling right now? Mild, moderate, or severe?`;
+        }
       } else if (severityId) {
         conversationalReply = `Oh gosh, ${sevPhrase.trim()} ${matchedSymptomName.toLowerCase()} sounds so miserable! Roughly when did this first start? Today, a few days ago, or longer?`;
       } else {
@@ -490,6 +510,25 @@ Analyze if user's input answers this question. If so, return decisionAnswer with
       }
     }
 
+    // Build Clinical Follow-Up Profile context for active symptom if available
+    let followUpProfileContext = '';
+    const prelimExtraction = !ctxSymptomId ? heuristicExtract(message, currentStep, currentContext)?.extracted : null;
+    const activeSymptomId = ctxSymptomId || prelimExtraction?.symptomId;
+    const profile = activeSymptomId ? departmentData.followUpProfiles?.[activeSymptomId] : null;
+    if (profile) {
+      const qLines = (profile.questions || []).map(q => {
+        const opts = (q.options || []).map(o => `${o.id}: "${o.label}"`).join(', ');
+        return `* Question ID "${q.id}" (Priority ${q.priority}): "${q.question}" [Options: ${opts}]`;
+      }).join('\n');
+      followUpProfileContext = `
+CLINICAL FOLLOW-UP PROFILE FOR "${activeSymptomId}":
+- Requires Duration: ${profile.requiresDuration ? 'YES' : 'NO'}
+- Requires Severity (mild/moderate/severe): ${profile.requiresSeverity ? 'YES' : 'NO (CRITICAL: DO NOT ask generic mild/moderate/severe question!)'}
+- Specific Clinical Questions to Ask instead:
+${qLines}
+`;
+    }
+
     // Build conversation history for LLM multi-turn context
     const conversationHistory = (recentConversation || []).map(turn => ({
       role: turn.role === 'user' ? 'user' : 'assistant',
@@ -507,34 +546,42 @@ CRITICAL INSTRUCTIONS:
 1. Extract bodyArea and symptomId ONLY from the catalog below.
 2. Extract durationId from: [${durationOptions}].
 3. Extract severityId from: [${severityOptions}].
-4. List co-occurring symptoms under extraSymptoms.
-5. LANGUAGE & SCRIPT RULES (EXTREMELY IMPORTANT):
+4. If a CLINICAL FOLLOW-UP PROFILE is provided, extract any answered profile question into profileAnswers object { questionId: optionId }.
+5. List co-occurring symptoms under extraSymptoms.
+6. LANGUAGE & SCRIPT RULES (EXTREMELY IMPORTANT):
    - IF the user writes in MANGLISH (Malayalam typed in English letters):
      You MUST formulate your conversationalReply in natural, empathetic, caring, sweet MANGLISH (Malayalam words written in English/Latin letters).
      DO NOT reply in Malayalam script. DO NOT reply in formal English.
      Example Manglish conversationalReply:
      * "Ayyoo, vayaru vedana undo! Ithu evide muthal thudangi — inno thudangiyo, atho kurachu divasam aayiyo?"
-     * "Ayyoo, pallu vedana bayankara kashtam! Vedana engane und — cheruthano, nallonam indo, bayankara aano?"
+     * "Ayyoo, pallu vedana bayankara kashtam! Vedana engane und — cheruthano, idatharam aano, atho bayankara aano?"
      * "Pedikkanda, namukku nalla specialist-e kandam. Ellaam sheri aakum!"
    - IF the user writes in Malayalam script (മലയാളം, e.g. "എനിക്ക് തലവേദനയുണ്ട്"):
      You MUST reply in warm Malayalam script (മലയാളം).
    - IF the user writes in English:
      Write conversationalReply in warm, friendly, empathetic English.
    - STRICT PROHIBITION: NEVER use Hindi words (such as dard, bukhar, pet, kripya, theek, etc.) under ANY circumstances. Talk2Doc serves Malayalam and English speaking patients only.
-6. STEP-BY-STEP QUESTIONING RULES:
-   - If a symptom is identified but duration is NOT provided: Acknowledge the symptom with empathy and ask ONLY about the timeframe/duration. DO NOT ask whether it's mild, moderate, or severe yet! The patient must answer duration first.
-     (In Manglish: e.g. "Ithu evide muthal thudangi — inno thudangiyo, atho kurachu divasam / azhcha aayiyo?")
-     (In English: e.g. "Roughly when did it start — today, a few days ago, or longer?")
-   - If duration is already known, but severity is missing: Ask ONLY about severity.
-     (In Manglish: e.g. "Vedana engane und — cheruthano, nallonam indo, atho bayankara vedana aano?")
-     (In English: e.g. "Would you describe the discomfort as mild, moderate, or severe?")
-   - If the patient provided symptom + duration + severity all in one single sentence (e.g. "severe fever for 2 days"): Acknowledge everything and set nextStep to "result".
-7. DO NOT prescribe medications or diagnose.
+7. STEP-BY-STEP QUESTIONING RULES:
+   - If ONLY a body area or general health issue is identified (e.g. "periods", "stomach", "chest", "head", "leg") and a specific symptom is NOT yet known:
+     Acknowledge the area with warm empathy and ask what specific trouble, symptom, or problem they are facing in that area, in the patient's language.
+     DO NOT ask about duration or severity yet!
+   - If a symptom is identified:
+     * If duration is NOT provided: Acknowledge the symptom with empathy and ask about the timeframe/duration.
+     * If duration IS provided (or already known):
+       - If a CLINICAL FOLLOW-UP PROFILE is provided for this symptom:
+         * If Requires Severity is NO: NEVER ask if the symptom is mild, moderate, or severe!
+         * Ask the next unanswered clinical question from the profile (e.g. for diarrhea: ask how many times stools were passed today; for tinnitus: ask if in one ear or both; for urinary: ask if burning or fever is present; for jaundice: ask about dark urine/pale stool; for fever: ask temperature).
+         * Set nextStep to "profile_question" (or "result" if all profile questions are answered).
+       - If no profile is provided, ask severity (mild, moderate, or severe).
+   - If the patient provided symptom + duration + specific answers all in one single sentence: Acknowledge everything and set nextStep to "result".
+8. DO NOT prescribe medications or diagnose.
 
 
 ${symptomSummary}
 
 ${activeQuestionContext}
+
+${followUpProfileContext}
 
 CURRENT PATIENT STATE:
 - Step: ${currentStep}
@@ -554,6 +601,7 @@ RESPOND WITH ONLY VALID JSON (the fields must match the patient's ACTUAL symptom
     "durationId": "hours",
     "severity": null,
     "severityId": null,
+    "profileAnswers": {},
     "extraSymptoms": []
   },
   "decisionAnswer": null,
@@ -580,12 +628,54 @@ RESPOND WITH ONLY VALID JSON (the fields must match the patient's ACTUAL symptom
       parsed = JSON.parse(rawContent);
 
       // --- Safety Sanitizer: Ensure speech question matches the UI step ---
-      // If symptom is present but duration is NOT yet answered, the UI will show Duration chips.
-      // Therefore, the conversational speech must NEVER ask about mild/moderate/severe yet!
-      const hasDuration = parsed.extracted?.durationId || currentContext.duration;
-      const hasSeverity = parsed.extracted?.severityId || currentContext.severity;
+      // ONLY enforce duration question if a specific symptom is ALREADY identified!
+      // If only a body area is known, the conversational speech should ask what the problem is.
+      const hasSymptom = Boolean(parsed.extracted?.symptomId || currentContext.symptomId);
+      const hasDuration = Boolean(parsed.extracted?.durationId || currentContext.duration);
+      const hasSeverity = Boolean(parsed.extracted?.severityId || currentContext.severity);
 
-      if (!hasDuration && parsed.conversationalReply) {
+      const activeSympId = parsed.extracted?.symptomId || currentContext.symptomId;
+      const sympProfile = activeSympId ? departmentData.followUpProfiles?.[activeSympId] : null;
+      if (sympProfile && sympProfile.requiresSeverity === false && parsed.conversationalReply) {
+        parsed.conversationalReply = parsed.conversationalReply
+          .replace(/(,\s*)?(and\s+)?(how\s+severe\s+(is\s+it|is\s+the\s+discomfort)|is\s+it|would\s+you\s+(call|say|describe)\s+it|how\s+intense\s+is\s+it|is\s+that)[^.!?]*(mild|moderate|severe)[^.!?]*[.!?]?/gi, '.')
+          .replace(/(,\s*)?(and\s+)?(is\s+it|would\s+you\s+(call|say|describe)\s+it|how\s+intense\s+is\s+it|is\s+that)\s+(mild|moderate|severe)[^.!?]*[.!?]?/gi, '.')
+          .replace(/how severe[^.!?]*[.!?]/gi, '')
+          .replace(/(ithu\s+)?(cheruthano|mild\s+aano)[^.!?]*[.!?]?/gi, '.')
+          .replace(/(vedana|budhimuttu|kashtam)\s+engane\s+und[^.!?]*[.!?]?/gi, '.')
+          .replace(/ithu\s+ethra\s+kashtam\s+und[^.!?]*[.!?]?/gi, '.')
+          .replace(/വേദന\s+എങ്ങനെയുണ്ട്[^.!?]*[.!?]?/gi, '.')
+          .replace(/[-—–:,]\s*\./g, '.')
+          .replace(/\s+([.!?])/g, '$1')
+          .replace(/\.\./g, '.')
+          .replace(/\s{2,}/g, ' ')
+          .trim();
+
+        if (hasDuration && sympProfile.questions && sympProfile.questions.length > 0) {
+          const firstQ = sympProfile.questions[0];
+          const replyLower = parsed.conversationalReply.toLowerCase();
+          const hasProfileQ = sympProfile.questions.some(q =>
+            replyLower.includes(q.id.replace(/_/g, ' ')) ||
+            replyLower.includes('times') ||
+            replyLower.includes('thavana') ||
+            replyLower.includes('pravashyam') ||
+            replyLower.includes('ear') ||
+            replyLower.includes('urin') ||
+            replyLower.includes('temperature')
+          );
+          if (!hasProfileQ) {
+            const replyLang = detectMessageLanguage(parsed.conversationalReply);
+            const qText = (replyLang === 'manglish' && firstQ.manglish)
+              ? firstQ.manglish
+              : (replyLang === 'malayalam_script' && firstQ.malayalam)
+                ? firstQ.malayalam
+                : firstQ.question;
+            parsed.conversationalReply = parsed.conversationalReply.replace(/[.!?]$/, '') + '. ' + qText;
+          }
+        }
+      }
+
+      if (hasSymptom && !hasDuration && parsed.conversationalReply) {
         // Strip out any premature mild/moderate/severe questions bundled by the LLM
         parsed.conversationalReply = parsed.conversationalReply
           .replace(/(,\s*)?(and\s+)?(is\s+it|would\s+you\s+(call|say|describe)\s+it|how\s+intense\s+is\s+it|is\s+that)\s+(mild|moderate|severe)[^.!?]*[.!?]?/gi, '.')
@@ -596,9 +686,16 @@ RESPOND WITH ONLY VALID JSON (the fields must match the patient's ACTUAL symptom
         // Ensure there is a duration question if it got stripped
         const hasDurationQ = /(how long|when did|since when|days|hours|timeframe|eppozh|ethra|eppol|neram|divasam|നാൾ|എപ്പോൾ)/i.test(parsed.conversationalReply);
         if (!hasDurationQ) {
-          if (detectedLang === 'manglish') {
-            parsed.conversationalReply = parsed.conversationalReply.replace(/[.!?]$/, '') + '. Ithu thudangiyittu ethra neramayi?';
-          } else if (detectedLang === 'malayalam_script') {
+          const replyLang = detectMessageLanguage(parsed.conversationalReply);
+          const effectiveLang = (detectedLang === 'manglish' || replyLang === 'manglish')
+            ? 'manglish'
+            : (detectedLang === 'malayalam_script' || replyLang === 'malayalam_script')
+              ? 'malayalam_script'
+              : 'english';
+
+          if (effectiveLang === 'manglish') {
+            parsed.conversationalReply = parsed.conversationalReply.replace(/[.!?]$/, '') + '. Ithu thudangiyittu ethra neramayi / ethra naalayi?';
+          } else if (effectiveLang === 'malayalam_script') {
             parsed.conversationalReply = parsed.conversationalReply.replace(/[.!?]$/, '') + '. ഇത് തുടങ്ങിയിട്ട് എത്ര സമയമായി?';
           } else {
             parsed.conversationalReply = parsed.conversationalReply.replace(/[.!?]$/, '') + '. Roughly how long has this been going on?';

@@ -16,6 +16,19 @@ const assessmentSchema = new mongoose.Schema(
     collected: Object,     // symptoms, answers, risk factors
     activeSyndromes: Array,
 
+    // Triage evaluation report fields
+    department: String,
+    alternativeDepartment: String,
+    urgencyLevel: String,
+    primarySymptom: String,
+    bodyArea: String,
+    duration: String,
+    severity: String,
+    reportType: {
+      type: String,
+      default: "TRIAGE_EVALUATION",
+    },
+    reportData: Object,
   },
   { timestamps: true }
 );

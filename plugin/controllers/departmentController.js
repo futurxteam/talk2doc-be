@@ -151,6 +151,7 @@ export const getBodyParts = (req, res) => {
       success: true,
       data: departmentData.bodyParts || {},
       followUpQuestions: departmentData.followUpQuestions || {},
+      followUpProfiles: departmentData.followUpProfiles || {},
       decisionTrees: departmentData.decisionTrees || {}
     });
   } catch (err) {
@@ -219,10 +220,48 @@ export const triageDecisionTree = (req, res) => {
  */
 export const recommendDepartment = (req, res) => {
   try {
-    const { bodyArea, symptomId, duration, severity } = req.body;
+    const { bodyArea, symptomId, duration, severity, profileAnswers = {} } = req.body;
 
     const areaConfig = departmentData.bodyParts?.[bodyArea];
     const symptom = areaConfig?.symptoms?.find(s => s.id === symptomId);
+
+    // Check for acute red flags and urgency in profileAnswers dynamically
+    let hasEmergencyFlag = false;
+    let hasPriorityFlag = false;
+    let profileNotes = [];
+
+    const profile = departmentData.followUpProfiles?.[symptomId];
+    if (profile && profile.questions) {
+      for (const q of profile.questions) {
+        const userAns = profileAnswers[q.id];
+        if (!userAns) continue;
+        const opt = q.options?.find(o => o.id === userAns || o.label === userAns);
+        if (opt) {
+          profileNotes.push(`${q.id.replace(/_/g, ' ')}: ${opt.label}`);
+          if (opt.redFlag || opt.urgency === 'EMERGENCY') {
+            hasEmergencyFlag = true;
+          } else if (opt.urgency === 'PRIORITY') {
+            hasPriorityFlag = true;
+          }
+        }
+      }
+    }
+
+    const profileValues = Object.values(profileAnswers).flatMap(v => Array.isArray(v) ? v : [v]);
+    if (!hasEmergencyFlag) {
+      hasEmergencyFlag = profileValues.some(val =>
+        ['blood_in_stool', 'cannot_keep_fluids', 'severe_abdominal_pain', 'radiation_sweats_sob',
+          'pressure_exertion', 'swelling_lip_face_sob', 'blisters_peeling', 'breathlessness_stridor',
+          'blood_in_sputum', 'vomiting_distension', 'rash_spots', 'rf_blood'].includes(val)
+      );
+    }
+    if (!hasPriorityFlag) {
+      hasPriorityFlag = profileValues.some(val =>
+        ['sudden_hearing_loss', 'with_vertigo', 'fever_back_pain', 'blood_in_urine',
+          'dark_urine_pale_stool', 'facial_swelling', 'high_fever', 'high_with_chills',
+          'very_high_persistent', '7_plus', 'freq_severe'].includes(val)
+      );
+    }
 
     // If bodyArea not found, fallback to General Medicine
     if (!areaConfig) {
@@ -230,27 +269,46 @@ export const recommendDepartment = (req, res) => {
         success: true,
         recommendation: {
           bodyArea: bodyArea || 'general',
-          bodyAreaName: areaConfig?.displayName || 'General / Multi-System',
+          bodyAreaName: 'General / Multi-System',
           symptomId: symptomId || 'general_discomfort',
           symptomName: 'General Symptoms',
           department: 'General Medicine',
           altDepartment: 'Primary Care / Internal Medicine',
-          urgency: severity === 'severe' ? 'PRIORITY' : 'ROUTINE',
+          urgency: hasEmergencyFlag ? 'EMERGENCY' : (hasPriorityFlag || severity === 'severe') ? 'PRIORITY' : 'ROUTINE',
           reason: 'Your symptoms involve generalized or non-localized discomfort. A General Medicine doctor will carry out initial triage, physical exams, and lab screening.',
           advice: 'Schedule an appointment with a primary care physician for a comprehensive health assessment.',
           duration: duration || 'Not specified',
-          severity: severity || 'moderate',
-          isEmergency: false,
-          emergencyNotice: null
+          severity: severity || 'Not specified',
+          isEmergency: hasEmergencyFlag,
+          emergencyNotice: hasEmergencyFlag ? '🚨 CRITICAL ALERT: Your reported symptoms indicate potential acute medical urgency. Please visit the nearest Emergency Room immediately.' : null,
+          clinicalContextNotes: profileNotes.length > 0 ? profileNotes.join('; ') : undefined,
+          redFlagAlert: hasEmergencyFlag ? '🚨 Red Flag Detected: immediate evaluation recommended' : undefined
         }
       });
     }
 
     const isEmergency = Boolean(
+      hasEmergencyFlag ||
       (symptom?.isRedFlagCandidate && severity === 'severe') ||
       (symptomId === 'chest_pain' && severity === 'severe') ||
-      (symptomId === 'breathing_difficulty' && severity === 'severe')
+      (symptomId === 'breathing_difficulty' && severity === 'severe') ||
+      (symptomId === 'speech_difficulty') ||
+      (symptomId === 'seizure') ||
+      (symptomId === 'blood_in_vomit')
     );
+
+    const isPriority = Boolean(
+      hasPriorityFlag ||
+      severity === 'moderate' ||
+      severity === 'severe'
+    );
+
+    const urgency = isEmergency ? 'EMERGENCY' : isPriority ? 'PRIORITY' : 'ROUTINE';
+
+    let customAdvice = symptom?.advice || 'Monitor your symptoms and schedule an appointment.';
+    if (isEmergency) {
+      customAdvice = '🚨 Seek prompt or emergency medical evaluation. Do not delay if symptoms worsen, or if chest pain, breathlessness, or severe dehydration are present.';
+    }
 
     const recommendation = {
       bodyArea,
@@ -258,16 +316,22 @@ export const recommendDepartment = (req, res) => {
       symptomArea: SYMPTOM_AREA_LABELS[symptomId] || areaConfig.displayName,
       symptomId: symptom?.id || symptomId,
       symptomName: symptom?.label || symptomId,
-      department: symptom?.department || 'General Medicine',
+      department: isEmergency && symptom?.isRedFlagCandidate ? (symptom?.department === 'Emergency Medicine' ? 'Emergency Medicine' : `${symptom?.department} / Emergency Medicine`) : (symptom?.department || 'General Medicine'),
       altDepartment: symptom?.altDepartment || null,
-      urgency: isEmergency ? 'EMERGENCY' : 'ROUTINE',
+      urgency,
+      urgencyLevel: urgency,
+      emergency: isEmergency,
+      primarySymptom: symptom?.label || symptomId,
       reason: symptom?.reason || 'A consultation will help evaluate your symptoms.',
-      advice: symptom?.advice || 'Monitor your symptoms and schedule an appointment.',
+      advice: customAdvice,
       duration: duration || 'Not specified',
-      severity: severity || 'Not specified',
+      severity: severity || (profileValues.length > 0 ? 'Assessed via clinical questions' : 'Not specified'),
+      profileAnswers,
+      clinicalContextNotes: profileNotes.length > 0 ? profileNotes.join('; ') : undefined,
+      redFlagAlert: hasEmergencyFlag ? '🚨 Red Flag Detected: immediate evaluation recommended' : undefined,
       isEmergency,
       emergencyNotice: isEmergency
-        ? 'CRITICAL ALERT: Your selected symptoms indicate potential medical urgency. Please contact emergency services (108/911/112) or visit the nearest Emergency Room immediately.'
+        ? 'CRITICAL ALERT: Your selected symptoms indicate potential medical urgency. Please contact emergency services (108) or visit the nearest Emergency Room immediately.'
         : null
     };
 

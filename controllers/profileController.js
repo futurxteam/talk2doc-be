@@ -252,6 +252,15 @@ export const saveAssessment = async (req, res) => {
       results,
       collected,
       activeSyndromes,
+      department,
+      alternativeDepartment,
+      urgencyLevel,
+      primarySymptom,
+      bodyArea,
+      duration,
+      severity,
+      reportType,
+      reportData,
     } = req.body;
 
     const assessment = await Assessment.create({
@@ -262,6 +271,15 @@ export const saveAssessment = async (req, res) => {
       results,
       collected,
       activeSyndromes,
+      department,
+      alternativeDepartment,
+      urgencyLevel,
+      primarySymptom,
+      bodyArea,
+      duration,
+      severity,
+      reportType: reportType || "TRIAGE_EVALUATION",
+      reportData,
     });
 
     res.json({
