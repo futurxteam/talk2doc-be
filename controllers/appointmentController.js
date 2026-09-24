@@ -1,5 +1,6 @@
 import Appointment from "../models/Appointment.js";
 import DoctorProfile from "../models/DoctorProfile.js";
+import User from "../models/User.js";
 
 /* ===============================
    UTIL: Time helpers
@@ -76,6 +77,69 @@ export const getAvailableSlots = async (req, res) => {
 };
 
 /* ===============================
+   BOOK APPOINTMENT (GUEST / NO AUTH)
+   POST /api/appointments/guest-book
+=============================== */
+export const guestBookAppointment = async (req, res) => {
+  try {
+    const {
+      doctorId,
+      date,
+      timeSlot,
+      paymentMode = "Offline",
+      assessmentId,
+      name,
+      age,
+      gender,
+      height,
+      weight,
+      phone
+    } = req.body;
+
+    const doctor = await DoctorProfile.findById(doctorId);
+    if (!doctor) return res.status(404).json({ message: "Doctor not found" });
+
+    // Create a guest patient record with demographic information
+    const guestUser = await User.create({
+      name: name || (age ? `Patient (${age}y, ${gender || 'N/A'})` : "Voice Guest Patient"),
+      gender: gender || "Not Specified",
+      height: Number(height) || undefined,
+      weight: Number(weight) || undefined,
+      phone: phone || "",
+      role: "PATIENT",
+    });
+
+    const appointment = await Appointment.create({
+      patientId: guestUser._id,
+      doctorId,
+      hospitalId: doctor.hospitalId,
+      date: new Date(date),
+      timeSlot,
+      paymentMode: paymentMode || "Offline",
+      paymentStatus: paymentMode === "Online" ? "Paid" : "Pending",
+      status: "Confirmed",
+      assessmentId,
+    });
+
+    res.json({
+      success: true,
+      bookingId: appointment._id,
+      appointment,
+      doctor: {
+        fullName: doctor.fullName,
+        specialization: doctor.specialization,
+      },
+    });
+  } catch (err) {
+    if (err.code === 11000) {
+      return res.status(400).json({ message: "Slot already booked" });
+    }
+    console.error("Guest booking failed:", err);
+    res.status(500).json({ message: "Booking failed", error: err.message });
+  }
+};
+
+/* ===============================
    BOOK APPOINTMENT
    POST /api/appointments/book
 =============================== */
@@ -113,11 +177,60 @@ date: new Date(date),       timeSlot,
 =============================== */
 export const myAppointments = async (req, res) => {
   const list = await Appointment.find({ patientId: req.user.id })
-    .populate("doctorId", "fullName specialization")
+    .populate("doctorId", "fullName specialization consultationFee experience location hospitalId qualifications")
     .sort({ date: 1 });
 
   res.json({ appointments: list });
 };
+
+/* ===============================
+   GET APPOINTMENTS BY PHONE (PUBLIC / NO TOKEN)
+   GET /api/appointments/by-phone?phone=
+=============================== */
+export const getAppointmentsByPhone = async (req, res) => {
+  try {
+    const rawPhone = (req.query.phone || "").trim();
+    if (!rawPhone) {
+      return res.status(400).json({ success: false, message: "Please provide a valid phone number" });
+    }
+
+    const cleanDigits = rawPhone.replace(/\D/g, "");
+    const searchPhone = cleanDigits.length >= 7 ? cleanDigits.slice(-10) : rawPhone;
+
+    // Search users by matching phone
+    const users = await User.find({
+      phone: { $regex: searchPhone, $options: "i" },
+    }).select("_id name phone");
+
+    const userIds = users.map((u) => u._id);
+
+    // Find appointments belonging to these user IDs or phone query
+    const appointments = await Appointment.find({
+      patientId: { $in: userIds },
+    })
+      .populate({
+        path: "doctorId",
+        select: "fullName specialization consultationFee experience location hospitalId qualifications",
+        populate: {
+          path: "hospitalId",
+          select: "name address city phone",
+        },
+      })
+      .populate("patientId", "name phone gender age")
+      .sort({ createdAt: -1 });
+
+    return res.json({
+      success: true,
+      phone: rawPhone,
+      count: appointments.length,
+      appointments,
+    });
+  } catch (err) {
+    console.error("getAppointmentsByPhone error:", err);
+    return res.status(500).json({ success: false, message: "Failed to fetch appointments by phone" });
+  }
+};
+
 
 /* ===============================
    DOCTOR / HOSPITAL APPOINTMENTS

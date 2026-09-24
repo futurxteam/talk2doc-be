@@ -15,6 +15,7 @@ import hospitalRoutes from "./routes/hospitalRoutes.js";
 import pluginDepartmentRoutes from "./plugin/routes/departmentRoutes.js";
 import triageRoutes from "./routes/triageRoutes.js";
 import synonymRoutes from "./routes/synonymRoutes.js";
+import voiceRoutes from "./routes/voiceRoutes.js";
 import { seedSynonymsIfEmpty } from "./controllers/synonymController.js";
 import dns from "dns";
 
@@ -27,7 +28,12 @@ const app = express();
 /* ================================
    CORS — ALLOW ALL (DEV)
    ================================ */
-app.use(cors());
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 
 /* ================================
    BODY PARSERS
@@ -39,6 +45,7 @@ app.use(express.urlencoded({ extended: true }));
    ROUTES
    ================================ */
 app.post("/api/ai-booster", handler);
+app.use("/api/voice", voiceRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api", pluginDepartmentRoutes); // Handles /api/bodyparts, /api/triage, /api/recommend

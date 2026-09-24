@@ -20,7 +20,7 @@ export const verifyToken = async (req, res, next) => {
     req.user = user; // ✅ full user object with role
     next();
   } catch (err) {
-    console.error(err);
+    // Return 401 cleanly without dumping stack trace
     res.status(401).json({ error: "Invalid or expired token" });
   }
 };
