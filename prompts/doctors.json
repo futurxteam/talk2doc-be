@@ -1,0 +1,2213 @@
+{
+ "city": "Kochi",
+ "note": "Fictional demo data. Doctors and clinics are invented; locality coordinates are approximate.",
+ "localities": {
+  "Edappally": {
+   "lat": 10.0261,
+   "lng": 76.3086
+  },
+  "Kakkanad": {
+   "lat": 10.0159,
+   "lng": 76.3419
+  },
+  "Kaloor": {
+   "lat": 9.9975,
+   "lng": 76.298
+  },
+  "Vyttila": {
+   "lat": 9.9674,
+   "lng": 76.3182
+  },
+  "Palarivattom": {
+   "lat": 10.0038,
+   "lng": 76.307
+  },
+  "Fort Kochi": {
+   "lat": 9.9658,
+   "lng": 76.2421
+  },
+  "Aluva": {
+   "lat": 10.1076,
+   "lng": 76.3516
+  },
+  "Thrippunithura": {
+   "lat": 9.9437,
+   "lng": 76.3494
+  },
+  "MG Road": {
+   "lat": 9.97,
+   "lng": 76.285
+  },
+  "Kadavanthra": {
+   "lat": 9.966,
+   "lng": 76.299
+  },
+  "Panampilly Nagar": {
+   "lat": 9.958,
+   "lng": 76.295
+  },
+  "Maradu": {
+   "lat": 9.934,
+   "lng": 76.317
+  },
+  "Kalamassery": {
+   "lat": 10.051,
+   "lng": 76.319
+  },
+  "Thevara": {
+   "lat": 9.942,
+   "lng": 76.294
+  },
+  "Kacheripady": {
+   "lat": 9.987,
+   "lng": 76.282
+  }
+ },
+ "insurers": [
+  "Star Health",
+  "HDFC ERGO",
+  "ICICI Lombard",
+  "Niva Bupa",
+  "Care Health",
+  "KASP"
+ ],
+ "doctors": [
+  {
+   "id": "d001",
+   "name": "Dr. Rajesh Mathew",
+   "gender": "male",
+   "specialty": "General Physician",
+   "qualifications": "MBBS, MD (General Medicine)",
+   "years_experience": 24,
+   "clinic": "Kaloor Family Clinic",
+   "locality": "Kaloor",
+   "lat": 9.99517,
+   "lng": 76.30006,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d002",
+   "name": "Dr. Neethu Krishnan",
+   "gender": "female",
+   "specialty": "General Physician",
+   "qualifications": "MBBS, MD (General Medicine)",
+   "years_experience": 18,
+   "clinic": "Kacheripady Family Clinic",
+   "locality": "Kacheripady",
+   "lat": 9.98805,
+   "lng": 76.27878,
+   "insurance": [],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d003",
+   "name": "Dr. Anil Mathew",
+   "gender": "male",
+   "specialty": "General Physician",
+   "qualifications": "MBBS, MD (General Medicine)",
+   "years_experience": 4,
+   "clinic": "Thrippunithura Family Clinic",
+   "locality": "Thrippunithura",
+   "lat": 9.942,
+   "lng": 76.3534,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 800,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d004",
+   "name": "Dr. Sunitha Menon",
+   "gender": "female",
+   "specialty": "General Physician",
+   "qualifications": "MBBS, MD (General Medicine)",
+   "years_experience": 24,
+   "clinic": "Fort Kochi Family Clinic",
+   "locality": "Fort Kochi",
+   "lat": 9.96344,
+   "lng": 76.24301,
+   "insurance": [],
+   "fee_inr": 700,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d005",
+   "name": "Dr. Anitha Iyer",
+   "gender": "female",
+   "specialty": "General Physician",
+   "qualifications": "MBBS, MD (General Medicine)",
+   "years_experience": 31,
+   "clinic": "Fort Kochi Family Clinic",
+   "locality": "Fort Kochi",
+   "lat": 9.96417,
+   "lng": 76.2435,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 800,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d006",
+   "name": "Dr. Arun Krishnan",
+   "gender": "male",
+   "specialty": "General Physician",
+   "qualifications": "MBBS, MD (General Medicine)",
+   "years_experience": 21,
+   "clinic": "Aluva Family Clinic",
+   "locality": "Aluva",
+   "lat": 10.10413,
+   "lng": 76.3529,
+   "insurance": [
+    "Star Health",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d007",
+   "name": "Dr. Pradeep Mathew",
+   "gender": "male",
+   "specialty": "Cardiologist",
+   "qualifications": "MBBS, MD, DM (Cardiology)",
+   "years_experience": 11,
+   "clinic": "Palarivattom Heart Centre",
+   "locality": "Palarivattom",
+   "lat": 10.00729,
+   "lng": 76.30338,
+   "insurance": [
+    "HDFC ERGO",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d008",
+   "name": "Dr. Deepa Joseph",
+   "gender": "female",
+   "specialty": "Cardiologist",
+   "qualifications": "MBBS, MD, DM (Cardiology)",
+   "years_experience": 9,
+   "clinic": "Kaloor Heart Centre",
+   "locality": "Kaloor",
+   "lat": 9.99971,
+   "lng": 76.29475,
+   "insurance": [
+    "Star Health",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d009",
+   "name": "Dr. Anjali Iyer",
+   "gender": "female",
+   "specialty": "Cardiologist",
+   "qualifications": "MBBS, MD, DM (Cardiology)",
+   "years_experience": 16,
+   "clinic": "Kaloor Heart Centre",
+   "locality": "Kaloor",
+   "lat": 9.9982,
+   "lng": 76.29873,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Care Health"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d010",
+   "name": "Dr. Fathima Pillai",
+   "gender": "female",
+   "specialty": "Cardiologist",
+   "qualifications": "MBBS, MD, DM (Cardiology)",
+   "years_experience": 21,
+   "clinic": "Edappally Heart Centre",
+   "locality": "Edappally",
+   "lat": 10.02367,
+   "lng": 76.30469,
+   "insurance": [
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d011",
+   "name": "Dr. Suresh Joseph",
+   "gender": "male",
+   "specialty": "Cardiologist",
+   "qualifications": "MBBS, MD, DM (Cardiology)",
+   "years_experience": 9,
+   "clinic": "Fort Kochi Heart Centre",
+   "locality": "Fort Kochi",
+   "lat": 9.96821,
+   "lng": 76.2425,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d012",
+   "name": "Dr. Anil Haris",
+   "gender": "male",
+   "specialty": "Cardiologist",
+   "qualifications": "MBBS, MD, DM (Cardiology)",
+   "years_experience": 31,
+   "clinic": "Vyttila Heart Centre",
+   "locality": "Vyttila",
+   "lat": 9.96646,
+   "lng": 76.31723,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 400,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d013",
+   "name": "Dr. Joseph Das",
+   "gender": "male",
+   "specialty": "Pulmonologist",
+   "qualifications": "MBBS, MD (Pulmonary Medicine)",
+   "years_experience": 27,
+   "clinic": "Kalamassery Chest Clinic",
+   "locality": "Kalamassery",
+   "lat": 10.05007,
+   "lng": 76.32115,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 500,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d014",
+   "name": "Dr. Anitha Joseph",
+   "gender": "female",
+   "specialty": "Pulmonologist",
+   "qualifications": "MBBS, MD (Pulmonary Medicine)",
+   "years_experience": 31,
+   "clinic": "Vyttila Chest Clinic",
+   "locality": "Vyttila",
+   "lat": 9.96518,
+   "lng": 76.32189,
+   "insurance": [
+    "Star Health",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d015",
+   "name": "Dr. Kavya Chacko",
+   "gender": "female",
+   "specialty": "Pulmonologist",
+   "qualifications": "MBBS, MD (Pulmonary Medicine)",
+   "years_experience": 24,
+   "clinic": "Edappally Chest Clinic",
+   "locality": "Edappally",
+   "lat": 10.02576,
+   "lng": 76.31074,
+   "insurance": [
+    "HDFC ERGO",
+    "Care Health"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d016",
+   "name": "Dr. Krishnan Kurian",
+   "gender": "male",
+   "specialty": "Pulmonologist",
+   "qualifications": "MBBS, MD (Pulmonary Medicine)",
+   "years_experience": 24,
+   "clinic": "Palarivattom Chest Clinic",
+   "locality": "Palarivattom",
+   "lat": 10.00637,
+   "lng": 76.30582,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d017",
+   "name": "Dr. Shabna Joseph",
+   "gender": "female",
+   "specialty": "Pulmonologist",
+   "qualifications": "MBBS, MD (Pulmonary Medicine)",
+   "years_experience": 12,
+   "clinic": "Panampilly Nagar Chest Clinic",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95661,
+   "lng": 76.29361,
+   "insurance": [
+    "HDFC ERGO",
+    "KASP"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d018",
+   "name": "Dr. Harish Panicker",
+   "gender": "male",
+   "specialty": "Pulmonologist",
+   "qualifications": "MBBS, MD (Pulmonary Medicine)",
+   "years_experience": 8,
+   "clinic": "Kakkanad Chest Clinic",
+   "locality": "Kakkanad",
+   "lat": 10.01768,
+   "lng": 76.341,
+   "insurance": [],
+   "fee_inr": 1200,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d019",
+   "name": "Dr. Deepa Menon",
+   "gender": "female",
+   "specialty": "Gastroenterologist",
+   "qualifications": "MBBS, MD, DM (Gastroenterology)",
+   "years_experience": 31,
+   "clinic": "Fort Kochi Digestive Care",
+   "locality": "Fort Kochi",
+   "lat": 9.96952,
+   "lng": 76.24551,
+   "insurance": [
+    "Star Health",
+    "ICICI Lombard",
+    "Niva Bupa"
+   ],
+   "fee_inr": 500,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d020",
+   "name": "Dr. Sanjay Antony",
+   "gender": "male",
+   "specialty": "Gastroenterologist",
+   "qualifications": "MBBS, MD, DM (Gastroenterology)",
+   "years_experience": 16,
+   "clinic": "Palarivattom Digestive Care",
+   "locality": "Palarivattom",
+   "lat": 10.00071,
+   "lng": 76.30314,
+   "insurance": [],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d021",
+   "name": "Dr. Priya Kurian",
+   "gender": "female",
+   "specialty": "Gastroenterologist",
+   "qualifications": "MBBS, MD, DM (Gastroenterology)",
+   "years_experience": 11,
+   "clinic": "Panampilly Nagar Digestive Care",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95545,
+   "lng": 76.29466,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d022",
+   "name": "Dr. Faisal Das",
+   "gender": "male",
+   "specialty": "Gastroenterologist",
+   "qualifications": "MBBS, MD, DM (Gastroenterology)",
+   "years_experience": 24,
+   "clinic": "Edappally Digestive Care",
+   "locality": "Edappally",
+   "lat": 10.02395,
+   "lng": 76.30941,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Care Health"
+   ],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d023",
+   "name": "Dr. Anitha Kutty",
+   "gender": "female",
+   "specialty": "Gastroenterologist",
+   "qualifications": "MBBS, MD, DM (Gastroenterology)",
+   "years_experience": 16,
+   "clinic": "Kacheripady Digestive Care",
+   "locality": "Kacheripady",
+   "lat": 9.98948,
+   "lng": 76.28255,
+   "insurance": [],
+   "fee_inr": 1000,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d024",
+   "name": "Dr. Vinod Kutty",
+   "gender": "male",
+   "specialty": "Gastroenterologist",
+   "qualifications": "MBBS, MD, DM (Gastroenterology)",
+   "years_experience": 21,
+   "clinic": "Panampilly Nagar Digestive Care",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95934,
+   "lng": 76.295,
+   "insurance": [
+    "HDFC ERGO",
+    "Niva Bupa"
+   ],
+   "fee_inr": 500,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d025",
+   "name": "Dr. Vinod Panicker",
+   "gender": "male",
+   "specialty": "Neurologist",
+   "qualifications": "MBBS, MD, DM (Neurology)",
+   "years_experience": 9,
+   "clinic": "Kacheripady Neuro Clinic",
+   "locality": "Kacheripady",
+   "lat": 9.98357,
+   "lng": 76.28433,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 800,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d026",
+   "name": "Dr. Pradeep Warrier",
+   "gender": "male",
+   "specialty": "Neurologist",
+   "qualifications": "MBBS, MD, DM (Neurology)",
+   "years_experience": 18,
+   "clinic": "Edappally Neuro Clinic",
+   "locality": "Edappally",
+   "lat": 10.02708,
+   "lng": 76.31093,
+   "insurance": [],
+   "fee_inr": 300,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d027",
+   "name": "Dr. Nisha Warrier",
+   "gender": "female",
+   "specialty": "Neurologist",
+   "qualifications": "MBBS, MD, DM (Neurology)",
+   "years_experience": 12,
+   "clinic": "Kacheripady Neuro Clinic",
+   "locality": "Kacheripady",
+   "lat": 9.9874,
+   "lng": 76.27949,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 800,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d028",
+   "name": "Dr. Sunitha Antony",
+   "gender": "female",
+   "specialty": "Neurologist",
+   "qualifications": "MBBS, MD, DM (Neurology)",
+   "years_experience": 16,
+   "clinic": "Aluva Neuro Clinic",
+   "locality": "Aluva",
+   "lat": 10.11016,
+   "lng": 76.35392,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d029",
+   "name": "Dr. Meera Antony",
+   "gender": "female",
+   "specialty": "Neurologist",
+   "qualifications": "MBBS, MD, DM (Neurology)",
+   "years_experience": 31,
+   "clinic": "Panampilly Nagar Neuro Clinic",
+   "locality": "Panampilly Nagar",
+   "lat": 9.9592,
+   "lng": 76.2939,
+   "insurance": [],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d030",
+   "name": "Dr. Vivek Pillai",
+   "gender": "male",
+   "specialty": "Neurologist",
+   "qualifications": "MBBS, MD, DM (Neurology)",
+   "years_experience": 16,
+   "clinic": "Aluva Neuro Clinic",
+   "locality": "Aluva",
+   "lat": 10.10445,
+   "lng": 76.35527,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 500,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d031",
+   "name": "Dr. Roshan Iyer",
+   "gender": "male",
+   "specialty": "Orthopaedic Surgeon",
+   "qualifications": "MBBS, MS (Orthopaedics)",
+   "years_experience": 16,
+   "clinic": "Kadavanthra Bone & Joint Clinic",
+   "locality": "Kadavanthra",
+   "lat": 9.96889,
+   "lng": 76.30067,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d032",
+   "name": "Dr. Aswathy Menon",
+   "gender": "female",
+   "specialty": "Orthopaedic Surgeon",
+   "qualifications": "MBBS, MS (Orthopaedics)",
+   "years_experience": 6,
+   "clinic": "Thevara Bone & Joint Clinic",
+   "locality": "Thevara",
+   "lat": 9.94011,
+   "lng": 76.29577,
+   "insurance": [
+    "Star Health",
+    "Niva Bupa"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d033",
+   "name": "Dr. Deepa Das",
+   "gender": "female",
+   "specialty": "Orthopaedic Surgeon",
+   "qualifications": "MBBS, MS (Orthopaedics)",
+   "years_experience": 11,
+   "clinic": "Kaloor Bone & Joint Clinic",
+   "locality": "Kaloor",
+   "lat": 9.99586,
+   "lng": 76.29518,
+   "insurance": [
+    "Star Health",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 400,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d034",
+   "name": "Dr. Ajay Varghese",
+   "gender": "male",
+   "specialty": "Orthopaedic Surgeon",
+   "qualifications": "MBBS, MS (Orthopaedics)",
+   "years_experience": 9,
+   "clinic": "Edappally Bone & Joint Clinic",
+   "locality": "Edappally",
+   "lat": 10.02966,
+   "lng": 76.31183,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d035",
+   "name": "Dr. Shabna Jacob",
+   "gender": "female",
+   "specialty": "Orthopaedic Surgeon",
+   "qualifications": "MBBS, MS (Orthopaedics)",
+   "years_experience": 12,
+   "clinic": "Kalamassery Bone & Joint Clinic",
+   "locality": "Kalamassery",
+   "lat": 10.0483,
+   "lng": 76.31832,
+   "insurance": [
+    "Star Health",
+    "KASP"
+   ],
+   "fee_inr": 800,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d036",
+   "name": "Dr. Anil Menon",
+   "gender": "male",
+   "specialty": "Orthopaedic Surgeon",
+   "qualifications": "MBBS, MS (Orthopaedics)",
+   "years_experience": 14,
+   "clinic": "Thrippunithura Bone & Joint Clinic",
+   "locality": "Thrippunithura",
+   "lat": 9.94363,
+   "lng": 76.34804,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d037",
+   "name": "Dr. Rahul Pillai",
+   "gender": "male",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Dermatology)",
+   "years_experience": 14,
+   "clinic": "Maradu Skin Clinic",
+   "locality": "Maradu",
+   "lat": 9.93005,
+   "lng": 76.31568,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d038",
+   "name": "Dr. Harish Haris",
+   "gender": "male",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Dermatology)",
+   "years_experience": 24,
+   "clinic": "Edappally Skin Clinic",
+   "locality": "Edappally",
+   "lat": 10.02991,
+   "lng": 76.31148,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 500,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d039",
+   "name": "Dr. Anil Joseph",
+   "gender": "male",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Dermatology)",
+   "years_experience": 6,
+   "clinic": "Thrippunithura Skin Clinic",
+   "locality": "Thrippunithura",
+   "lat": 9.9427,
+   "lng": 76.35242,
+   "insurance": [
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d040",
+   "name": "Dr. Anitha Panicker",
+   "gender": "female",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Dermatology)",
+   "years_experience": 18,
+   "clinic": "Kadavanthra Skin Clinic",
+   "locality": "Kadavanthra",
+   "lat": 9.96387,
+   "lng": 76.29957,
+   "insurance": [
+    "Star Health",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d041",
+   "name": "Dr. Meera Iyer",
+   "gender": "female",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Dermatology)",
+   "years_experience": 16,
+   "clinic": "Kadavanthra Skin Clinic",
+   "locality": "Kadavanthra",
+   "lat": 9.9689,
+   "lng": 76.29727,
+   "insurance": [
+    "Star Health",
+    "ICICI Lombard",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d042",
+   "name": "Dr. Meera Warrier",
+   "gender": "female",
+   "specialty": "Dermatologist",
+   "qualifications": "MBBS, MD (Dermatology)",
+   "years_experience": 16,
+   "clinic": "Vyttila Skin Clinic",
+   "locality": "Vyttila",
+   "lat": 9.96909,
+   "lng": 76.3181,
+   "insurance": [
+    "ICICI Lombard",
+    "Care Health"
+   ],
+   "fee_inr": 300,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d043",
+   "name": "Dr. George Krishnan",
+   "gender": "male",
+   "specialty": "ENT Specialist",
+   "qualifications": "MBBS, MS (ENT)",
+   "years_experience": 8,
+   "clinic": "Kalamassery ENT Centre",
+   "locality": "Kalamassery",
+   "lat": 10.05395,
+   "lng": 76.32209,
+   "insurance": [
+    "ICICI Lombard",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d044",
+   "name": "Dr. Nikhil Menon",
+   "gender": "male",
+   "specialty": "ENT Specialist",
+   "qualifications": "MBBS, MS (ENT)",
+   "years_experience": 11,
+   "clinic": "MG Road ENT Centre",
+   "locality": "MG Road",
+   "lat": 9.97224,
+   "lng": 76.28537,
+   "insurance": [
+    "ICICI Lombard",
+    "KASP"
+   ],
+   "fee_inr": 400,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d045",
+   "name": "Dr. Mariam Nair",
+   "gender": "female",
+   "specialty": "ENT Specialist",
+   "qualifications": "MBBS, MS (ENT)",
+   "years_experience": 9,
+   "clinic": "MG Road ENT Centre",
+   "locality": "MG Road",
+   "lat": 9.96682,
+   "lng": 76.28168,
+   "insurance": [
+    "Star Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d046",
+   "name": "Dr. Sheeba Pillai",
+   "gender": "female",
+   "specialty": "ENT Specialist",
+   "qualifications": "MBBS, MS (ENT)",
+   "years_experience": 6,
+   "clinic": "Palarivattom ENT Centre",
+   "locality": "Palarivattom",
+   "lat": 10.001,
+   "lng": 76.30714,
+   "insurance": [],
+   "fee_inr": 1200,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d047",
+   "name": "Dr. Reshma Antony",
+   "gender": "female",
+   "specialty": "ENT Specialist",
+   "qualifications": "MBBS, MS (ENT)",
+   "years_experience": 9,
+   "clinic": "Kakkanad ENT Centre",
+   "locality": "Kakkanad",
+   "lat": 10.01236,
+   "lng": 76.33956,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 500,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d048",
+   "name": "Dr. Krishnan Jacob",
+   "gender": "male",
+   "specialty": "ENT Specialist",
+   "qualifications": "MBBS, MS (ENT)",
+   "years_experience": 14,
+   "clinic": "Edappally ENT Centre",
+   "locality": "Edappally",
+   "lat": 10.02379,
+   "lng": 76.30974,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d049",
+   "name": "Dr. Shabna Das",
+   "gender": "female",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (Obstetrics & Gynaecology)",
+   "years_experience": 24,
+   "clinic": "Vyttila Women's Clinic",
+   "locality": "Vyttila",
+   "lat": 9.96522,
+   "lng": 76.31492,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d050",
+   "name": "Dr. Roshan Rahman",
+   "gender": "male",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (Obstetrics & Gynaecology)",
+   "years_experience": 24,
+   "clinic": "Kakkanad Women's Clinic",
+   "locality": "Kakkanad",
+   "lat": 10.01976,
+   "lng": 76.34434,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d051",
+   "name": "Dr. Meera Kutty",
+   "gender": "female",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (Obstetrics & Gynaecology)",
+   "years_experience": 12,
+   "clinic": "Maradu Women's Clinic",
+   "locality": "Maradu",
+   "lat": 9.93727,
+   "lng": 76.3152,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d052",
+   "name": "Dr. Ashraf Iyer",
+   "gender": "male",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (Obstetrics & Gynaecology)",
+   "years_experience": 9,
+   "clinic": "MG Road Women's Clinic",
+   "locality": "MG Road",
+   "lat": 9.97142,
+   "lng": 76.2812,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 400,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d053",
+   "name": "Dr. Revathy Jacob",
+   "gender": "female",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (Obstetrics & Gynaecology)",
+   "years_experience": 18,
+   "clinic": "Kalamassery Women's Clinic",
+   "locality": "Kalamassery",
+   "lat": 10.04925,
+   "lng": 76.31704,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d054",
+   "name": "Dr. Jithin Panicker",
+   "gender": "male",
+   "specialty": "Gynaecologist",
+   "qualifications": "MBBS, MS (Obstetrics & Gynaecology)",
+   "years_experience": 27,
+   "clinic": "Kalamassery Women's Clinic",
+   "locality": "Kalamassery",
+   "lat": 10.04834,
+   "lng": 76.31677,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d055",
+   "name": "Dr. Sheeba Kutty",
+   "gender": "female",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, MD (Paediatrics)",
+   "years_experience": 8,
+   "clinic": "Thrippunithura Children's Clinic",
+   "locality": "Thrippunithura",
+   "lat": 9.94294,
+   "lng": 76.34695,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d056",
+   "name": "Dr. Suresh Haris",
+   "gender": "male",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, MD (Paediatrics)",
+   "years_experience": 12,
+   "clinic": "Kacheripady Children's Clinic",
+   "locality": "Kacheripady",
+   "lat": 9.98526,
+   "lng": 76.28105,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d057",
+   "name": "Dr. Anil Rahman",
+   "gender": "male",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, MD (Paediatrics)",
+   "years_experience": 6,
+   "clinic": "MG Road Children's Clinic",
+   "locality": "MG Road",
+   "lat": 9.96785,
+   "lng": 76.28379,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d058",
+   "name": "Dr. Aswathy Nair",
+   "gender": "female",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, MD (Paediatrics)",
+   "years_experience": 11,
+   "clinic": "MG Road Children's Clinic",
+   "locality": "MG Road",
+   "lat": 9.97057,
+   "lng": 76.28136,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d059",
+   "name": "Dr. Rajesh Kurian",
+   "gender": "male",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, MD (Paediatrics)",
+   "years_experience": 11,
+   "clinic": "Kacheripady Children's Clinic",
+   "locality": "Kacheripady",
+   "lat": 9.98321,
+   "lng": 76.27904,
+   "insurance": [],
+   "fee_inr": 1200,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d060",
+   "name": "Dr. Liya Das",
+   "gender": "female",
+   "specialty": "Paediatrician",
+   "qualifications": "MBBS, MD (Paediatrics)",
+   "years_experience": 31,
+   "clinic": "Fort Kochi Children's Clinic",
+   "locality": "Fort Kochi",
+   "lat": 9.967,
+   "lng": 76.24254,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "Care Health"
+   ],
+   "fee_inr": 800,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d061",
+   "name": "Dr. Divya Antony",
+   "gender": "female",
+   "specialty": "Endocrinologist",
+   "qualifications": "MBBS, MD, DM (Endocrinology)",
+   "years_experience": 4,
+   "clinic": "Kacheripady Diabetes & Thyroid Centre",
+   "locality": "Kacheripady",
+   "lat": 9.98515,
+   "lng": 76.28039,
+   "insurance": [
+    "HDFC ERGO",
+    "Care Health"
+   ],
+   "fee_inr": 600,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d062",
+   "name": "Dr. Harish Krishnan",
+   "gender": "male",
+   "specialty": "Endocrinologist",
+   "qualifications": "MBBS, MD, DM (Endocrinology)",
+   "years_experience": 4,
+   "clinic": "Aluva Diabetes & Thyroid Centre",
+   "locality": "Aluva",
+   "lat": 10.10583,
+   "lng": 76.35165,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d063",
+   "name": "Dr. Ashraf Menon",
+   "gender": "male",
+   "specialty": "Endocrinologist",
+   "qualifications": "MBBS, MD, DM (Endocrinology)",
+   "years_experience": 14,
+   "clinic": "Kaloor Diabetes & Thyroid Centre",
+   "locality": "Kaloor",
+   "lat": 9.99483,
+   "lng": 76.29794,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Care Health"
+   ],
+   "fee_inr": 400,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d064",
+   "name": "Dr. Meera Nair",
+   "gender": "female",
+   "specialty": "Endocrinologist",
+   "qualifications": "MBBS, MD, DM (Endocrinology)",
+   "years_experience": 6,
+   "clinic": "Maradu Diabetes & Thyroid Centre",
+   "locality": "Maradu",
+   "lat": 9.93445,
+   "lng": 76.31737,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d065",
+   "name": "Dr. Deepa Varghese",
+   "gender": "female",
+   "specialty": "Endocrinologist",
+   "qualifications": "MBBS, MD, DM (Endocrinology)",
+   "years_experience": 8,
+   "clinic": "Kacheripady Diabetes & Thyroid Centre",
+   "locality": "Kacheripady",
+   "lat": 9.9872,
+   "lng": 76.27906,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 800,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d066",
+   "name": "Dr. Jithin Warrier",
+   "gender": "male",
+   "specialty": "Endocrinologist",
+   "qualifications": "MBBS, MD, DM (Endocrinology)",
+   "years_experience": 14,
+   "clinic": "Kakkanad Diabetes & Thyroid Centre",
+   "locality": "Kakkanad",
+   "lat": 10.01813,
+   "lng": 76.33932,
+   "insurance": [],
+   "fee_inr": 800,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d067",
+   "name": "Dr. Revathy Iyer",
+   "gender": "female",
+   "specialty": "Nephrologist",
+   "qualifications": "MBBS, MD, DM (Nephrology)",
+   "years_experience": 21,
+   "clinic": "Maradu Kidney Care",
+   "locality": "Maradu",
+   "lat": 9.93241,
+   "lng": 76.3196,
+   "insurance": [],
+   "fee_inr": 1200,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d068",
+   "name": "Dr. Sreeja Varghese",
+   "gender": "female",
+   "specialty": "Nephrologist",
+   "qualifications": "MBBS, MD, DM (Nephrology)",
+   "years_experience": 12,
+   "clinic": "MG Road Kidney Care",
+   "locality": "MG Road",
+   "lat": 9.96657,
+   "lng": 76.28712,
+   "insurance": [],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d069",
+   "name": "Dr. Jithin Antony",
+   "gender": "male",
+   "specialty": "Nephrologist",
+   "qualifications": "MBBS, MD, DM (Nephrology)",
+   "years_experience": 16,
+   "clinic": "Kadavanthra Kidney Care",
+   "locality": "Kadavanthra",
+   "lat": 9.96206,
+   "lng": 76.29738,
+   "insurance": [],
+   "fee_inr": 400,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d070",
+   "name": "Dr. Anil Pillai",
+   "gender": "male",
+   "specialty": "Nephrologist",
+   "qualifications": "MBBS, MD, DM (Nephrology)",
+   "years_experience": 24,
+   "clinic": "Aluva Kidney Care",
+   "locality": "Aluva",
+   "lat": 10.10945,
+   "lng": 76.35278,
+   "insurance": [
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d071",
+   "name": "Dr. Sreeja Rahman",
+   "gender": "female",
+   "specialty": "Nephrologist",
+   "qualifications": "MBBS, MD, DM (Nephrology)",
+   "years_experience": 9,
+   "clinic": "Kacheripady Kidney Care",
+   "locality": "Kacheripady",
+   "lat": 9.98941,
+   "lng": 76.27812,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d072",
+   "name": "Dr. Vivek Varghese",
+   "gender": "male",
+   "specialty": "Nephrologist",
+   "qualifications": "MBBS, MD, DM (Nephrology)",
+   "years_experience": 9,
+   "clinic": "Vyttila Kidney Care",
+   "locality": "Vyttila",
+   "lat": 9.97112,
+   "lng": 76.31748,
+   "insurance": [
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d073",
+   "name": "Dr. Neethu Mathew",
+   "gender": "female",
+   "specialty": "Urologist",
+   "qualifications": "MBBS, MS, MCh (Urology)",
+   "years_experience": 16,
+   "clinic": "Aluva Urology Clinic",
+   "locality": "Aluva",
+   "lat": 10.1074,
+   "lng": 76.34905,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d074",
+   "name": "Dr. Roshan Haris",
+   "gender": "male",
+   "specialty": "Urologist",
+   "qualifications": "MBBS, MS, MCh (Urology)",
+   "years_experience": 6,
+   "clinic": "Palarivattom Urology Clinic",
+   "locality": "Palarivattom",
+   "lat": 10.0024,
+   "lng": 76.30806,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 300,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d075",
+   "name": "Dr. Mathew Warrier",
+   "gender": "male",
+   "specialty": "Urologist",
+   "qualifications": "MBBS, MS, MCh (Urology)",
+   "years_experience": 16,
+   "clinic": "Kakkanad Urology Clinic",
+   "locality": "Kakkanad",
+   "lat": 10.01618,
+   "lng": 76.33922,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d076",
+   "name": "Dr. Reshma Haris",
+   "gender": "female",
+   "specialty": "Urologist",
+   "qualifications": "MBBS, MS, MCh (Urology)",
+   "years_experience": 6,
+   "clinic": "Thevara Urology Clinic",
+   "locality": "Thevara",
+   "lat": 9.94496,
+   "lng": 76.29184,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 800,
+   "next_available": "Today 4:30 PM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d077",
+   "name": "Dr. Nisha Kutty",
+   "gender": "female",
+   "specialty": "Urologist",
+   "qualifications": "MBBS, MS, MCh (Urology)",
+   "years_experience": 31,
+   "clinic": "Kadavanthra Urology Clinic",
+   "locality": "Kadavanthra",
+   "lat": 9.96475,
+   "lng": 76.3014,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "Niva Bupa"
+   ],
+   "fee_inr": 600,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d078",
+   "name": "Dr. Ajay Menon",
+   "gender": "male",
+   "specialty": "Urologist",
+   "qualifications": "MBBS, MS, MCh (Urology)",
+   "years_experience": 14,
+   "clinic": "Panampilly Nagar Urology Clinic",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95604,
+   "lng": 76.29897,
+   "insurance": [
+    "HDFC ERGO",
+    "KASP"
+   ],
+   "fee_inr": 500,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d079",
+   "name": "Dr. Ashraf Mathew",
+   "gender": "male",
+   "specialty": "Psychiatrist",
+   "qualifications": "MBBS, MD (Psychiatry)",
+   "years_experience": 18,
+   "clinic": "Aluva Mind Wellness Clinic",
+   "locality": "Aluva",
+   "lat": 10.10895,
+   "lng": 76.34866,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 800,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d080",
+   "name": "Dr. Krishnan Joseph",
+   "gender": "male",
+   "specialty": "Psychiatrist",
+   "qualifications": "MBBS, MD (Psychiatry)",
+   "years_experience": 6,
+   "clinic": "MG Road Mind Wellness Clinic",
+   "locality": "MG Road",
+   "lat": 9.96752,
+   "lng": 76.28548,
+   "insurance": [],
+   "fee_inr": 800,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d081",
+   "name": "Dr. Divya Krishnan",
+   "gender": "female",
+   "specialty": "Psychiatrist",
+   "qualifications": "MBBS, MD (Psychiatry)",
+   "years_experience": 14,
+   "clinic": "Palarivattom Mind Wellness Clinic",
+   "locality": "Palarivattom",
+   "lat": 10.00351,
+   "lng": 76.3052,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1200,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d082",
+   "name": "Dr. Anitha Chacko",
+   "gender": "female",
+   "specialty": "Psychiatrist",
+   "qualifications": "MBBS, MD (Psychiatry)",
+   "years_experience": 11,
+   "clinic": "Kaloor Mind Wellness Clinic",
+   "locality": "Kaloor",
+   "lat": 9.99921,
+   "lng": 76.29898,
+   "insurance": [
+    "Star Health",
+    "ICICI Lombard",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d083",
+   "name": "Dr. Vinod Das",
+   "gender": "male",
+   "specialty": "Psychiatrist",
+   "qualifications": "MBBS, MD (Psychiatry)",
+   "years_experience": 16,
+   "clinic": "Vyttila Mind Wellness Clinic",
+   "locality": "Vyttila",
+   "lat": 9.96937,
+   "lng": 76.31871,
+   "insurance": [
+    "Star Health",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d084",
+   "name": "Dr. Liya Menon",
+   "gender": "female",
+   "specialty": "Psychiatrist",
+   "qualifications": "MBBS, MD (Psychiatry)",
+   "years_experience": 27,
+   "clinic": "Panampilly Nagar Mind Wellness Clinic",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95507,
+   "lng": 76.29597,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard"
+   ],
+   "fee_inr": 400,
+   "next_available": "Today 7:15 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d085",
+   "name": "Dr. Ann Iyer",
+   "gender": "female",
+   "specialty": "Ophthalmologist",
+   "qualifications": "MBBS, MS (Ophthalmology)",
+   "years_experience": 4,
+   "clinic": "Panampilly Nagar Eye Care",
+   "locality": "Panampilly Nagar",
+   "lat": 9.96114,
+   "lng": 76.2985,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Tomorrow 11:00 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d086",
+   "name": "Dr. Sunitha Kurian",
+   "gender": "female",
+   "specialty": "Ophthalmologist",
+   "qualifications": "MBBS, MS (Ophthalmology)",
+   "years_experience": 27,
+   "clinic": "Panampilly Nagar Eye Care",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95976,
+   "lng": 76.29532,
+   "insurance": [
+    "HDFC ERGO",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 600,
+   "next_available": "Sat 10:00 AM",
+   "languages": [
+    "Malayalam",
+    "English"
+   ]
+  },
+  {
+   "id": "d087",
+   "name": "Dr. Anil Kutty",
+   "gender": "male",
+   "specialty": "Ophthalmologist",
+   "qualifications": "MBBS, MS (Ophthalmology)",
+   "years_experience": 31,
+   "clinic": "Kacheripady Eye Care",
+   "locality": "Kacheripady",
+   "lat": 9.9897,
+   "lng": 76.28042,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 700,
+   "next_available": "Today 6:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d088",
+   "name": "Dr. Thomas Menon",
+   "gender": "male",
+   "specialty": "Ophthalmologist",
+   "qualifications": "MBBS, MS (Ophthalmology)",
+   "years_experience": 8,
+   "clinic": "Panampilly Nagar Eye Care",
+   "locality": "Panampilly Nagar",
+   "lat": 9.95852,
+   "lng": 76.29311,
+   "insurance": [
+    "Star Health",
+    "HDFC ERGO",
+    "ICICI Lombard",
+    "Niva Bupa",
+    "Care Health",
+    "KASP"
+   ],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 9:30 AM",
+   "languages": [
+    "English",
+    "Hindi"
+   ]
+  },
+  {
+   "id": "d089",
+   "name": "Dr. Vinod Menon",
+   "gender": "male",
+   "specialty": "Ophthalmologist",
+   "qualifications": "MBBS, MS (Ophthalmology)",
+   "years_experience": 18,
+   "clinic": "Kacheripady Eye Care",
+   "locality": "Kacheripady",
+   "lat": 9.98452,
+   "lng": 76.28091,
+   "insurance": [
+    "HDFC ERGO",
+    "ICICI Lombard"
+   ],
+   "fee_inr": 600,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  },
+  {
+   "id": "d090",
+   "name": "Dr. Deepa Iyer",
+   "gender": "female",
+   "specialty": "Ophthalmologist",
+   "qualifications": "MBBS, MS (Ophthalmology)",
+   "years_experience": 9,
+   "clinic": "Edappally Eye Care",
+   "locality": "Edappally",
+   "lat": 10.02549,
+   "lng": 76.31175,
+   "insurance": [],
+   "fee_inr": 1000,
+   "next_available": "Tomorrow 5:00 PM",
+   "languages": [
+    "Malayalam",
+    "English",
+    "Tamil"
+   ]
+  }
+ ]
+}

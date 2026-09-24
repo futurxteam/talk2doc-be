@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const doctorsJsonPath = path.resolve(__dirname, "../../mydoktor247-demo/doctors.json");
+const doctorsJsonPath = path.resolve(__dirname, "doctors.json");
 export const DIRECTORY = JSON.parse(fs.readFileSync(doctorsJsonPath, "utf8"));
 export const APP_NAME = process.env.APP_NAME || "Talk2Doc";
 export const CITY = DIRECTORY.city || "Kochi";
