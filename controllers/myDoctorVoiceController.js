@@ -21,18 +21,38 @@ const getOpenAIClient = () => {
 };
 
 // ---------------------------------------------------------------------------
-// Call State Management & Server-Sent Events (SSE)
+// Multi-Session Call State Management & Server-Sent Events (SSE)
 // ---------------------------------------------------------------------------
-let call = null;
-const subscribers = new Set();
+// Map of active calls: sessionId -> call object
+const calls = new Map();
 
-function broadcast(type, data) {
+// Map of SSE subscribers: sessionId -> Set of express response streams
+const sessionSubscribers = new Map();
+
+// Global subscribers (fallback for dashboard/observers not specifying a sessionId)
+const globalSubscribers = new Set();
+
+function broadcast(sessionId, type, data) {
   const msg = `event: ${type}\ndata: ${JSON.stringify(data ?? null)}\n\n`;
-  for (const res of subscribers) {
+
+  // 1. Broadcast to all clients specifically subscribed to this session
+  if (sessionId && sessionSubscribers.has(sessionId)) {
+    const subs = sessionSubscribers.get(sessionId);
+    for (const res of subs) {
+      try {
+        res.write(msg);
+      } catch (err) {
+        console.error(`SSE write error for session ${sessionId}:`, err?.message);
+      }
+    }
+  }
+
+  // 2. Also forward to global/observer subscribers
+  for (const res of globalSubscribers) {
     try {
       res.write(msg);
     } catch (err) {
-      console.error("SSE write error:", err?.message);
+      console.error("SSE global write error:", err?.message);
     }
   }
 }
@@ -48,8 +68,25 @@ export const handleSSE = (req, res) => {
   res.setHeader("Connection", "keep-alive");
   res.setHeader("X-Accel-Buffering", "no");
   res.flushHeaders();
-  res.write(`event: snapshot\ndata: ${JSON.stringify(call)}\n\n`);
-  subscribers.add(res);
+
+  const sessionId = req.query?.sessionId || req.query?.session;
+
+  if (sessionId) {
+    if (!sessionSubscribers.has(sessionId)) {
+      sessionSubscribers.set(sessionId, new Set());
+    }
+    sessionSubscribers.get(sessionId).add(res);
+
+    // Send snapshot of this specific session
+    const currentCall = calls.get(sessionId) || null;
+    res.write(`event: snapshot\ndata: ${JSON.stringify(currentCall)}\n\n`);
+  } else {
+    globalSubscribers.add(res);
+    // Fallback: send the most recently updated call
+    const allCalls = Array.from(calls.values());
+    const latestCall = allCalls.length > 0 ? allCalls[allCalls.length - 1] : null;
+    res.write(`event: snapshot\ndata: ${JSON.stringify(latestCall)}\n\n`);
+  }
 
   const ping = setInterval(() => {
     try {
@@ -59,17 +96,42 @@ export const handleSSE = (req, res) => {
 
   req.on("close", () => {
     clearInterval(ping);
-    subscribers.delete(res);
+    if (sessionId && sessionSubscribers.has(sessionId)) {
+      const subs = sessionSubscribers.get(sessionId);
+      subs.delete(res);
+      if (subs.size === 0) {
+        sessionSubscribers.delete(sessionId);
+      }
+    } else {
+      globalSubscribers.delete(res);
+    }
   });
 };
 
-export const getConfig = (_req, res) => {
+export const getConfig = (req, res) => {
+  const sessionId = req.query?.sessionId || req.query?.session;
+  const activeCall = sessionId
+    ? calls.has(sessionId) && calls.get(sessionId).status === "active"
+    : Array.from(calls.values()).some((c) => c.status === "active");
+
   res.json({
     appName: APP_NAME,
     city: CITY,
-    activeCall: !!call,
+    activeCall,
+    totalActiveCalls: Array.from(calls.values()).filter((c) => c.status === "active").length,
   });
 };
+
+// Periodic cleanup of ended calls older than 1 hour
+setInterval(() => {
+  const oneHourAgo = Date.now() - 60 * 60 * 1000;
+  for (const [id, c] of calls.entries()) {
+    if (c.status === "ended" && c.endedAt && c.endedAt < oneHourAgo) {
+      calls.delete(id);
+      sessionSubscribers.delete(id);
+    }
+  }
+}, 10 * 60 * 1000);
 
 // ---------------------------------------------------------------------------
 // Doctor Search Algorithm with Progressive Fallback Relaxation
@@ -197,6 +259,21 @@ function searchDoctors(prefs) {
 // ---------------------------------------------------------------------------
 // Live Session Negotiation (WebRTC with OpenAI)
 // ---------------------------------------------------------------------------
+// Helper to resolve call by sessionId with graceful fallback
+function getCall(sessionId) {
+  if (sessionId && calls.has(sessionId)) {
+    return calls.get(sessionId);
+  }
+  const allCalls = Array.from(calls.values());
+  for (let i = allCalls.length - 1; i >= 0; i--) {
+    if (allCalls[i].status === "active") return allCalls[i];
+  }
+  return allCalls.length > 0 ? allCalls[allCalls.length - 1] : null;
+}
+
+// ---------------------------------------------------------------------------
+// Live Session Negotiation (WebRTC with OpenAI)
+// ---------------------------------------------------------------------------
 export const createLiveSession = async (req, res) => {
   const sdp = req.body?.sdp;
   if (typeof sdp !== "string" || !sdp.trim()) {
@@ -206,6 +283,11 @@ export const createLiveSession = async (req, res) => {
   if (!process.env.OPENAI_API_KEY) {
     return res.status(503).json({ error: "OPENAI_API_KEY is not configured in backend/.env" });
   }
+
+  // Resolve or generate a unique sessionId for this call
+  const sessionId =
+    req.body?.sessionId ||
+    `call_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
   try {
     const openai = getOpenAIClient();
@@ -229,8 +311,9 @@ export const createLiveSession = async (req, res) => {
       transport: { type: "webrtc", sdp },
     });
 
-    call = {
-      id: result?.session?.id || `call_${Date.now()}`,
+    const callObj = {
+      id: result?.session?.id || sessionId,
+      sessionId,
       startedAt: Date.now(),
       status: "active",
       transcript: [],
@@ -241,10 +324,20 @@ export const createLiveSession = async (req, res) => {
       emergency: null,
     };
 
-    broadcast("call_started", call);
-    return res.status(201).json(result);
+    calls.set(sessionId, callObj);
+
+    // Broadcast only to subscribers of this session
+    broadcast(sessionId, "call_started", callObj);
+
+    console.log(`🎙️ Started live voice session: ${sessionId}`);
+
+    return res.status(201).json({
+      ...result,
+      sessionId,
+      callId: callObj.id,
+    });
   } catch (error) {
-    console.error("Live voice session creation failed:", error?.message || error);
+    console.error(`Live voice session creation failed for ${sessionId}:`, error?.message || error);
     return res.status(error?.status || 500).json({
       error: error?.message || "Live session negotiation failed",
     });
@@ -255,60 +348,76 @@ export const createLiveSession = async (req, res) => {
 // Tool Execution Endpoints
 // ---------------------------------------------------------------------------
 export const handleTranscript = (req, res) => {
-  const { role, text } = req.body || {};
-  if (!call || !["patient", "assistant"].includes(role) || typeof text !== "string") {
+  const { role, text, sessionId } = req.body || {};
+  if (!["patient", "assistant"].includes(role) || typeof text !== "string") {
     return res.status(204).end();
   }
 
-  const last = call.transcript.at(-1);
+  const callObj = getCall(sessionId);
+  if (!callObj) {
+    return res.status(204).end();
+  }
+
+  const last = callObj.transcript.at(-1);
   if (last && last.role === role) {
     last.text += text;
   } else {
-    call.transcript.push({ role, text });
+    callObj.transcript.push({ role, text });
   }
 
-  broadcast("transcript", { role, text });
+  broadcast(callObj.sessionId, "transcript", { role, text, sessionId: callObj.sessionId });
   res.status(204).end();
 };
 
 export const handleEmergency = (req, res) => {
-  if (!call) return res.status(409).json({ error: "No active call" });
-  call.emergency = { ...req.body, at: Date.now() };
-  broadcast("emergency", call.emergency);
+  const { sessionId } = req.body || {};
+  const callObj = getCall(sessionId);
+  if (!callObj) return res.status(409).json({ error: "No active call" });
+
+  callObj.emergency = { ...req.body, at: Date.now() };
+  broadcast(callObj.sessionId, "emergency", callObj.emergency);
   res.json({ ok: true });
 };
 
 export const handleAssessment = (req, res) => {
-  if (!call) return res.status(409).json({ error: "No active call" });
-  call.assessment = { ...req.body, at: Date.now() };
-  broadcast("assessment", call.assessment);
+  const { sessionId } = req.body || {};
+  const callObj = getCall(sessionId);
+  if (!callObj) return res.status(409).json({ error: "No active call" });
+
+  callObj.assessment = { ...req.body, at: Date.now() };
+  broadcast(callObj.sessionId, "assessment", callObj.assessment);
   res.json({ ok: true });
 };
 
 export const findSpecialists = (req, res) => {
-  if (!call) return res.status(409).json({ error: "No active call" });
-  if (!req.body?.specialty) return res.status(400).json({ error: "specialty is required" });
+  const { sessionId, specialty } = req.body || {};
+  const callObj = getCall(sessionId);
+  if (!callObj) return res.status(409).json({ error: "No active call" });
+  if (!specialty) return res.status(400).json({ error: "specialty is required" });
 
   const result = searchDoctors(req.body);
   if (result.status !== "unknown_locality") {
-    call.search = result;
-    call.selected = null;
-    broadcast("search", result);
+    callObj.search = result;
+    callObj.selected = null;
+    broadcast(callObj.sessionId, "search", result);
   }
   res.json(result);
 };
 
 export const selectDoctor = (req, res) => {
-  if (!call) return res.status(409).json({ error: "No active call" });
-  const doc = call.search?.matches.find((m) => m.id === req.body?.doctor_id);
+  const { sessionId, doctor_id } = req.body || {};
+  const callObj = getCall(sessionId);
+  if (!callObj) return res.status(409).json({ error: "No active call" });
+
+  const doc = callObj.search?.matches?.find((m) => m.id === doctor_id);
   if (!doc) {
     return res.json({
       status: "not_found",
       note: "Doctor not found in current options. Please ask which option was chosen.",
     });
   }
-  call.selected = doc;
-  broadcast("selected", doc);
+  callObj.selected = doc;
+  broadcast(callObj.sessionId, "selected", doc);
   res.json({ status: "ok", doctor: doc });
 };
 
@@ -329,7 +438,10 @@ export const bookVoiceAppointment = async (req, res) => {
       preferred_slot,
       date,
       timeSlot,
+      sessionId,
     } = req.body || {};
+
+    const callObj = getCall(sessionId);
 
     const rawPhone = caller_phone || phone;
     const resolvedDocId = doctor_id || doctorId;
@@ -374,16 +486,14 @@ export const bookVoiceAppointment = async (req, res) => {
     }
 
     // 3. Resolve Doctor Profile in MongoDB
-    // Try by licenseNumber e.g. MYDOC-D001 or MongoDB _id
     const licenseNumber = `MYDOC-${String(resolvedDocId).toUpperCase()}`;
     let doctor = await DoctorProfile.findOne({
       $or: [{ licenseNumber }, { _id: resolvedDocId.length === 24 ? resolvedDocId : null }],
     }).populate("hospitalId", "name");
 
     if (!doctor) {
-      // Fallback search by doctor name if from memory
       doctor = await DoctorProfile.findOne({
-        fullName: new RegExp(call?.selected?.name || "", "i"),
+        fullName: new RegExp(callObj?.selected?.name || "", "i"),
       });
     }
 
@@ -459,12 +569,10 @@ export const bookVoiceAppointment = async (req, res) => {
       },
     };
 
-    if (call) {
-      call.booking = bookingResult;
+    if (callObj) {
+      callObj.booking = bookingResult;
+      broadcast(callObj.sessionId, "booking_confirmed", bookingResult);
     }
-
-    // Broadcast booking event to both live operator view & caller screen
-    broadcast("booking_confirmed", bookingResult);
 
     console.log(`✅ Appointment #${appointment._id} booked for ${patientUser.name} with ${doctor.fullName}`);
 
@@ -483,11 +591,14 @@ export const bookVoiceAppointment = async (req, res) => {
   }
 };
 
-export const endCall = (_req, res) => {
-  if (call) {
-    call.status = "ended";
-    call.endedAt = Date.now();
-    broadcast("ended", { at: call.endedAt });
+export const endCall = (req, res) => {
+  const sessionId = req.body?.sessionId || req.query?.sessionId;
+  const callObj = getCall(sessionId);
+  if (callObj) {
+    callObj.status = "ended";
+    callObj.endedAt = Date.now();
+    broadcast(callObj.sessionId, "ended", { at: callObj.endedAt, sessionId: callObj.sessionId });
+    console.log(`📞 Ended live voice session: ${callObj.sessionId}`);
   }
   res.status(204).end();
 };
